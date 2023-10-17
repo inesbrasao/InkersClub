@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Install dependencies
+
+In order to install nextjs and react dependencies, run the following command in the terminal
+
+```bash
+npm install
+```
 
 ## Getting Started
 
