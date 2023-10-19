@@ -1,3 +1,6 @@
+import {getByEmail} from '../../server/data/login'
+import {createDocument} from '../../server/data/signup'
+
 //SIGNUP
 //app.post('/criarconta), method:post
 //no body envia email, pass, e confirmação
@@ -5,9 +8,25 @@
 //retorna res 200 e cria documento BD
 //SENAO retorna erro correspondente
 
-export default function signup(req, res) {
-    const {email, pass, confpass} = req.body
+export default async function signup(req, res) {
+    const { email, password, passwordConfirmation } = req.body
+    //const messageError = findErrors(req.body)
+    //if (Object.keys(messageError).length == 0) {
+    const result = await getByEmail(email)
+    if(!result && password === passwordConfirmation){
+        const user = await createDocument({email: email, password: password})
+        res.status(201).json({
+        message: "Utilizador Criado com Sucesso!", _id: user.insertedId})
+    } else if (!result){
+        res.status(400).json({ message: "Password de confirmação não corresponde a password."})
 
-    res.status(200)
-  
+    } else {
+        res.status(400).json({ message: "Email já existe."})
+    }
+// } else {
+//     res.status(400).json({
+//         message: "Os dados introduzidos não são válidos.",
+//         errors: messageError
+//     })
+// }
 }
