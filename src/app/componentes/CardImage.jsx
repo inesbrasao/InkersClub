@@ -1,8 +1,12 @@
 import Image from 'next/image'
 import styles from '@/styles/styles.module.css'
 
-export default function CardImage({props}) {
+export default function CardImage({artist, image}) {
     //recebe uma imagem e uma (ou duas) tags
+
+    const pathImage = image.src
+   const tags = image.tags
+   const artistName = artist.name
     
     //retorna uma div  com uma imagem e um paragrafo
 
@@ -10,14 +14,14 @@ export default function CardImage({props}) {
     
     <div className={styles.cardImage}>
     <Image
-       src="/next.svg"
+       src={pathImage}
        //src={props.img}
        width={100}
        height={100}
-      alt="Picture of the author"
+      alt={artistName}
     />
     <p>
-        {props.tags}
+        {tags}
     </p>
     </div>
     </>
