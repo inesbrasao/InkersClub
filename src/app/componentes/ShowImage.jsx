@@ -1,8 +1,9 @@
 export default function ShowImage(props) {
    //recebe: 
    // uma imagem/url
-   //   as tags
-   // o nome do artista
+   // as tags
+   // o artista
+   
 
 
 

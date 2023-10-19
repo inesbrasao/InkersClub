@@ -1,7 +1,26 @@
-export default function CardImage(props) {
+import Image from 'next/image'
+import styles from '@/styles/styles.module.css'
+
+export default function CardImage({props}) {
     //recebe uma imagem e uma (ou duas) tags
     
     //retorna uma div  com uma imagem e um paragrafo
+
+    return <>
+    
+    <div className={styles.cardImage}>
+    <Image
+       src="/next.svg"
+       //src={props.img}
+       width={100}
+       height={100}
+      alt="Picture of the author"
+    />
+    <p>
+        {props.tags}
+    </p>
+    </div>
+    </>
     
 }
 
