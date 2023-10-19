@@ -1,39 +1,44 @@
-export default function ShowImage(props) {
+import Button from "./Button";
+import Tags from "./Tags";
+
+export default function ShowImage({artist, image}) {
    //recebe: 
    // uma imagem/url
    // as tags
    // o artista
-   
+
+   const pathImage = image.path
+   const tags = image.tags
+   const artistName = artist.name
+
 
 
 
    //retorna 
   
-    /* 
-
-   <div>
+  return <div>
 
     <Image
-       src={props.img}
+       src={pathImage}
        width={500}
        height={500}
-      alt="Picture of the author"
+       alt={artistName}
     />
 
    <div>
       <div>
-         arrTag.map(e => botao)
+         {tags.map(e => <Tags tagName = {e}/>)}
       </div>
       <div>
-         {artistname} 
-         botao
+        <p>{artistName}</p>
+         <Button name="Ver perfil" className={styles.buttonUnderlined}/>
       </div>
       
    </div>
 
    </div>
 
-   */
+  
    
 
    

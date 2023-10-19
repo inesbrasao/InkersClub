@@ -1,5 +1,5 @@
 import CardImage from "./CardImage"
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/styles.module.css'
 
 
 export default function ListCard(props) {
@@ -25,8 +25,8 @@ export default function ListCard(props) {
         tags : ["New School"]},
     ]
 
-    return <div >
-    olá do ListCard
+    return <div className={styles.listCard}>
+    
     {arrInfos.map(e => <CardImage key={e.idArtist} props={e}/>)}
 
     </div>
