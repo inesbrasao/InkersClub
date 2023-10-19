@@ -21,7 +21,7 @@
 //   }
 
 
-//Get Result from Search
+//Get Result from Searchsrc
 // async function getResults(param) {
 //      Validar que param existe.
 //     const collection = await GetCollection("desafioBD", "users")

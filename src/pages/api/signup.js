@@ -6,5 +6,8 @@
 //SENAO retorna erro correspondente
 
 export default function signup(req, res) {
+    const {email, pass, confpass} = req.body
+
+    res.status(200)
   
 }

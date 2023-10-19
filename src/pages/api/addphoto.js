@@ -7,5 +7,9 @@
 //SENAO retorna erro correspondente
 
 export default function addPhoto(req, res) {
+    const profile = req.params.profileID
+    const imageData = req.body.image
+
+    res.status(200).json()
   
 }

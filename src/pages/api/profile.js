@@ -5,5 +5,8 @@
 //SENAO(?) retorna erro correspondente
 
 export default function profile(req, res) {
+    const {image, name, lastName, shop, location, inst} = req.body
+
+    res.status(200)
   
 }

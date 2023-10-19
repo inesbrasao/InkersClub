@@ -6,5 +6,8 @@
 //SENAO retorna erro
 
 export default function login(req, res) {
+    const {email, pass} = req.body
+
+    res.status(200)
   
 }
