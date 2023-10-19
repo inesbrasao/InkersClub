@@ -4,9 +4,15 @@
 //     nome: string,
 //     estilo: string
 // }
-function SearchPhotos(searchParams) {
+import { getResults } from "../data/search"
+
+export async function searchPhotos(searchParams) {
     if(Object.keys(searchParams).length === 0) {
-        return getRandomCenas()
+        //return getRandomCenas()
+        const result = await getResults()
+        return result
     }
-    return getResults(searchParams)
+    const result = await getResults()
+    return result
+    //return getResults(searchParams)
 }
