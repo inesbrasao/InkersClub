@@ -4,15 +4,13 @@
 //     nome: string,
 //     estilo: string
 // }
-import { getResults } from "../data/search"
+import { getResults, getRandomResults } from "../data/search"
 
-export async function searchPhotos(searchParams) {
-    if(Object.keys(searchParams).length === 0) {
-        //return getRandomCenas()
-        const result = await getResults()
+export async function searchPhotos(collection, searchParams) {
+    if(!searchParams.city && !searchParams.name && !searchParams.category) {
+        const result = await getRandomResults(collection)
         return result
     }
-    const result = await getResults()
+    const result = await getResults(collection, searchParams)
     return result
-    //return getResults(searchParams)
 }

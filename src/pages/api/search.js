@@ -5,9 +5,7 @@
 import {searchPhotos} from '../../server/services/search'
 
 export default async function search(req, res) {
-    const {localizacao, estilo, nome} = req.query
-   //chamamos servicoes
-   console.log({localizacao, estilo, nome})
-   const result = await searchPhotos({localizacao, estilo, nome})
+    const {city, category, name, collection} = req.body
+   const result = await searchPhotos(collection, {city, category, name})
     res.status(200).json(result)
 }

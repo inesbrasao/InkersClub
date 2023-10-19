@@ -1,3 +1,5 @@
+import {getByEmail} from '../../server/data/login'
+
 //LOGIN
 //app.get('/login), method: get
 //no body envia email e pass
@@ -5,9 +7,18 @@
 //Retorna token(?)
 //SENAO retorna erro
 
-export default function login(req, res) {
-    const {email, pass} = req.body
-
-    res.status(200)
-  
+export default async function login(req, res) {
+    const {email, password} = req.body
+    const user = await getByEmail(email)
+    if ( user === null) {
+        res.status(404).json({
+            message: "O utilizador não foi encontrado!"
+        })
+    } else if(user.email === email && user.password === password) {
+        res.status(200).json({message: "boa"})
+    } else if (user.email === email) {
+        res.status(401).json({
+            message: "A password introduzida é inválida!"
+        })
+    }  
 }

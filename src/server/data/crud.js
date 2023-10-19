@@ -2,30 +2,10 @@
 // const { GetCollection } = require("./client")
 
 
-//Create Artist
-// async function createDocument(artist) {
-//     const collection = await GetCollection("desafioBD", "users")
-//     const result = await collection.insertOne(artist)
-//     return result
-//   }
-
-//Edit Profile
-//
-
-
 //Add Photo
 // async function addPhoto(photo) {
 //     const collection = await GetCollection("desafioBD", "users")
 //     const result = await collection.insertOne(photo)
-//     return result
-//   }
-
-
-//Get Result from Searchsrc
-// async function getResults(param) {
-//      Validar que param existe.
-//     const collection = await GetCollection("desafioBD", "users")
-//     const result = await collection.find({param.["localizacao"]: param.localizacao})
 //     return result
 //   }
 

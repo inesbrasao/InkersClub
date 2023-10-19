@@ -2,16 +2,36 @@ import {ObjectId}  from "mongodb"
 import { GetCollection } from "./mongo"
 
 
-async function getResults() {
-    const collection = await GetCollection("inkersclub","images")
-    const result = await collection.find().toArray()
+async function getResults(collect, params) {
+    const collection = await GetCollection("inkersclub",collect)
+    const { city, name, category} = params
+    let query = {};
+
+    if (name) {
+      query.name = name
+    }
+
+    if ( city) {
+      query.city = city
+    }
+
+    if ( category ) {
+      query.category = category
+    }
+    
+    const result = await collection.find(query).toArray()
     return result
   } 
 
-module.exports = { getResults }
 
-// async function getRandomResults() {
-//   const collection = await GetCollection("images")
-//   const result = await collection.(1)
-//   // return result
-// }    //  Validar que param existe.
+
+async function getRandomResults(colect) {
+  const collection = await GetCollection("inkersclub", colect)
+  const result = await collection.aggregate([{$sample: {size: 5} }]).toArray()
+  return result
+} 
+
+module.exports = { 
+  getResults,
+  getRandomResults
+ }
