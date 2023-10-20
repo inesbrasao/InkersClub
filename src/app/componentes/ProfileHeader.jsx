@@ -2,7 +2,15 @@ export default function ProfileHeader({artista}) {
 
    //recebe informações do artista
 
-         return (
+         return ( 
+            //retorna 
+                  //<div>
+                  //imagem circular, 
+                  // h1 com ArtistName
+                  //paragrafo com estudio(se houver)
+                  //paragrafo localidade
+                  //</div>
+
             <div>
                <div>
                   <h1>{artista.name}</h1>
@@ -10,6 +18,9 @@ export default function ProfileHeader({artista}) {
                   <p>{artista.shop}</p>
                   <p>{artista.city}</p>
                </div>
+
+
+
 
                <div>
                   <p>neo tradicional</p>
@@ -32,14 +43,7 @@ export default function ProfileHeader({artista}) {
             adicionar foto</button>
             </div>
          );
-   //retorna 
-   //<div>
-   //imagem circular, 
-   // h1 com ArtistName
-   //paragrafo com estudio(se houver)
-   //paragrafo localidade
-   //</div>
-
+  
 
 
    //<div>

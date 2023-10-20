@@ -35,6 +35,7 @@ export default function Home() {
         {/* <ShowImage />     */}
         <ListCard />
         <ProfileHeader artista={artista}/>
+        
         {/*<TesteEvellyn/>*/}
          </main>
          <button onClick={() => router.push("/photo/sfaqwqdsad142asd")}>asfasf</button>
