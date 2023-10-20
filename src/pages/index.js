@@ -5,10 +5,12 @@ import styles from '@/styles/Home.module.css'
 import ListCard from '@/app/componentes/ListCard'
 import ShowImage from '@/app/componentes/ShowImage'
 import TesteEvellyn from '@/app/componentes/TesteEvellyn'
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -19,8 +21,10 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         {/* <ShowImage />     */}
-        <TesteEvellyn/>
+        <ListCard />
+        {/*<TesteEvellyn/>*/}
          </main>
+         <button onClick={() => router.push("/photo/sfaqwqdsad142asd")}>asfasf</button>
     </>
   )
 }

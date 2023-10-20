@@ -6,6 +6,8 @@
 //retorna res 200 
 //SENAO retorna erro correspondente
 
+//Utilizar o createDocument
+
 export default function addPhoto(req, res) {
     const profile = req.params.profileID
     const imageData = req.body.image
