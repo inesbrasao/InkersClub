@@ -1,6 +1,6 @@
 import styles from '@/styles/styles.module.css'
 
-export default function InputText({name, value, onChange}) {
+export default function InputText({name, value, onChange}, ) {
    // recebe label do input
 
 
