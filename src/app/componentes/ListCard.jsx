@@ -48,9 +48,6 @@ export default function ListCard({ paramsPesquisa }) {
     }, [])
 
 
-
-
-
     return <div className={styles.listCard}>
         <button>Pesquisar</button>
         {showImage ? <div onClick={() => setShowImage()}> {router.push(`/photo/${imageList.id}`)}</div> :
@@ -60,6 +57,7 @@ export default function ListCard({ paramsPesquisa }) {
                 )}
             </div>
         }
+
     </div>
 }
 

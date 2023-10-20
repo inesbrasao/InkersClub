@@ -1,20 +1,43 @@
-export default function InputSearch(props) {
-   // state que guarda dados da pesquisa
-   // envia por props dados para o ListCard
+import { useState, useEffect } from "react"
+import ListCard from "./ListCard"
 
+export default function InputSearch() {
+   const [searchData, setSearchData] = useState()
+   const [propsList, setPropsList] = useState()
+   const tags = [undefined, "minimalista", "tradicional", "pontilhismo", "aquarela"]
+   const cities = [undefined, "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", 
+   "Coimbra", "Évora", "Faro", "Funchal", "Guarda", "Leiria", "Lisboa", "Portalegre", 
+   "Porto", "Santarém", "São Miguel", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu"]
 
-   //não recebe nada
+   const handleChange = (event) =>  {
+      const {name, value} = event.target
+      setSearchData({
+         ...searchData,
+         [name]: value,
+       });  
+   }
 
-   //retorna um input type select 
-
-   // dois input type text
-   // um botão "pesquisar"
+   const handleSubmit = (event) => {
+      event.preventDefault();
+      setPropsList(searchData)
+   }
 
 
    return<div>
-   <input type="select" />
-   <InputText name="Nome"  value={formData.name} onChange={handleChange}/>
-   <InputText name="Label"/>
+      <form onSubmit={handleSubmit}>
+         <label>Estilo:</label>
+         <select name="tag" onChange={handleChange}>
+         {tags.map(e => <option value={e}>{e}</option>)}
+         </select>
+         <label>Artista:</label>
+         <input type="text" name="name" onChange={handleChange}/>
+         <label>Distrito:</label>
+         <select name="city" onChange={handleChange}>
+         {cities.map(e => <option value={e}>{e}</option>)}
+         </select>
+         <input type="submit" value="Pesquisar" />
+         {console.log(searchData)}
+      </form>
    </div>
 
    

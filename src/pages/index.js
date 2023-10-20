@@ -7,7 +7,6 @@ import ShowImage from '@/app/componentes/ShowImage'
 import TesteEvellyn from '@/app/componentes/TesteEvellyn'
 import TesteSilvia from '@/app/componentes/TesteSilvia'
 import { useRouter } from 'next/router'
-import ProfileHeader from '@/app/componentes/ProfileHeader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,9 +32,6 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         {/* <ShowImage />     */}
-        <ListCard />
-        <ProfileHeader artista={artista}/>
-        
         {/*<TesteEvellyn/>*/}
          </main>
          <button onClick={() => router.push("/photo/sfaqwqdsad142asd")}>asfasf</button>
