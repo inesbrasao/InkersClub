@@ -1,4 +1,4 @@
-
+[
 {
     
     "name": "Ana Carolina" ,
@@ -200,5 +200,6 @@
     "phone": "+351977777777",
     "password": "ArtGonçalo123",
     "category": ["black work", "neo tradicional"]
-},
+}
 
+]
