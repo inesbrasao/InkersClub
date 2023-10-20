@@ -65,7 +65,7 @@ export default function ProfileControl({props}) {
       <label htmlFor={formData.name}>{formData.name}</label> <br/>
       <input type="text" id={formData.name} value={formData.name}name={formData.name}   onChange={handleChange}/>
 
-       <InputText name="Nome"  value={formData.name} onChange={handleChange}/>
+       <InputText name="name"  value={formData.name} onChange={handleChange}/>
        <InputText name="Telemóvel"  value={formData.phone} onChange={handleChange}/>
        <InputText name="Estúdio"  value={formData.shop} onChange={handleChange}/>
        <InputText name="Localidade"  value={formData.city} onChange={handleChange}/>
