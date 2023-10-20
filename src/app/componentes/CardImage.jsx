@@ -4,9 +4,9 @@ import styles from '@/styles/styles.module.css'
 export default function CardImage({artist, image}) {
     //recebe uma imagem e uma (ou duas) tags
 
-    const pathImage = image.src
-   const tags = image.tags
-   const artistName = artist.name
+    const pathImage = image.path
+   const tags = image.tag
+   const artistName = image.artists_id   //artist.name
     
     //retorna uma div  com uma imagem e um paragrafo
 
