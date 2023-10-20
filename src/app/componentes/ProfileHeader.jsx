@@ -1,24 +1,12 @@
-const artista = {
-      "name": "João Silva",
-      "email": "joao.silva@gmail.com",
-      "instagram": "@joaosilva",
-      "city": "Lisboa",
-      "shop": "ArtStudio Lisboa",
-      "phone": "+351912345678",
-      "password": "SenhaSegura123",
-      "category": ["neo tradicional", "aquarela"]
-  };
-  
-  export default function ProfileHeader(artista) {
+export default function ProfileHeader({artista}) {
 
    //recebe informações do artista
-   
 
          return (
             <div>
                <div>
-                  <h1>{artista.name}</h1>;
-                  <img src="/6531323d939a1134f480717f/image1.jpg" alt="image1"/>
+                  <h1>{artista.name}</h1>
+                  <img src="/6531323d939a1134f480717f/image1.jpg" alt="aquarela"/>
                   <p>{artista.shop}</p>
                   <p>{artista.city}</p>
                </div>
@@ -29,7 +17,7 @@ const artista = {
                </div>
 
                <div>
-                  <link to="/"/>
+                  <a href ="mailto:">joao.silva@gmail.com</a>
                   <p>{artista.instagram}</p>
                </div>
 
