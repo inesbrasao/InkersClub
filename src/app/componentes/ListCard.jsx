@@ -27,7 +27,7 @@ export default function ListCard({paramsPesquisa}) {
 
 
         async function fetchData() {
-           const res = await fetch(`/api/search`, options);
+           const res = await fetch(`/api/search/`, options);
   
            console.log(res.status)
            if (res.status === 200) {
