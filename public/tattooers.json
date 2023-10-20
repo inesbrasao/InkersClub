@@ -1,4 +1,4 @@
-
+[
 {
     
     "name": "Ana Carolina" ,
@@ -175,7 +175,7 @@
     "name": "Luís Rodrigues",
     "email": "luis.rodrigues@gmail.com",
     "instagram": "@luisrodrigues",
-    "city": "Açores",
+    "city": "São Miguel",
     "shop": "ArtVision Açores",
     "phone": "+351955555555",
     "password": "ArtistaLuís",
@@ -200,5 +200,6 @@
     "phone": "+351977777777",
     "password": "ArtGonçalo123",
     "category": ["black work", "neo tradicional"]
-},
+}
 
+]
