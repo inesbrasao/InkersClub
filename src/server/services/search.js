@@ -22,7 +22,6 @@ export async function searchPhotos(searchParams) {
         let query = {};
         query.tag = tag
         imageCollection = await getResults("images", query)
-        console.log("oi", imageCollection)
     } 
     if (city || name){
         let query = {}
@@ -34,25 +33,22 @@ export async function searchPhotos(searchParams) {
         query.name = name
         }
         artistCollection = await getResults("artists", query)
-        console.log("oi", artistCollection)
     }
-
-    if(imageCollection.length === 0){
-        return artistCollection
-    } else if(artistCollection.length === 0) {
-        return imageCollection
-    } else {
-
+    
+    if(city && tag || name && tag){
         for(let i = 0; i < imageCollection.length; i++){
             for(let j = 0; j < artistCollection.length; j++){
                 console.log(imageCollection[i].artist_id)
                 console.log(artistCollection[j]._id.toString())
                 if(imageCollection[i].artist_id === artistCollection[j]._id.toString()){
-                    console.log("oi")
                     result.push(imageCollection[i])
                 }
             }
         }
+        return result
+    } else if(imageCollection.length === 0){
+        return artistCollection
+    } else if(artistCollection.length === 0) {
+        return imageCollection
     }
-    return result
 }

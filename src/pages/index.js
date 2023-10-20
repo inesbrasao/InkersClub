@@ -6,6 +6,7 @@ import ListCard from '@/app/componentes/ListCard'
 import ShowImage from '@/app/componentes/ShowImage'
 import TesteEvellyn from '@/app/componentes/TesteEvellyn'
 import { useRouter } from 'next/router'
+import InputSearch from '@/app/componentes/InputSearch'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         {/* <ShowImage />     */}
-        <ListCard />
+        <InputSearch />
         {/*<TesteEvellyn/>*/}
          </main>
          <button onClick={() => router.push("/photo/sfaqwqdsad142asd")}>asfasf</button>

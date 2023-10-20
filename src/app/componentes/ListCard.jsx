@@ -42,22 +42,6 @@ export default function ListCard({paramsPesquisa}) {
      }, [])
 
 
-    // const arrInfos = [
-    //     {idArtist : 1,
-    //     imgURL: "/next.svg" ,
-    //     tags : ["New School"]},
-    //     {idArtist : 2,
-    //     imgURL: "/next.svg" ,
-    //     tags : ["New School"]},
-    //     {idArtist : 3,
-    //     imgURL: "/next.svg" ,
-    //     tags : ["New School"]},
-    //     {idArtist : 4,
-    //     imgURL: "/next.svg" ,
-    //     tags : ["New School"]},
-    // ]
-
-
 
     return <div className={styles.listCard}>
         <button>Pesquisar</button>
@@ -67,8 +51,6 @@ export default function ListCard({paramsPesquisa}) {
         )}
         </div>
         }
-    
-    {/*{arrInfos.map(e => <CardImage key={e.idArtist} props={e}/>)}*/}
 
     </div>
     
