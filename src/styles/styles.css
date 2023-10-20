@@ -1,0 +1,111 @@
+*{
+    --color-main-text: #ceb27d;
+    --color-text-tag: #121420;
+    --color-text-card-image-tattooer: #ffffff;
+    --color-text-card-image-viewer: #121420;
+
+    --font-style-heading: 'Playfair Display';
+    --font-style-paragraph: 'Raleway';
+
+    --font-size-h3: 2rem;
+    --font-size-paragraph-1: 1.125rem;
+    --font-size-paragraph-2: 1rem; 
+    --font-size--button-homepage: 1.75rem;
+
+
+    --color-background-home-button: #121420;
+    --color-backgrund-submit-button: #ceb27d;
+    --color-background-textbox: #121420;
+    --color-background-tag: #ceb27d; 
+    --color-background-card-image-viewer: #ceb27d; 
+    -color-background-card-image-tattooer: #121420;
+    --color-background-add-button: #9ab592;
+    --color-background-return-button: #9ab592; 
+    --color-edit-button: #9ab592;
+
+    --button-home-page-width: 17.5rem;
+    /* 280pixels*/
+    --button-home-page-height: 4.5rem;
+    /* 72pixels*/
+
+    --search-menu-width:20.25rem;
+    /* 324pixels */
+    --search-menu-width:2.5rem;
+    /* 40pixels */
+
+    --cardimage-heigth: 11.5rem;
+    /* 185pixels */
+    --cardimage-width: 9.375rem;
+    /* 150pixels */
+
+    --search-section-width: 19.75rem;
+    /* 316pixels */
+    --search-section-heigth:2rem;
+    /* 32pixels */
+
+    --search-button-width:10.5rem
+    /* 168pixels */
+    --search-button-heigth:2.5rem
+    /* 40pixels */
+
+    --tag-width: min-width; 
+    --tag-heigth: 1.5rem;
+    /* 24pixels */
+
+    --zoom-image-width: 19.5rem;
+    /* 320pixels */
+    --zoom-image-heigth: 20rem;
+    /* 320pixels */
+
+    --profile-image-size: 6.25rem;
+    /* 100pixels */
+
+    --return-button-size: 3.5rem; 
+    /* 56pixels */
+
+    --add-button-size: 3.5rem; 
+    /* 56pixels */
+
+    --edit-button-size: 2rem;
+    /* 32pixels */
+
+    --change_page_button-width: 0.75rem;
+    /* 12pixels */
+    --change_page_button-height: 1.5rem;
+    /* 24pixels */
+
+    --text_box-width: 19.5rem;
+    /* 312pixels */
+    --text_box-heigth: 2.5rem;
+    /* 40pixels */
+
+    --upload-image-button-height: 2rem;
+    /* 32pixels */
+    --upload-image-button-width: 10.75rem;
+    /* 172pixels */
+
+    --submit-button-height:10.75rem;
+    /* 172pixels */
+    --submit-button-width:2.5rem;
+    /* 40pixels */
+
+    --edit-profile-button-heigth: 2.5rem; 
+    /* 40pixels */
+    --edit-profile-button-width: 10.75rem; 
+    /* 172pixels */
+
+    
+    --delete-profile-button-heigth:2.5rem;
+    /* 40pixels */
+    --delete-profile-button-width:8rem;
+    /* 128pixels */
+
+    --proflie-upload-picture-size: 6.25rem;
+    /* 100pixels */
+
+    --uploading-photos-heigth: 10.75rem;
+    /* 172pixels */
+    --uploading-photos-width: 10rem;
+    /* 160pixels */
+
+}
