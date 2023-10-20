@@ -13,6 +13,16 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const router = useRouter()
+  const artista = {
+    "name": "João Silva",
+    "email": "joao.silva@gmail.com",
+    "instagram": "@joaosilva",
+    "city": "Lisboa",
+    "shop": "ArtStudio Lisboa",
+    "phone": "+351912345678",
+    "password": "SenhaSegura123",
+    "category": ["neo tradicional", "aquarela"]
+};
   return (
     <>
       <Head>
@@ -24,7 +34,7 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         {/* <ShowImage />     */}
         <ListCard />
-        <ProfileHeader/>
+        <ProfileHeader artista={artista}/>
         {/*<TesteEvellyn/>*/}
          </main>
          <button onClick={() => router.push("/photo/sfaqwqdsad142asd")}>asfasf</button>
