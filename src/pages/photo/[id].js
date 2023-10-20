@@ -1,37 +1,18 @@
-import Button from "@/app/componentes/Button";
+import Tags from "@/app/componentes/Tags";
 import { useRouter } from "next/router"
-import { useState } from "react";
+import { useEffect, useState, } from "react";
+import styles from '@/styles/styles.module.css'
 
-
-{/*export default function App() {
-    const router = useRouter()
-    const id = router.asPath.split("/")[2]
-
-    async function fetchData() {
-        const res = await fetch(/api/search/{id});
-
-
-     }
-      fetchData();
-
-
-
-  return <div>{router.asPath.split("/")}</div>
-}*/}
-
-
-{/*imageState={
-  "path": "/6531323d939a1134f4807191/image2.jpg",
-    "artist_id": "6531323d939a1134f4807191",
-    "tag":["neo tradicional"]
-}*/}
-const router = useRouter()
-const id = router.asPath.split("/")[2]
 
 export default function ShowImage() {
+  const router = useRouter()
+  const id = router.asPath.split("/")[2]
+
+  const [idState, setIdState] = useState(router.asPath.split("/")[2])
+  const [imageState, setImagemState] = useState()
 
   useEffect(() => {
-    const options = {
+    const optionsImage = {
       method: 'POST',
       headers: {
         'Content-Type': "application/json"
@@ -42,54 +23,57 @@ export default function ShowImage() {
         "id": id
       })
     }
-  })
 
-  async function fetchData() {
-    const res = await fetch(`/api/search`, options);
+    async function fetchImage() {
+      console.log(idState)
 
-    console.log(res.status)
-    if (res.status === 200) {
-      const body = await res.json();
-      setImagemState(body)
+      const res = await fetch(`/api/fetchById`, optionsImage);
 
+      console.log(res.status)
+      if (res.status === 200) {
+        const body = await res.json();
+        setImagemState(body)
+
+      }
     }
-  }
-  fetchData();
+    async function fetchArtist() {
+      console.log(idState)
 
-  const pathImage = imageState.path
-  const tags = imageState.tag
-  const artistName = imageState  //artist.name
+      const res = await fetch(`/api/fetchById`, options);
 
+      console.log(res.status)
+      if (res.status === 200) {
+        const body = await res.json();
+        setImagemState(body)
 
+      }
+    }
+    fetchImage<();
 
+  }, [])
 
+  // const pathImage = imageState.path
+  // const tags = imageState.tag
+  // const artistName = imageState  //artist.name
 
-
-  //retorna 
-
-  return <div>
-
-    <button>Voltar</button>
-    <div>
-      {/*<Image
-           src={pathImage}
-           width={500}
-           height={500}
-           alt={artistName}
-        />*/}
-
+  return <> {imageState &&
+    <><button onClick={() => router.push()}>Voltar</button>
       <div>
-        {/* <div>
-              {state[0].tag.map(e => <Tags tagName={e} />)}
-           </div> */}
-        <div>
-          <p>{artistName}</p>
-          {/* <Button name="Ver perfil" /> */}
-        </div>
+        {console.log(imageState)}
 
+        <img src={imageState.path} alt="Girl in a jacket" ></img>
+        <div>
+          <div>
+            {imageState.tag.map(e => <Tags tagName={e} />)}
+          </div>
+          <div>
+            {/* //<p>{artistName}</p> 
+            <Button name="Ver perfil" />*/}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </>}
+  </>
 
 
 
