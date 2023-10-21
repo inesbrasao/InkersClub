@@ -1,4 +1,4 @@
-import styles from '@/styles/styles.module.css'
+import styles from '@/styles/photo.module.css'
 
 export default function Button({name}) {
    // recebe "conteudo" do botão

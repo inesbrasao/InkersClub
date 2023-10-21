@@ -1,6 +1,4 @@
-.body{
-    background-color: #121420;
-}
+
 
 .cardImage{
     background-color: #CEB27D;
@@ -16,6 +14,7 @@
 }
 
 .tags{
+    font-family: "Raleway";
     color: black;
 }
 

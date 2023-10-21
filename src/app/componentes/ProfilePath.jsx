@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import Button from "./Button";
+import styles from "../../styles/photo.module.css"
 
 
 export default function ProfilePath({artistId}) {
@@ -41,7 +42,6 @@ export default function ProfilePath({artistId}) {
    return <>{artistState &&
   <div>
              <p>{artistState.name}</p>  
-            "palavra"
             <Button name="Ver perfil" />
           </div>
    

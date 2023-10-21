@@ -1,7 +1,7 @@
 import Tags from "@/app/componentes/Tags";
 import { useRouter } from "next/router"
 import { useEffect, useState, } from "react";
-import styles from '@/styles/styles.module.css'
+import styles from '@/styles/photo.module.css'
 import Button from "@/app/componentes/Button";
 import { useParams } from "next/navigation";
 import ProfilePath from "@/app/componentes/ProfilePath";
@@ -51,21 +51,22 @@ export default function ShowImage() {
       }
      
     }
+    fetchImage()
+
+  }, [])
 
 
   return <> {imageState &&
-    <div className={styles.ShowImage}>
+    <div className={styles.showImage}>
       <button onClick={() => router.push(`/home`)}><img src="\icons\radix-icons_cross-1.svg"/></button> 
-      
       <div>
-
         <img src={imageState.path} alt="Girl in a jacket" ></img>
-        <div>
+        <div className={styles.photoInfo}>
           <div>
             {imageState.tag.map(e => <Tags tagName={e} key={e} />)}
+          </div>
+          <div>
             <ProfilePath artistId={imageState.artist_id}/>
-            <p>{imageState
-            .artist_id}</p> 
           </div>
           {/* <div>
             <p>{artistState.name}</p> 
