@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '@/styles/styles.module.css'
+import styles from '@/styles/homepage.module.css'
 
 export default function CardImage({artist, image}) {
     //recebe uma imagem e uma (ou duas) tags
@@ -13,12 +13,11 @@ export default function CardImage({artist, image}) {
     return <>
     
     <div className={styles.cardImage}>
-    <Image
+    <Image className={styles.image}
        src={pathImage}
-       //src={props.img}
-       width={100}
-       height={100}
-      alt={artistName}
+       width={293}
+       height={293}
+       alt={artistName}
     />
     <p className={styles.tags}>
         {tags}

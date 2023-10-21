@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react"
 import ListCard from "./ListCard"
+import styles from "../../styles/homepage.module.css"
 
 export default function InputSearch({changeParams}) {
    const [searchData, setSearchData] = useState()
-   const tags = [undefined, "minimalista", "tradicional", "pontilhismo", "aquarela"]
-   const cities = [undefined, "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", 
+   const tags = ["Estilo", undefined, "minimalista", "tradicional", "pontilhismo", "aquarela"]
+   const cities = ["Distrito", undefined, "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", 
    "Coimbra", "Évora", "Faro", "Funchal", "Guarda", "Leiria", "Lisboa", "Portalegre", 
    "Porto", "Santarém", "São Miguel", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu"]
 
@@ -13,7 +14,7 @@ export default function InputSearch({changeParams}) {
       setSearchData({
          ...searchData,
          [name]: value,
-       });  
+       });
    }
 
    const handleSubmit = (event) => {
@@ -21,19 +22,22 @@ export default function InputSearch({changeParams}) {
    }
 
 
-   return<div>
+   return<div className={styles.searchForm}>
       <form onSubmit={handleSubmit}>
-         <label>Estilo:</label>
-         <select name="tag" onChange={handleChange}>
-         {tags.map(e => <option value={e}>{e}</option>)}
+         <div>
+         <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={handleChange}>
+         {tags.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
          </select>
-         <label>Artista:</label>
-         <input type="text" name="name" onChange={handleChange}/>
-         <label>Distrito:</label>
-         <select name="city" onChange={handleChange}>
-         {cities.map(e => <option value={e}>{e}</option>)}
+         </div>
+         <div>
+         <input className={styles.inputBox} type="text" placeholder="Artista" name="name" onChange={handleChange}/>
+         </div>
+         <div>
+         <select className={styles.inputBox} name="city" onChange={handleChange}>
+         {cities.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
          </select>
-         <input type="submit" value="Pesquisar" />
+         </div>
+         <input className={styles.searchButton} type="submit" value="Pesquisar" />
       </form>
    </div>
 
