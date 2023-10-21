@@ -7,6 +7,7 @@ import ShowImage from '@/app/componentes/ShowImage'
 import TesteEvellyn from '@/app/componentes/TesteEvellyn'
 import TesteSilvia from '@/app/componentes/TesteSilvia'
 import { useRouter } from 'next/router'
+import ProfilePath from '@/app/componentes/ProfilePath'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,12 +31,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
+      <main >
         {/* <ShowImage />     */}
         {/* <TesteEvellyn/> */}
 
-        <ListCard/>
-
+        <ListCard/> 
+       
+       
         
          </main>
          

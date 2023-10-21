@@ -4,6 +4,7 @@ import { useEffect, useState, } from "react";
 import styles from '@/styles/styles.module.css'
 import Button from "@/app/componentes/Button";
 import { useParams } from "next/navigation";
+import ProfilePath from "@/app/componentes/ProfilePath";
 
 
 export default function ShowImage() {
@@ -13,7 +14,7 @@ export default function ShowImage() {
 
   const [idState, setIdState] = useState(router.asPath.split("/")[2])
   const [imageState, setImageState] = useState()
-  const [artistState, setArtistState] = useState()
+  //const [artistState, setArtistState] = useState()
 
     useEffect(() => {
     
@@ -27,14 +28,14 @@ export default function ShowImage() {
         "id": idState
       })
     }
-    const optionsArtist = {
-      method: 'POST',
-      headers: {'Content-Type': "application/json"},
-      body: JSON.stringify({
-        "collection": "artists",
-        "id": "6531323d939a1134f480717e" //NÃO ESQUECER DE MUDAR
-      })
-    }
+    // const optionsArtist = {
+    //   method: 'POST',
+    //   headers: {'Content-Type': "application/json"},
+    //   body: JSON.stringify({
+    //     "collection": "artists",
+    //     "id": "65325d5990af02c609610323" //NÃO ESQUECER DE MUDAR
+    //   })
+    // }
 
     async function fetchImage() {
 
@@ -44,27 +45,26 @@ export default function ShowImage() {
       if (res.status === 200) {
         const body = await res.json();
         setImageState(body)
-
-      }
-      if (imageState) {
-        await fetchArtist()
-      }
-
-    }
-    async function fetchArtist() {
-
-      const res = await fetch(`/api/fetchById`, optionsArtist);
-
-      console.log(artistState, 'ola1')
-      console.log(res.status)
-      if (res.status === 200) {
-        const body = await res.json();
-        setArtistState(body)
         
-        console.log(artistState,imageState.artist_id, 'ola2')
+      
+
       }
+     
     }
-    fetchImage(),fetchArtist();
+    // async function fetchArtist() {
+
+    //   const res = await fetch(`/api/fetchById`, optionsArtist);
+
+    //   console.log(res.status, "ola2")
+    //   if (res.status === 200) {
+    //     const body = await res.json();
+    //     setArtistState(body)
+    //     console.log(artistState, 'ola1')
+        
+    //     // console.log(artistState,imageState.artist_id, 'ola2')
+    //   }
+    // }
+    fetchImage();//,fetchArtist();
 
   }, [])
 
@@ -82,11 +82,14 @@ export default function ShowImage() {
         <div>
           <div>
             {imageState.tag.map(e => <Tags tagName={e} key={e} />)}
+            <ProfilePath artistId={imageState.artist_id}/>
+            <p>{imageState
+            .artist_id}</p> 
           </div>
-          <div>
-            <p>{artistState}</p> 
+          {/* <div>
+            <p>{artistState.name}</p> 
             <Button name="Ver perfil" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>}
