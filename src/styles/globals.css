@@ -1,4 +1,22 @@
 :root {
+  --primarycolor:#121420 ;
+  --secondarycolor : #ceb27d;
+
+  --font-style-heading: 'Playfair Display';
+  --font-style-paragraph: 'Raleway';
+
+  --font-size-h3: 2rem;
+  --font-size-paragraph-1: 1.125rem;
+  --font-size-paragraph-2: 1rem; 
+  --font-size--button-homepage: 1.75rem;
+
+
+
+
+
+
+/* --------------------------------------- */
+
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -73,32 +91,19 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background:  #121420;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+
 
 @media (prefers-color-scheme: dark) {
   html {

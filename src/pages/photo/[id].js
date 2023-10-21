@@ -2,6 +2,7 @@ import Tags from "@/app/componentes/Tags";
 import { useRouter } from "next/router"
 import { useEffect, useState, } from "react";
 import styles from '@/styles/styles.module.css'
+import Button from "@/app/componentes/Button";
 
 
 export default function ShowImage() {
@@ -9,7 +10,8 @@ export default function ShowImage() {
   const id = router.asPath.split("/")[2]
 
   const [idState, setIdState] = useState(router.asPath.split("/")[2])
-  const [imageState, setImagemState] = useState()
+  const [imageState, setImageState] = useState()
+  const [artistState, setArtistState] = useState()
 
   useEffect(() => {
     const optionsImage = {
@@ -18,38 +20,48 @@ export default function ShowImage() {
         'Content-Type': "application/json"
       },
       body: JSON.stringify({
-        //"city": paramsPesquisa.city
         "collection": "images",
         "id": id
       })
     }
+    const optionsArtist = {
+      method: 'POST',
+      headers: {'Content-Type': "application/json"},
+      body: JSON.stringify({
+        "collection": "artists",
+        "id": "6531323d939a1134f4807188"
+      })
+    }
 
     async function fetchImage() {
-      console.log(idState)
+      console.log(imageState, "tst")
 
       const res = await fetch(`/api/fetchById`, optionsImage);
 
       console.log(res.status)
       if (res.status === 200) {
         const body = await res.json();
-        setImagemState(body)
+        setImageState(body)
 
       }
+      if (imageState !== undefined) {
+        console.log(idState, imageState, "teste11")
+        await fetchArtist()
+      }
+
     }
     async function fetchArtist() {
-      console.log(idState)
+      console.log(idState.artist_id, "teste2")
 
-      const res = await fetch(`/api/fetchById`, options);
+      const res = await fetch(`/api/fetchById`, optionsArtist);
 
       console.log(res.status)
       if (res.status === 200) {
         const body = await res.json();
-        setImagemState(body)
+        setArtistState(body)
 
       }
     }
-    //fetchImage<();
-
   }, [])
 
   // const pathImage = imageState.path
@@ -57,22 +69,24 @@ export default function ShowImage() {
   // const artistName = imageState  //artist.name
 
   return <> {imageState &&
-    <><button onClick={() => router.push()}>Voltar</button>
+    <div className={styles.ShowImage}>
+      <button onClick={() => router.push(`/home`)}><img src="\icons\radix-icons_cross-1.svg"/></button>
       <div>
         {console.log(imageState)}
+        {console.log(artistState)}
 
         <img src={imageState.path} alt="Girl in a jacket" ></img>
         <div>
           <div>
-            {imageState.tag.map(e => <Tags tagName={e} />)}
+            {imageState.tag.map(e => <Tags tagName={e} key={e} />)}
           </div>
           <div>
-            {/* //<p>{artistName}</p> 
-            <Button name="Ver perfil" />*/}
+            <p>{artistState}</p> 
+            <Button name="Ver perfil" />
           </div>
         </div>
       </div>
-    </>}
+    </div>}
   </>
 
 
