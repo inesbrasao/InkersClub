@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react"
 import ListCard from "./ListCard"
 
-export default function InputSearch() {
+export default function InputSearch({changeParams}) {
    const [searchData, setSearchData] = useState()
-   const [propsList, setPropsList] = useState()
    const tags = [undefined, "minimalista", "tradicional", "pontilhismo", "aquarela"]
    const cities = [undefined, "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", 
    "Coimbra", "Évora", "Faro", "Funchal", "Guarda", "Leiria", "Lisboa", "Portalegre", 
@@ -18,8 +17,7 @@ export default function InputSearch() {
    }
 
    const handleSubmit = (event) => {
-      event.preventDefault();
-      setPropsList(searchData)
+      changeParams(searchData)
    }
 
 
@@ -36,7 +34,6 @@ export default function InputSearch() {
          {cities.map(e => <option value={e}>{e}</option>)}
          </select>
          <input type="submit" value="Pesquisar" />
-         {console.log(searchData)}
       </form>
    </div>
 

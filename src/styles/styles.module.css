@@ -1,16 +1,92 @@
-.cardImage{
+.background{
+  background-color: #121420;
+}
+
+.searchButton{/* Group 4 */
+
+  position: absolute;
+  width: 324px;
+  height: 40px;
+  left: 26px;
+  top: 75px;
+  
+  
+  
+  /* system-uicons:filter */
+  
+  position: absolute;
+  width: 29.28px;
+  height: 15px;
+  left: 63.08px;
+  top: 86px;
+  
+  
+  
+  /* Rectangle 15 */
+  
+  position: absolute;
+  width: 324px;
+  height: 40px;
+  left: 26px;
+  top: 75px;
+  
+  background: #121420;
+  border: 1px solid #CEB27D;
+  border-radius: 4px;
+  
+  
+  /* pesquisar */
+  
+  position: absolute;
+  width: 324px;
+  height: 38.75px;
+  left: 26px;
+  top: 75px;
+  
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160.6%;
+  /* or 26px */
   display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  
+  color: #CEB27D;
+  
+  
+  
+
+}
+
+.cardImage{
+/* Rectangle 8 */
+
+width: 150px;
+height: 185px;
+left: 26px;
+top: 141px;
+
+background: #CEB27D;
+/* bege */
+border: 1px solid #CEB27D;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 6px;
+
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   max-width: 100px;
   max-height: 100px;
-  border: 1px black solid;
-  background: darkblue;
+  border: 2px #CEB27D solid;
+  background: #CEB27D; */
 }
 .listCard{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
  /* width: 100vh; */
@@ -18,7 +94,7 @@
   /* flex-shrink: 1; */
 
   border: 1px black solid;
-  background: rgb(0, 139, 76);
+  background: #121420;
 }
 
 .tagButton{
@@ -26,6 +102,31 @@
 }
 .button{
 background-color: rgb(255, 49, 49);
+}
+
+.tag{
+  /* Neo Tradicional */
+
+position: absolute;
+width: 92px;
+height: 14px;
+left: 34px;
+top: 294px;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #121420;
+
+
 }
 
 /*
