@@ -1,31 +1,32 @@
 import Image from 'next/image'
 import styles from '@/styles/styles.module.css'
 
-export default function CardImage({artist, image}) {
+export default function CardImage({ artist, image }) {
     //recebe uma imagem e uma (ou duas) tags
 
     const pathImage = image.path
-   const tags = image.tag
-   const artistName = image.artists_id   //artist.name
-    
+    const tags = image.tag
+    const artistName = image.artist_id   
+
+    console.log(image)
+
     //retorna uma div  com uma imagem e um paragrafo
 
     return <>
-    
-    <div className={styles.cardImage}>
-    <Image
-       src={pathImage}
-       //src={props.img}
-       width={100}
-       height={100}
-      alt={artistName}
-    />
-    <p className={styles.tags}>
-        {tags}
-    </p>
-    </div>
+  <div className={styles.cardImage}>
+            <Image
+                src={pathImage}
+                //src={props.img}
+                width={100}
+                height={100}
+                alt={artistName}
+            />
+            <p>
+                {tags}
+            </p>
+        </div>
     </>
-    
+
 }
 
 
@@ -54,7 +55,7 @@ export default function CardImage({artist, image}) {
 
 [XX]SHOWIMAGE
 
-*/  
+*/
 
 
 
