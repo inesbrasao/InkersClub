@@ -12,7 +12,7 @@ async function getResults(collect, params) {
 
 async function getRandomResults() {
   const collection = await GetCollection("inkersclub", "images")
-  const result = await collection.aggregate([{$sample: {size: 5} }]).toArray()
+  const result = await collection.aggregate([{$sample: {size: 10} }]).toArray()
   return result
 } 
 

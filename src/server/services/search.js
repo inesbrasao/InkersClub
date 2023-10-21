@@ -11,6 +11,7 @@ export async function searchPhotos(searchParams) {
     let imageCollection = []
     let artistCollection = []
     let result = []
+    console.log("searchphotos", searchParams)
 
 
     if(!city && !name && !tag) {
@@ -38,8 +39,6 @@ export async function searchPhotos(searchParams) {
     if(city && tag || name && tag){
         for(let i = 0; i < imageCollection.length; i++){
             for(let j = 0; j < artistCollection.length; j++){
-                console.log(imageCollection[i].artist_id)
-                console.log(artistCollection[j]._id.toString())
                 if(imageCollection[i].artist_id === artistCollection[j]._id.toString()){
                     result.push(imageCollection[i])
                 }
@@ -47,7 +46,16 @@ export async function searchPhotos(searchParams) {
         }
         return result
     } else if(imageCollection.length === 0){
-        return artistCollection
+        const images = await getResults("images")
+        for(let i = 0; i < images.length; i++){
+            for(let j = 0; j < artistCollection.length; j++){
+                if(images[i].artist_id === artistCollection[j]._id.toString()){
+                    result.push(images[i])
+                }
+            }
+
+        }
+        return result
     } else if(artistCollection.length === 0) {
         return imageCollection
     }
