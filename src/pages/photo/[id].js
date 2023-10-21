@@ -75,7 +75,7 @@ export default function ShowImage() {
   return <> {imageState &&
     <div className={styles.ShowImage}>
       <button onClick={() => router.push(`/home`)}><img src="\icons\radix-icons_cross-1.svg"/></button> 
-      <button onClick={console.log(userId)}>TESTE</button> 
+      
       <div>
 
         <img src={imageState.path} alt="Girl in a jacket" ></img>
