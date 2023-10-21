@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
+
+
 :root {
   --primarycolor:#121420 ;
   --secondarycolor : #ceb27d;
@@ -92,21 +96,6 @@
 }
 
 
-html,
-body {
-  max-width: 100vw;
-  
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background:  #121420;
-}
 
 
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

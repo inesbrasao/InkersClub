@@ -1,13 +1,15 @@
 import Image from 'next/image'
 import styles from '@/styles/homepage.module.css'
 
-export default function CardImage({artist, image}) {
+export default function CardImage({ artist, image }) {
     //recebe uma imagem e uma (ou duas) tags
 
     const pathImage = image.path
-   const tags = image.tag
-   const artistName = image.artists_id   //artist.name
-    
+    const tags = image.tag
+    const artistName = image.artist_id   
+
+    console.log(image)
+
     //retorna uma div  com uma imagem e um paragrafo
 
     return <>
@@ -24,7 +26,7 @@ export default function CardImage({artist, image}) {
     </p>
     </div>
     </>
-    
+
 }
 
 
@@ -53,7 +55,7 @@ export default function CardImage({artist, image}) {
 
 [XX]SHOWIMAGE
 
-*/  
+*/
 
 
 
