@@ -16,12 +16,14 @@
     --color-background-home-button: #121420;
     --color-backgrund-submit-button: #ceb27d;
     --color-background-textbox: #121420;
+    --color-border-textbox: #ceb27d;
     --color-background-tag: #ceb27d; 
     --color-background-card-image-viewer: #ceb27d; 
     -color-background-card-image-tattooer: #121420;
     --color-background-add-button: #9ab592;
     --color-background-return-button: #9ab592; 
     --color-edit-button: #9ab592;
+
 
     --button-home-page-width: 17.5rem;
     /* 280pixels*/

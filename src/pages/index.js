@@ -7,6 +7,7 @@ import ShowImage from '@/app/componentes/ShowImage'
 import TesteEvellyn from '@/app/componentes/TesteEvellyn'
 import TesteSilvia from '@/app/componentes/TesteSilvia'
 import { useRouter } from 'next/router'
+import UploadImage from '@/app/componentes/UploadImage'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,6 +34,7 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         {/* <ShowImage />     */}
         {/* <TesteEvellyn/> */}
+      
 
         <ListCard/>
 
