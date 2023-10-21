@@ -51,26 +51,7 @@ export default function ShowImage() {
       }
      
     }
-    // async function fetchArtist() {
 
-    //   const res = await fetch(`/api/fetchById`, optionsArtist);
-
-    //   console.log(res.status, "ola2")
-    //   if (res.status === 200) {
-    //     const body = await res.json();
-    //     setArtistState(body)
-    //     console.log(artistState, 'ola1')
-        
-    //     // console.log(artistState,imageState.artist_id, 'ola2')
-    //   }
-    // }
-    fetchImage();//,fetchArtist();
-
-  }, [])
-
-  // const pathImage = imageState.path
-  // const tags = imageState.tag
-  // const artistName = imageState  //artist.name
 
   return <> {imageState &&
     <div className={styles.ShowImage}>

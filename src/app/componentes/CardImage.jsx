@@ -13,8 +13,7 @@ export default function CardImage({ artist, image }) {
     //retorna uma div  com uma imagem e um paragrafo
 
     return <>
-
-        <div className={styles.cardImage}>
+  <div className={styles.cardImage}>
             <Image
                 src={pathImage}
                 //src={props.img}
