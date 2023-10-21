@@ -20,7 +20,7 @@ export default function CardImage({artist, image}) {
        height={100}
       alt={artistName}
     />
-    <p>
+    <p className={styles.tags}>
         {tags}
     </p>
     </div>

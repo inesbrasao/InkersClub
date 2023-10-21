@@ -62,8 +62,6 @@ export default function ShowImage() {
 
       }
     }
-    fetchImage();//,fetchArtist();
-
   }, [])
 
   // const pathImage = imageState.path
