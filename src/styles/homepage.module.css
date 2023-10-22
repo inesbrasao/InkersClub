@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+
+
 }
 
 .cardImage {
@@ -13,6 +16,10 @@
     display: flex;
     flex-direction: column;
     height: 230px;
+    
+   
+
+
 }
 
 .image {
@@ -29,11 +36,10 @@
     font-size: 1rem;
 }
 
-.idContainer {
+.listCard {
 
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-evenly;
 
 }
@@ -49,7 +55,7 @@
     padding: 1rem;
     letter-spacing: 0.02em;
     color: #CEB27D;
-    margin: 20px;
+    margin: 25px;
 
 }
 

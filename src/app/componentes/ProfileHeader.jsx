@@ -40,7 +40,8 @@ const [artista, setArtista] = useState(artistaTeste)
          </div>
 
          <div className={styles.tagsContainer}>
-            {artista.category.map(e => <Tags tagName={e} key={e} />)}
+            
+            {artista.category.map(e => <p className={styles.tags}>{e}</p>)}
 
             {/* <p>neo tradicional</p>
             <p>aquarela</p> */}
@@ -51,7 +52,7 @@ const [artista, setArtista] = useState(artistaTeste)
             <p>{artista.instagram}</p>
          </div>
 
-         <button onClick={() => {
+         {/* <button onClick={() => {
             //  alert('clicked');
          }}>editar </button>
 
@@ -59,7 +60,7 @@ const [artista, setArtista] = useState(artistaTeste)
          <button onClick={() => {
 
          }}>
-            adicionar foto</button>
+            adicionar foto</button> */}
       </div>
    );
 
