@@ -1,17 +1,16 @@
+.cardImage {
+  /* Rectangle 8 */
 
-.cardImage{
-/* Rectangle 8 */
+  width: 150px;
+  height: 185px;
+  left: 26px;
+  top: 141px;
 
-width: 150px;
-height: 185px;
-left: 26px;
-top: 141px;
-
-background: #CEB27D;
-/* bege */
-border: 1px solid #CEB27D;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 6px;
+  background: #CEB27D;
+  /* bege */
+  border: 1px solid #CEB27D;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
 
   /* display: flex;
   flex-direction: column;
@@ -22,12 +21,12 @@ border-radius: 6px;
   border: 2px #CEB27D solid;
   background: #CEB27D; */
 }
-.listCard{
+
+.listCard {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
- /* width: 100vh; */
   align-items: center;
   /* flex-shrink: 1; */
 
@@ -35,7 +34,7 @@ border-radius: 6px;
   background: #121420;
 }
 
-.tagButton{
+.tagButton {
   background-color: var(--secondarycolor);
   color: var(--primarycolor);
   cursor: pointer;
@@ -44,41 +43,41 @@ border-radius: 6px;
   font-size: var(--font-size-paragraph-2);
   padding: .25rem .5rem;
   position: relative;
- 
+
 }
 
-.showImage{
+.showImage {
   display: flex;
   background-color: var(--primarycolor)
 }
 
 
-.button{
-background-color: rgb(255, 49, 49);
+.button {
+  background-color: rgb(255, 49, 49);
 }
 
 
-.tag{
- 
+.tag {
 
-position: absolute;
-width: 92px;
-height: 14px;
-left: 34px;
-top: 294px;
 
-font-family: 'Raleway';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.03em;
+  position: absolute;
+  width: 92px;
+  height: 14px;
+  left: 34px;
+  top: 294px;
 
-color: #121420;
+  font-family: 'Raleway';
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #121420;
 
 
 }

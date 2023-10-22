@@ -58,11 +58,11 @@ export default function ShowImage() {
 
   return <> {imageState &&
     <div className={styles.showImage}>
-      <button onClick={() => router.push(`/home`)}><img src="\icons\radix-icons_cross-1.svg"/></button> 
-      <div>
-        <img src={imageState.path} alt="Girl in a jacket" ></img>
+      <button onClick={() => router.push(`/home`)}  className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg"/></button> 
+      <div className={styles.photoContainer}>
+        <img className={styles.photo} src={imageState.path} alt="Girl in a jacket" ></img>
         <div className={styles.photoInfo}>
-          <div>
+          <div className={styles.tags}>
             {imageState.tag.map(e => <Tags tagName={e} key={e} />)}
           </div>
           <div>
