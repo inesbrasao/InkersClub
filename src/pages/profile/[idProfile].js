@@ -6,6 +6,7 @@ import Button from "@/app/componentes/Button";
 import { useParams } from "next/navigation";
 import ProfilePath from "@/app/componentes/ProfilePath";
 import CardImage from "@/app/componentes/CardImage";
+import ProfileHeader from "@/app/componentes/ProfileHeader";
 
 
 export default function ArtistsImages() {
@@ -44,6 +45,7 @@ export default function ArtistsImages() {
 
 
     return <div>
+        {<ProfileHeader id={id} />}
         {artistImages && <div>
             {artistImages.map(e => <div><CardImage image={e} /></div>)}
         </div>
