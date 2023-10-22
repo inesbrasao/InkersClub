@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '@/styles/styles.module.css'
+import styles from '@/styles/homepage.module.css'
 
 export default function CardImage({ artist, image }) {
     //recebe uma imagem e uma (ou duas) tags
@@ -13,18 +13,18 @@ export default function CardImage({ artist, image }) {
     //retorna uma div  com uma imagem e um paragrafo
 
     return <>
-  <div className={styles.cardImage}>
-            <Image
-                src={pathImage}
-                //src={props.img}
-                width={100}
-                height={100}
-                alt={artistName}
-            />
-            <p>
-                {tags}
-            </p>
-        </div>
+    
+    <div className={styles.cardImage}>
+    <Image className={styles.image}
+       src={pathImage}
+       width={293}
+       height={293}
+       alt={artistName}
+    />
+    <p className={styles.tags}>
+        {tags}
+    </p>
+    </div>
     </>
 
 }
