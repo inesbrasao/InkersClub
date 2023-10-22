@@ -8,6 +8,7 @@ import TesteEvellyn from '@/app/componentes/TesteEvellyn'
 import TesteSilvia from '@/app/componentes/TesteSilvia'
 import { useRouter } from 'next/router'
 import ProfilePath from '@/app/componentes/ProfilePath'
+import ProfileHeader from '@/app/componentes/ProfileHeader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
-
+    <ProfileHeader/>
          </main>
          
     </>
