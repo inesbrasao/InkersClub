@@ -3,9 +3,11 @@ import styles from '../styles/homepage.module.css'
 
 
 export default function Home() {
-    return (
+    return(
+          <div>
           <div className={styles.body} >
               <ListCard />
+
           </div>
     )
   }

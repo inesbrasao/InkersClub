@@ -7,6 +7,7 @@ import ShowImage from '@/app/componentes/ShowImage'
 import TesteEvellyn from '@/app/componentes/TesteEvellyn'
 import TesteSilvia from '@/app/componentes/TesteSilvia'
 import { useRouter } from 'next/router'
+import UploadImage from '@/app/componentes/UploadImage'
 import ProfilePath from '@/app/componentes/ProfilePath'
 import ProfileHeader from '@/app/componentes/ProfileHeader'
 
@@ -25,6 +26,7 @@ export default function Home() {
       </Head>
       <main >
     <ProfileHeader/>
+
          </main>
          
     </>
