@@ -42,7 +42,7 @@ export default function ProfilePath({artistId}) {
    return <>{artistState &&
   <div>
              <p>{artistState.name}</p>  
-            <Button name="Ver perfil" />
+            <Button name="Ver perfil" id={artistState._id} />
           </div>
    
     
