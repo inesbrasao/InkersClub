@@ -17,13 +17,12 @@ export default function CardImage({ artist, image }) {
     <div className={styles.cardImage}>
     <Image className={styles.image}
        src={pathImage}
-       width={293}
-       height={293}
+       width={180}
+       height={180}
        alt={artistName}
     />
-    <p className={styles.tags}>
-        {tags}
-    </p>
+    {tags.map(e=><p className={styles.tags}>{e}</p>)}
+   
     </div>
     </>
 

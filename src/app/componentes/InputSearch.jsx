@@ -22,8 +22,8 @@ export default function InputSearch({changeParams}) {
    }
 
 
-   return<div className={styles.searchForm}>
-      <form onSubmit={handleSubmit}>
+   return<div >
+      <form onSubmit={handleSubmit} className={styles.searchForm}>
          <div>
          <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={handleChange}>
          {tags.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
