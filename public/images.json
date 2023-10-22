@@ -121,6 +121,11 @@
     "tag":["single line"]
 },
 {
+    "path": "/6531323d939a1134f4807181/image3.jpg",
+    "artist_id": "6531323d939a1134f4807181",
+    "tag":["sem contorno"]
+},
+{
     "path": "/6531323d939a1134f4807182/image1.jpg",
     "artist_id": "6531323d939a1134f4807182",
     "tag":["lettering"]
@@ -159,6 +164,11 @@
     "path": "/6531323d939a1134f4807184/image2.jpg",
     "artist_id": "6531323d939a1134f4807184",
     "tag":["lettering"]
+},
+{
+    "path": "/6531323d939a1134f4807184/image3.jpg",
+    "artist_id": "6531323d939a1134f4807184",
+    "tag":["single line"]
 },
 {
     "path": "/6531323d939a1134f4807185/image1.jpg",
@@ -209,6 +219,11 @@
     "path": "/6531323d939a1134f4807189/image2.jpg",
     "artist_id": "6531323d939a1134f4807189",
     "tag":["tinta vermelha"]
+},
+{
+    "path": "/6531323d939a1134f4807189/image3.jpg",
+    "artist_id": "6531323d939a1134f4807189",
+    "tag":["floral"]
 },
 {
     "path": "/6531323d939a1134f4807190/image1.jpg",
