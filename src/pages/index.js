@@ -28,10 +28,7 @@ export default function Home() {
         {/* <TesteEvellyn/> */}
       
 
-        <ListCard/>
-=======
-      <main>
-
+      
          </main>
          
     </>
