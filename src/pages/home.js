@@ -14,9 +14,14 @@ export default function Home() {
                 <Button>Procuro tatuador</Button>
             </div>
 
+
             <div>
                 <Button>Sou tatuador</Button>
             </div> */}
            </div> 
+
+          </div>
+          </div>
+
     )
   }

@@ -1,0 +1,80 @@
+.ProfileHeader {
+  color: var(--secondarycolor);
+  background-color: var(--primarycolor);
+
+
+}
+
+.idImage {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.idContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tagsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.tags {
+  font-family: "Raleway";
+  color: var(--primarycolor);
+  margin: 2px;
+  font-size: 1rem;
+  background-color: var(--secondarycolor);
+  padding: 4px;
+}
+.idData {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+
+
+
+.idData p {
+  font-family: var(--font-style-paragraph);
+  font-size: var(--font-size-paragraph-2);
+  margin: 0;
+  margin-bottom: 8px;
+}
+.contactContainer {
+  font-family: var(--font-style-paragraph);
+  font-size: var(--font-size-paragraph-2);
+  margin: 0;
+  margin-top: 8px;
+}
+.contactContainer p{
+  margin-bottom: 8px;
+  margin: 0px;
+  
+}
+.contactContainer a{
+  
+  color: var(--secondarycolor);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.idData h1 {
+  font-family: var(--font-style-heading);
+  font-size: var(--font-size-h3);
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160.6%;
+  letter-spacing: 0.04rem;
+}

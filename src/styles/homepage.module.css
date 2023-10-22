@@ -1,59 +1,87 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 
-.cardImage{
-    background-color: #CEB27D;
-    width: 295px;
-    border-radius: 6px;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
-.image{
+.cardImage {
+    background-color: #CEB27D;
+    width: 182px;
+    border-radius: 6px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    
+   
+
+
+}
+
+.image {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     border: 1px #CEB27D solid;
+    object-fit: cover
 }
 
-.tags{
+.tags {
     font-family: "Raleway";
-    color: black;
+    color: var(--primarycolor);
+    margin: 2px;
+    font-size: 1rem;
 }
 
-.listCard{
-    margin-left: 50px;
-    margin-right: 50px;
+.listCard {
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
+    justify-content: space-evenly;
+
 }
 
-.searchButton{
+.searchButton {
 
-background: #121420;
-border: 1px solid #CEB27D;
-border-radius: 4px;
-width: 324px;
-height: 38.75px;
-font-weight: 400;
-font-size: 16px;
-line-height: 160.6%;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.02em;
-color: #CEB27D;
-margin-bottom: 50px;
+    background: #121420;
+    border: 1px solid #CEB27D;
+    border-radius: 4px;
+    width: 90vw;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 1rem;
+    letter-spacing: 0.02em;
+    color: #CEB27D;
+    margin: 25px;
 
 }
 
 .searchForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 
 }
 
-.inputBox{
+.inputBox {
     background: #121420;
+    border: 1px solid #CEB27D;
+    border-radius: 4px;
+    width: 90vw;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 1.5rem;
+    letter-spacing: 0.02em;
+    color: #CEB27D;
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* background: #121420;
     border: 1px solid #CEB27D;
     border-radius: 4px;
     width: 324px;
@@ -66,6 +94,6 @@ margin-bottom: 50px;
     text-align: center;
     letter-spacing: 0.02em;
     color: #CEB27D;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
 
 }
