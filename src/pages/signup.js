@@ -1,11 +1,12 @@
 import InputText from "@/app/componentes/InputText";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
+import styles from '@/styles/signup.module.css'
 
 import React, { useState } from 'react';
 
 export default function SignUp() {
   const [formData, setFormData] = useState()
-  const [artistId, setArtistId] = useState()
+  // const [artistId, setArtistId] = useState()
   const router = useRouter()
 
   const options = {
@@ -47,16 +48,16 @@ export default function SignUp() {
 
 
 
-  return (
+  return (<div className={styles.formContainer}>
     <div>
-      <h1>Criar Conta</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className={styles.title}>Criar Conta</h1>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <InputText name="email" label="Email" onChange={handleChange} />
         <InputText name="password" label="Senha" onChange={handleChange} />
         <InputText name="passwordConfirmation" label="Confirmar Senha" onChange={handleChange} />
 
-        <button type="submit" >Continuar</button>
+        <button className={styles.button} type="submit" >Continuar</button>
       </form>
-    </div>
+    </div></div>
   )
 }

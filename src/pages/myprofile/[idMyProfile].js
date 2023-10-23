@@ -2,7 +2,7 @@ import CardImage from "@/app/componentes/CardImage";
 import ProfileHeader from "@/app/componentes/ProfileHeader";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import styles from '@/styles/myprofile.module.css'
 
 export default function MyProfile() {
 
@@ -43,15 +43,13 @@ export default function MyProfile() {
     }, [router.isReady])
 
 
-    return <div> {artistImages && <div>
-        <div>
+    return <div>  {artistImages && <div className={styles.myProfileContainer}>
+        <div className={styles.headerContainer}>
             <ProfileHeader id={id} />
-            <button onClick={() => { router.push(`/myprofile/form/${id}`) }}><img src="/icons/edit_profile.svg" /></button>
+            <button className={`${styles.editbutton} ${styles.button}`}onClick={() => { router.push(`/myprofile/form/${id}`) }}><img src="/icons/edit_profile.svg" /></button>
+            <button className={`${styles.addbutton} ${styles.button}`} onClick={() => { router.push(`/myprofile/addimage/${id}`) }}><img src="/icons/add_photo.svg" /></button>
         </div>
-        <div>
-            <button onClick={() => { router.push(`/myprofile/addimage/${id}`) }}><img src="/icons/add_photo.svg" /></button>
-        </div>
-        <div>
+        <div className={styles.cardBackground}>
             {artistImages && artistImages.length > 0
                 ? artistImages.map(e => <div key={e.id}><CardImage image={e} /></div>)
                 : <div>Ainda não tens nenhuma imagem, adicione agora!</div>
