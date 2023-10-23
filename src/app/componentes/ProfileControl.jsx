@@ -39,14 +39,7 @@ export default function ProfileControl({props}) {
       console.log('Form data:', { name, phone, shop, city, instagram });
       console.log(event.target);
   
-      // Reset the form after submission
-      // setFormData({
-      //    name: '',
-      //    phone: '',
-      //    shop: '',
-      //    city: '',
-      //    instagram:''
-      // });
+  
     };
 
     const handleChange = (event) => {
@@ -74,7 +67,7 @@ export default function ProfileControl({props}) {
       
     
       {/* <Button name="alterar"/>  */}
-      <button type="submit">Submit</button>
+      <button type="submit" onClick={handleSubmit()}>Submit</button>
       </form>
 
    </div>
