@@ -1,0 +1,40 @@
+.myProfileContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.cardBackground {
+    background-color: #CEB27D;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 12px 12px 0 0;
+    flex-grow: 1
+}
+
+.button {
+    background: transparent;
+    border: none;
+}
+
+.addbutton {
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+
+}
+.editbutton {
+
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    
+}
+.headerContainer{
+    position: relative;
+}

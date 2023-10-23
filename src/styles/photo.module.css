@@ -1,6 +1,6 @@
 .showImage {
   color: #CEB27D;
-  width: 90vw;
+  
   margin-top: 20px;
 }
 
@@ -83,6 +83,19 @@
 }
 
 .cardBackground {
-  background-color: #CEB27D;
-  width: 100%;
+
+    background-color: #CEB27D;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 12px 12px 0 0;
+    flex-grow: 1
+
+}
+
+.myProfileContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }

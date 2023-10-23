@@ -24,19 +24,19 @@ export default function InputSearch({changeParams}) {
 
    return<div >
       <form onSubmit={handleSubmit} className={styles.searchForm}>
-         <div>
+         {/* <div> */}
          <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={handleChange}>
          {tags.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
          </select>
-         </div>
-         <div>
+         {/* </div>
+         <div> */}
          <input className={styles.inputBox} type="text" placeholder="Artista" name="name" onChange={handleChange}/>
-         </div>
-         <div>
+         {/* </div>
+         <div> */}
          <select className={styles.inputBox} name="city" onChange={handleChange}>
          {cities.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
          </select>
-         </div>
+         {/* </div> */}
          <input className={styles.searchButton} type="submit" value="Pesquisar" />
       </form>
    </div>

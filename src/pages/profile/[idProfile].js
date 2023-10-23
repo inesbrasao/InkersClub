@@ -48,7 +48,7 @@ export default function ArtistsImages() {
     }, [router.isReady])
 
 
-    return <div>
+    return <div className={styles.myProfileContainer}>
         {<ProfileHeader id={id} />}
         {artistImages && <div className={styles.cardBackground}>
             {artistImages.map(e => <div onClick={() => router.push(`/photo/${e._id}`)}><CardImage image={e} page={"profile"} /></div>)}

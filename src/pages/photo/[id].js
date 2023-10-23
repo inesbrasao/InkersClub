@@ -28,14 +28,7 @@ export default function ShowImage() {
         "id": idState
       })
     }
-    // const optionsArtist = {
-    //   method: 'POST',
-    //   headers: {'Content-Type': "application/json"},
-    //   body: JSON.stringify({
-    //     "collection": "artists",
-    //     "id": "65325d5990af02c609610323" //NÃO ESQUECER DE MUDAR
-    //   })
-    // }
+    
 
     async function fetchImage() {
 
