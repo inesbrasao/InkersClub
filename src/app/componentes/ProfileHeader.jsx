@@ -64,7 +64,7 @@ export default function ProfileHeader({id}) {
       {artist && <div className={styles.ProfileHeader}>
          <div className={styles.idContainer}>
             
-            <img className={styles.idImage} src="/6531323d939a1134f480717f/image1.jpg" alt="aquarela" />
+            <img className={styles.idImage} src="/6531323d939a1134f480717f/pp.jpg" alt="aquarela" />
          <div className={styles.idData}>
             <h1>{artist.name}</h1>
             <p>{artist.shop}</p>
