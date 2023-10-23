@@ -1,0 +1,75 @@
+.formWrapper {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputBox {
+    background: #121420;
+    border: 1px solid #CEB27D;
+    border-radius: 4px;
+    width: 90vw;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 1.5rem;
+    letter-spacing: 0.02em;
+    color: #CEB27D;
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.styleLabel{
+    margin-top: 50px;
+    color: #CEB27D;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.addButton {
+
+    background: #CEB27D;
+    border: 1px solid #CEB27D;
+    border-radius: 4px;
+    width: 70vw;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 1rem;
+    letter-spacing: 0.02em;
+    color: #121420;
+    margin: 25px;
+
+}
+
+
+.loadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #CEB27D;
+    border: 1px solid #CEB27D;
+    border-radius: 4px;
+    width: 173px;
+    height: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 1rem;
+    letter-spacing: 0.02em;
+    color: #121420;
+    margin: 25px;
+    text-align: center;
+}
+
+.photoPreview {
+    background-color: grey;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
