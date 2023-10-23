@@ -1,0 +1,27 @@
+.indexbutton{
+    background-color: #121420;
+    border: 1px solid #ceb27d;
+    border-radius: 4px;
+    width:80vw;
+    height: 4.5rem;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: #ceb27d;
+}
+
+.buttons{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin-top: 297px;
+    margin-bottom: 120px;
+}
+
+/* .body{
+    background-image: url("./src/images/background.jpg");
+    background-size: cover;
+    box-shadow: 0 0 0 200px ;
+} */

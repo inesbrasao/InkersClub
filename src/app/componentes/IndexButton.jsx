@@ -1,8 +1,9 @@
-import styles from "@/styles/photo.module.css";
+// import styles from "@/styles/photo.module.css";
+import styles from "@/styles/index.module.css";
 import { useRouter } from "next/router";
 
  
-export default function Button({path,name}) {
+export default function Button({path, name}) {
    // recebe "conteudo" do botão
    const router = useRouter()
 
@@ -15,5 +16,5 @@ export default function Button({path,name}) {
    //retorna um botão
 
 
-   return <button onClick={() => {router.push(`${path}`)}} type="button" className={styles.button}>{name}</button>
+   return <button onClick={() => {router.push(`${path}`)}} type="button" className={styles.indexbutton}>{name}</button>
 }
