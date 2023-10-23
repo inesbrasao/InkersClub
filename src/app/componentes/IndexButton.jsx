@@ -1,8 +1,8 @@
-
 import styles from "@/styles/photo.module.css";
+import { useRouter } from "next/router";
 
  
-export default function Button({name, id}) {
+export default function Button({path,name}) {
    // recebe "conteudo" do botão
    const router = useRouter()
 
@@ -15,5 +15,5 @@ export default function Button({name, id}) {
    //retorna um botão
 
 
-   return <button onClick={() => {router.push(`/profile/${id}`)}} type="button" className={styles.button}>{name}</button>
+   return <button onClick={() => {router.push(`${path}`)}} type="button" className={styles.button}>{name}</button>
 }
