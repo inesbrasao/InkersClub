@@ -12,12 +12,14 @@ import ProfileHeader from "@/app/componentes/ProfileHeader";
 export default function ArtistsImages() {
 
   const router = useRouter()
-  const id = router.asPath.split("/")[2]
+  const id = router.query.idProfile
 
   const [artistImages, setArtistImages] = useState()
 
   useEffect(() => {
 
+    if(router.isReady){
+      console.log("id:", id)
     const optionsImage = {
         method: 'POST',
         headers: {
@@ -40,16 +42,20 @@ export default function ArtistsImages() {
     
     }
     fetchImages()
+    }
+
   
-    }, [])
+    }, [router.isReady])
 
 
     return <div>
         {<ProfileHeader id={id} />}
-        {artistImages && <div>
-            {artistImages.map(e => <div><CardImage image={e} /></div>)}
+        {artistImages && <div className={styles.cardBackground}>
+            {artistImages.map(e => <div onClick={() => router.push(`/photo/${e._id}`)}><CardImage image={e} page={"profile"} /></div>)}
+            
         </div>
-}
+} 
+      <button className={styles.returnButton} onClick={() => router.back()}><img src="/icons/back.svg" /></button>
     </div>
 
 

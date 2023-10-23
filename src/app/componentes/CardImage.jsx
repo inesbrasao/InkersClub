@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import styles from '@/styles/homepage.module.css'
+import Tag from './Tags'
 
-export default function CardImage({ artist, image }) {
+export default function CardImage({ artist, image, page }) {
     //recebe uma imagem e uma (ou duas) tags
 
     const pathImage = image.path
@@ -14,14 +15,14 @@ export default function CardImage({ artist, image }) {
 
     return <>
     
-    <div className={styles.cardImage}>
+    <div className={page === "home" ? styles.cardImage : styles.cardImage2}>
     <Image className={styles.image}
        src={pathImage}
        width={180}
        height={180}
        alt={artistName}
     />
-    {tags.map(e=><p className={styles.tags}>{e}</p>)}
+    {tags.map(e=><p className={page === "home" ? styles.tags : styles.tags2}>{e}</p>)}
    
     </div>
     </>

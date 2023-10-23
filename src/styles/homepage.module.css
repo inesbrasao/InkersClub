@@ -1,3 +1,5 @@
+
+
 .body {
     display: flex;
     flex-direction: column;
@@ -16,10 +18,19 @@
     display: flex;
     flex-direction: column;
     height: 230px;
+
+}
+
+.cardImage2 {
+    background-color: #121420;
+    width: 182px;
+    border-radius: 6px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 230px;
     
-   
-
-
 }
 
 .image {
@@ -32,6 +43,13 @@
 .tags {
     font-family: "Raleway";
     color: var(--primarycolor);
+    margin: 2px;
+    font-size: 1rem;
+}
+
+.tags2 {
+    font-family: "Raleway";
+    color: #CEB27D;
     margin: 2px;
     font-size: 1rem;
 }

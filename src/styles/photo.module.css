@@ -50,6 +50,7 @@
 
 }
 
+
 .artistpath {
   display: flex;
   flex-direction: column;
@@ -70,4 +71,18 @@
   font-family: var(--font-style-paragraph);
   font-size: var(--font-size-paragraph-2);
   margin-bottom: 8px;
+}
+
+.returnButton{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  border: none;
+  background-color: transparent;
+}
+
+.cardBackground {
+  background-color: #CEB27D;
+  width: 100%;
 }
