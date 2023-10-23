@@ -1,6 +1,6 @@
 import styles from '@/styles/styles.module.css'
 
-export default function InputText({name, value, onChange}, ) {
+export default function InputText({name, value, onChange, label}, ) {
    // recebe label do input
 
 
@@ -8,7 +8,7 @@ export default function InputText({name, value, onChange}, ) {
 
    return<div className={styles.inputText} >
    {/* <input type="text"> ola </input> */}
-   <label htmlFor={name}>"nome"</label> <br/>
+   <label htmlFor={name}>{label}</label> <br/>
    <input type="text" id={name} name={name}   value={value} onChange={onChange}/>
 
   
