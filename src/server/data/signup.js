@@ -3,9 +3,9 @@ import { GetCollection } from "./mongo"
 
 
 //Create Artist
-async function createDocument(artist) {
-    const collection = await GetCollection("inkersclub", "artists")
-    const result = await collection.insertOne(artist)
+async function createDocument(data, collect) {
+    const collection = await GetCollection("inkersclub", collect)
+    const result = await collection.insertOne(data)
     return result
   }
 
