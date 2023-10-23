@@ -1,4 +1,4 @@
-
+import { useRouter } from "next/router"
 import styles from "@/styles/photo.module.css";
 
  
