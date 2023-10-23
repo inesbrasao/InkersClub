@@ -1,75 +1,73 @@
+import { useRouter } from "next/router";
 import Button from "./Button";
 import InputText from "./InputText";
 import React, { useState } from 'react';
 
 
-export default function ProfileControl({props}) {
-   //pode receber um idArtist 
-   //ou email e senha para criar um novo Artista
-   //Se props.idArtist existir faz um pedido de alteração do perfil
-   //Se não, cria um novo Artista
-   
+export default function ProfileControl({ artist }) {
+  const router = useRouter()
+  const [formData, setFormData] = useState(artist)
 
-   //retorna Componente UploadImage e
-   //form com 5 InputText de texto (nome, tlm, estúdio, localidade, instagram)  e um botão {se o props.idArtist existe: "atualizar", se não "Criar Perfil"  }
-   
-   /*let profilebutton = false
-   if(props.id){
-      profilebutton = true
-   }*/
 
-   const artist ={
-   "name": "Ana Carolina" ,
-   "email": "anacarolina@gmail.com",
-   "instagram":"@ana_carolina",
-   "city": "Braga",
-   "shop": "The Waveless Beach",
-   "phone": "+351967454687", 
-   "password": "Mor@ngito19",
-   "category":["glitch", "tinta branca", "minimalista"]}
+  const optionsArtist = {
+    method: 'POST',
+    headers: { 'Content-Type': "application/json" },
+    body: JSON.stringify(
+      formData)
+  }
 
-   const [formData, setFormData] = useState(artist)
+  async function updateProfile() {
 
-    const handleSubmit = (event) => {
-      event.preventDefault();
-  
-      
-      const { name, phone, shop, city, instagram } = formData;
-  
-      console.log('Form data:', { name, phone, shop, city, instagram });
-      console.log(event.target);
-  
-  
-    };
+    const res = await fetch(`/api/profile`, optionsArtist);
 
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-      console.log(event.target.value,name)
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    };
-    
-   return <div>
-      <form onSubmit={handleSubmit} id="profileControl">
+    console.log(res.status, "ola2")
+    if (res.status === 200) {
+      const body = await res.json();
+      setArtistState(body)
+      console.log(artistState, 'ola1')
 
-      
+
+    }
+  }
+
+
+
+  const handleSubmit = (event) => {
+
+   event.preventDefault()
+    updateProfile()
+    router.push(`/myprofile/${formData._id}`)
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    console.log(event.target.value, name)
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  return <div>{formData && <div>
+    <form onSubmit={handleSubmit} id="profileControl">
+
+
       {/*<label htmlFor={formData.name}>{formData.name}</label> <br/>
        <input type="text" id={formData.name} value={formData.name}name={formData.name}   onChange={handleChange}/> */}
 
-       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange}/>
-       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange}/>
-       <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange}/>
-       <InputText name="city"label="Localidade"  value={formData.city} onChange={handleChange}/>
-       <InputText name="instagram" label="Instagram"  value={formData.instagram} onChange={handleChange}/>
-      
-      
-    
+      <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
+      <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
+      <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
+      <InputText name="city" label="Localidade" value={formData.city} onChange={handleChange} />
+      <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
+
+
+
+
       {/* <Button name="alterar"/>  */}
-      <button type="submit" onClick={handleSubmit()}>Submit</button>
-      </form>
+      <button type="submit" >Submit</button>
+    </form>
 
-   </div>
+  </div>}</div>
 
-   }
+}
