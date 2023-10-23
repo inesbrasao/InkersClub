@@ -8,7 +8,7 @@ export default function InputText({name, value, onChange}, ) {
 
    return<div className={styles.inputText} >
    {/* <input type="text"> ola </input> */}
-   <label htmlFor={name}>{name}</label> <br/>
+   <label htmlFor={name}>"nome"</label> <br/>
    <input type="text" id={name} name={name}   value={value} onChange={onChange}/>
 
   
