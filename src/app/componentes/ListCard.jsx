@@ -1,9 +1,9 @@
 import CardImage from "./CardImage"
 import styles from '@/styles/homepage.module.css'
 import { useState, useEffect } from "react"
-import ShowImage from "./ShowImage"
 import { useRouter } from "next/router"
 import InputSearch from "./InputSearch"
+import TagSuggest from "./TagSuggest"
 
 
 export default function ListCard() {
@@ -51,7 +51,7 @@ export default function ListCard() {
 
     return <div >
         {search ? <InputSearch changeParams={changeParams}/> : 
-        <button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button>}
+        <div><button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> <TagSuggest /> </div>}
         <div>
             {showImage ? <div onClick={() => setShowImage()}>
                 {router.push(`/photo/${imageList.id}`)}</div> :
