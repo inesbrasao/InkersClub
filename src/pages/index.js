@@ -10,6 +10,7 @@ import { useRouter } from 'next/router'
 import UploadImage from '@/app/componentes/UploadImage'
 import ProfilePath from '@/app/componentes/ProfilePath'
 import ProfileHeader from '@/app/componentes/ProfileHeader'
+import IndexButton from '../app/componentes/IndexButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,9 +26,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
-    <ProfileHeader/>
+      <div className='index_button'>
+        <IndexButton path={"/home"} name={"Procuro tatuador"}/>
+      </div>
 
-         </main>
+      </main>
          
     </>
   )
