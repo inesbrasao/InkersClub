@@ -58,7 +58,7 @@ export default function ShowImage() {
 
   return <> {imageState &&
     <div className={styles.showImage}>
-      <button onClick={() => router.push(`/home`)}  className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg"/></button> 
+      <button onClick={() => router.back()}  className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg"/></button> 
       <div className={styles.photoContainer}>
         <img className={styles.photo} src={imageState.path} alt="Girl in a jacket" ></img>
         <div className={styles.photoInfo}>

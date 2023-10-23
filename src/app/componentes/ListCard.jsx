@@ -57,7 +57,7 @@ export default function ListCard() {
                 {router.push(`/photo/${imageList.id}`)}</div> :
                 imageList && <div className={styles.listCard}>
                 {imageList.map(e => <div onClick={() => {router.push(`/photo/${e._id}`)}}>
-                    <CardImage image={e} /> </div>)}
+                    <CardImage image={e} page={"home"} /> </div>)}
                 </div>
             }
 

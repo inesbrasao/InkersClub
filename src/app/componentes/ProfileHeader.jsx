@@ -1,29 +1,20 @@
 import { useState, useEffect } from "react";
 import styles from '@/styles/ProfileHearder.module.css'
-import Tags from "./Tags";
+import Tag from "./Tags";
 import { useRouter } from "next/router";
 
-//  const artistaTeste = {
-//       "name": "Carlos Pereira",
-//       "email": "carlos.pereira@gmail.com",
-//       "instagram": "@carlospereira",
-//       "city": "Faro",
-//       "shop": "Agulha Dourada",
-//       "phone": "+351933333333",
-//       "password": "SenhaCarlos",
-//       "category": ["single line", "preto e branco", "sem contorno"],
-      
-//    }
 
 export default function ProfileHeader({id}) {
    
    const [artist, setArtist] = useState()
+   const router = useRouter()
    
 
 
    useEffect(() => {
 
-      const options = {
+      if(router.isReady){
+               const options = {
           method: 'POST',
           headers: {
             'Content-Type': "application/json"
@@ -45,8 +36,11 @@ export default function ProfileHeader({id}) {
       
       }
       fetchArtist()
+      }
+
+
     
-      }, [])
+      }, [router.isReady])
 
 
 
@@ -74,7 +68,7 @@ export default function ProfileHeader({id}) {
 
          <div className={styles.tagsContainer}>
             
-            {artist.category.map(e => <p className={styles.tags}>{e}</p>)}
+            {artist.category.map(e => <Tag tagName={e} />)}
 
             {/* <p>neo tradicional</p>
             <p>aquarela</p> */}

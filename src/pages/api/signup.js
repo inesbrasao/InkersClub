@@ -15,7 +15,7 @@ export default async function signup(req, res) {
     const result = await getByEmail(email)
     if(!result && password === passwordConfirmation){
 
-        const user = await createDocument({email: email, password: password})
+        const user = await createDocument({email: email, password: password}, "artists")
         res.status(200).json({
 
         message: "Utilizador Criado com Sucesso!", _id: user.insertedId})
