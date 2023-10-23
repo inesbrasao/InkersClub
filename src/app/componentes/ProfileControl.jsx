@@ -20,11 +20,11 @@ export default function ProfileControl({ artist }) {
 
     const res = await fetch(`/api/profile`, optionsArtist);
 
-    console.log(res.status, "ola2")
+    console.log(res.status)
     if (res.status === 200) {
       const body = await res.json();
       setArtistState(body)
-      console.log(artistState, 'ola1')
+      console.log(artistState)
 
 
     }
@@ -51,21 +51,14 @@ export default function ProfileControl({ artist }) {
   return <div>{formData && <div>
     <form onSubmit={handleSubmit} id="profileControl">
 
-
-      {/*<label htmlFor={formData.name}>{formData.name}</label> <br/>
-       <input type="text" id={formData.name} value={formData.name}name={formData.name}   onChange={handleChange}/> */}
-
       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
       <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
       <InputText name="city" label="Localidade" value={formData.city} onChange={handleChange} />
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
 
-
-
-
-      {/* <Button name="alterar"/>  */}
       <button type="submit" >Submit</button>
+
     </form>
 
   </div>}</div>
