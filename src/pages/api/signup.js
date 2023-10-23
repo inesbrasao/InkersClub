@@ -9,12 +9,12 @@ import {createDocument} from '../../server/data/signup'
 //SENAO retorna erro correspondente
 
 export default async function signup(req, res) {
-    const { email, password, passwordConfirmation } = req.body
+    const { email, password, passwordConfirmation} = req.body
     //const messageError = findErrors(req.body)
     //if (Object.keys(messageError).length == 0) {
     const result = await getByEmail(email)
     if(!result && password === passwordConfirmation){
-        const user = await createDocument({email: email, password: password})
+        const user = await createDocument({email: email, password: password}, "artist")
         res.status(201).json({
         message: "Utilizador Criado com Sucesso!", _id: user.insertedId})
     } else if (!result){
