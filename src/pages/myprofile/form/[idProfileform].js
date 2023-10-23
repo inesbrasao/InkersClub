@@ -19,8 +19,6 @@ export default function FormIdProfile() {
              })
            }
   
-  
-  
       async function fetchArtist() {
   
         const res = await fetch(`/api/fetchById`, optionsArtist);
@@ -44,7 +42,6 @@ export default function FormIdProfile() {
 
     return ( artistState &&
           <div>
-            <p>{idState}</p>
              <ProfileControl artist={artistState}/>
           </div>
     )
