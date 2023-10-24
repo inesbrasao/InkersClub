@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Tag from "./Tags"
 import { useRouter } from "next/router";
 
-export default function TagSuggest() {
+export default function TagSuggest({changeParams}) {
    const [tagList, setTagList] = useState()
 
    useEffect(() => {
@@ -33,9 +33,10 @@ export default function TagSuggest() {
    }, [])
 
 
+
    return <div>
       {tagList && <div>
-         {tagList.map(e => <Tag tagName={e} />)}
+         {tagList.map(e => <Tag changeParams={(data) => changeParams(data)} tagName={e} />)}
          </div>
          }
    </div>
