@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "./Button";
-import Tags from "./Tags";
+import Tags from "./Tag";
 import Image from "next/image";
 
 

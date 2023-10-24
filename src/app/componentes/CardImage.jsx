@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import styles from '@/styles/homepage.module.css'
-import Tag from './Tags'
+import styles from '@/styles/cardImage.module.css'
+import Tag from './Tag'
 
 export default function CardImage({ artist, image, page }) {
     //recebe uma imagem e uma (ou duas) tags

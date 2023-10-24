@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Tag from "./Tags"
+import Tag from "./Tag"
 import { useRouter } from "next/router";
 
 export default function TagSuggest({changeParams}) {

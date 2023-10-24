@@ -11,7 +11,9 @@ margin: 0.8rem;
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  overflow: hidden;
+  object-fit:cover;
+  object-position: left top;
+  filter: drop-shadow(-4px 0px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .idContainer {
@@ -35,6 +37,7 @@ margin: 0.8rem;
   font-size: 1rem;
   background-color: var(--secondarycolor);
   padding: 4px;
+  border-radius: 2px;
 }
 .idData {
   display: flex;
