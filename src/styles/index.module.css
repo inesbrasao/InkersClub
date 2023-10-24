@@ -25,9 +25,6 @@
     height: 100%;
     background-size: cover;
 
-}
-
-
 .logocontainer{
     display: flex;
     flex-direction: column;
