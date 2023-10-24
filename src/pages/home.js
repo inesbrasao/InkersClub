@@ -5,20 +5,11 @@ import TesteSilvia from "@/app/componentes/TesteSilvia";
 
 
 export default function Home() {
-    return(
-          <div>
-            <div className={styles.body} >
-                <ListCard />
-            </div>
-            {/* <div>
-                <Button>Procuro tatuador</Button>
-            </div>
+    return (
 
-
-            <div>
-                <Button>Sou tatuador</Button>
-            </div> */}
-           </div> 
+        <div className={styles.body} >
+            <ListCard />
+        </div>
 
     )
-  }
+}
