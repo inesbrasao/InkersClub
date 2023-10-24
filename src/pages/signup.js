@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import styles from '@/styles/signup.module.css'
 
 import React, { useState } from 'react';
+import Logo from "@/app/componentes/Logo";
 
 export default function SignUp() {
   const [formData, setFormData] = useState()
@@ -48,8 +49,11 @@ export default function SignUp() {
 
 
 
-  return (<div className={styles.formContainer}>
+  return (<div className={styles.signupContainer}>
     <div>
+      <Logo/>
+    </div>
+    <div className={styles.formContainer}>
       <h1 className={styles.title}>Criar Conta</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <InputText name="email" label="Email" onChange={handleChange} />
