@@ -30,7 +30,6 @@ export default function ListCard() {
 
         async function fetchData() {
 
-        
            const res = await fetch(`/api/search/${query}`, options);
            if (res.status === 200) {
               const body = await res.json();
@@ -44,17 +43,16 @@ export default function ListCard() {
         fetchData();
 
 
-    }, [])
+    }, [params])
 
     const changeParams = (data) => {
         setParams(data)
-
     }
 
 
     return <div >
         {search ? <InputSearch changeParams={changeParams}/> : 
-        <div><button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> <TagSuggest /> </div>}
+        <div><button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> <TagSuggest changeParams={changeParams} /> </div>}
         <div>
             {showImage ? <div onClick={() => setShowImage()}>
                 {router.push(`/photo/${imageList.id}`)}</div> :
