@@ -20,8 +20,8 @@
     margin-bottom: 120px;
 }
 
-/* .body{
-    background-image: url("./src/images/background.jpg");
+.body{
+    background-image: url("/icons/background.jpg") important;
     background-size: cover;
     box-shadow: 0 0 0 200px ;
-} */
+}
