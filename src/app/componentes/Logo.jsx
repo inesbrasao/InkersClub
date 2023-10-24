@@ -5,7 +5,7 @@ class Logo extends Component {
   render() {
     return (
       <div>
-        <img src= "\background\Inkers__club.png" width={320} height={320} className={styles.logo}/>
+        <img src= "icons\logo-inkersclub.svg.svg" width={320} height={320} className={styles.logo}/>
       </div>
     )
   }
