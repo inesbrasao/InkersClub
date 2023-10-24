@@ -10,7 +10,8 @@ import {getByEmail} from '../../server/data/login'
 export default async function login(req, res) {
     const {email, password} = req.body
     const user = await getByEmail(email)
-    if ( user === null) {
+    try{
+        if ( user === null) {
         res.status(404).json({
             message: "O utilizador não foi encontrado!"
         })
@@ -21,4 +22,9 @@ export default async function login(req, res) {
             message: "A password introduzida é inválida!"
         })
     }  
+    }
+    catch {
+        res.status(400).end()
+    }
+    
 }
