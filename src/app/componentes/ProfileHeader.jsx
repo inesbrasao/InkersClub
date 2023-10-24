@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from '@/styles/ProfileHearder.module.css'
-import Tag from "./Tags";
+import Tag from "./Tag";
 import { useRouter } from "next/router";
 
 

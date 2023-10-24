@@ -1,0 +1,13 @@
+.tagButton {
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-style-paragraph);
+  font-size: var(--font-size-paragraph-2);
+  padding: .25rem .5rem;
+  border: none;
+  margin: 3px;
+}
+
+

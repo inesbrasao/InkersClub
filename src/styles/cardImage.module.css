@@ -1,0 +1,62 @@
+
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+}
+
+.cardImage {
+    background-color:var(--secondarycolor);
+    width: 182px;
+    border-radius:2px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    outline: 1.25px var(--secondarycolor) solid;
+    filter: drop-shadow(-4px 0px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.cardImage2 {
+    background-color:var(--primarycolor);
+    width: 182px;
+    border-radius: 2px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    outline: 1.25px var(--primarycolor) solid;
+    filter: drop-shadow(-4px 0px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.image {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    object-fit: cover;
+    width: 100%;
+}
+
+.tags {
+    font-family: "Raleway";
+    color: var(--primarycolor);
+    margin: 2px;
+    font-size: 1rem;
+}
+
+.tags2 {
+    font-family: "Raleway";
+    color:var(--secondarycolor);
+    margin: 4px;
+    font-size: 1rem;
+}
+
+
