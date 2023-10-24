@@ -4,3 +4,5 @@ async function deleteById(id) {
     console.log(result.deletedCount)
     return result.deletedCount
   }
+
+deleteById()

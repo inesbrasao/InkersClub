@@ -24,6 +24,7 @@
     background-image: url("/background/home_page-background.jpg");
     height: 100%;
     background-size: cover;
+}
 
 .logocontainer{
     display: flex;
