@@ -36,6 +36,7 @@ export default function ListCard() {
               setImageList(body)
               setErrorMessage()
            } else if(res.status === 204){
+                setImageList()
                 setErrorMessage("Pesquisa sem Resultados")
            }
 
@@ -47,6 +48,7 @@ export default function ListCard() {
 
     const changeParams = (data) => {
         setParams(data)
+        setSearch(false)
     }
 
 
