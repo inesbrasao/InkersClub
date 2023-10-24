@@ -18,6 +18,7 @@ export default function InputSearch({changeParams}) {
    }
 
    const handleSubmit = (event) => {
+      event.preventDefault()
       changeParams(searchData)
    }
 

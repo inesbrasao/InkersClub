@@ -1,0 +1,24 @@
+.containerInputText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.labelInputText {
+  color: var(--secondarycolor);
+  font-size: var(--font-size-paragraph-1);
+  font-family: var(--font-style-paragraph);
+}
+
+
+.inputText {
+  color: var(--secondarycolor);
+  font-size: var(--font-size-paragraph-1);
+  font-family: var(--font-style-paragraph);
+  background-color: transparent;
+  border: 2px solid var(--secondarycolor) ;
+  height: 2.5rem;
+  width: 80vw;
+  border-radius:0.25rem;
+}

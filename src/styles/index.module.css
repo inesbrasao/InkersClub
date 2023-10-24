@@ -1,6 +1,6 @@
 .indexbutton{
-    background-color: #121420;
-    border: 1px solid #ceb27d;
+    background-color: var(--primarycolor);
+    border: 1px solid var(--secondarycolor);
     border-radius: 4px;
     width:80vw;
     height: 4.5rem;
@@ -25,9 +25,10 @@
     height: 100%;
     background-size: cover;
 
-}
-
-.logo{
-    margin: -49px 45px 0px 45px ;
-    /* box-shadow: 0px 0px 20px 0px rgba(229, 221, 221, 0.25) inset; */
+.logocontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   padding: 50px;
+   filter: drop-shadow(0px 3px 5px rgba(255, 255, 255, 0.80));
 }

@@ -1,4 +1,4 @@
-import styles from '@/styles/styles.module.css'
+import styles from '@/styles/inputText.module.css'
 
 
 export default function InputText({name, value, onChange, label}, ) {
@@ -7,10 +7,10 @@ export default function InputText({name, value, onChange, label}, ) {
 
    //retorna um input type text
 
-   return<div className={styles.inputText} >
+   return<div className={styles.containerInputText} >
    {/* <input type="text"> ola </input> */}
-   <label htmlFor={name}>{label}</label> <br/>
-   <input type="text" id={name} name={name}   value={value} onChange={onChange}/>
+   <label htmlFor={name} className={styles.labelInputText}>{label}</label> 
+   <input className={styles.inputText} type="text" id={name} name={name}   value={value} onChange={onChange}/>
 
   
 

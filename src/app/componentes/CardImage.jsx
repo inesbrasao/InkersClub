@@ -9,7 +9,6 @@ export default function CardImage({ artist, image, page }) {
     const tags = image.tag
     const artistName = image.artist_id   
 
-    console.log(image)
 
     //retorna uma div  com uma imagem e um paragrafo
 

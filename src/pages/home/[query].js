@@ -3,10 +3,9 @@ import styles from '../styles/homepage.module.css'
 
 
 export default function Search() {
-    const router = useRouter()
 
     return (
-          <div >
+          <div className={styles.body}  >
               <ListCard />
           </div>
     )

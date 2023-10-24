@@ -11,6 +11,7 @@ export default function ListCard() {
     const [params, setParams] = useState()
     const [imageList, setImageList] = useState()
     const [showImage, setShowImage] = useState()
+    const [errorMessage, setErrorMessage] = useState()
 
     const router = useRouter()
     let query = "?" + router.asPath.split('?')[1]
@@ -29,29 +30,31 @@ export default function ListCard() {
 
         async function fetchData() {
 
-        
            const res = await fetch(`/api/search/${query}`, options);
            if (res.status === 200) {
               const body = await res.json();
-              console.log("listcard", body)
               setImageList(body)
+              setErrorMessage()
+           } else if(res.status === 204){
+                setImageList()
+                setErrorMessage("Pesquisa sem Resultados")
            }
 
         }
         fetchData();
 
 
-    }, [])
+    }, [params])
 
     const changeParams = (data) => {
         setParams(data)
-
+        setSearch(false)
     }
 
 
     return <div >
         {search ? <InputSearch changeParams={changeParams}/> : 
-        <div><button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> <TagSuggest /> </div>}
+        <div><button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> <TagSuggest changeParams={changeParams} /> </div>}
         <div>
             {showImage ? <div onClick={() => setShowImage()}>
                 {router.push(`/photo/${imageList.id}`)}</div> :
@@ -60,7 +63,7 @@ export default function ListCard() {
                     <CardImage image={e} page={"home"} /> </div>)}
                 </div>
             }
-
+            {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
         </div>
     </div>
 }

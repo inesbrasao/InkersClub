@@ -13,17 +13,27 @@ export default async function signup(req, res) {
     //const messageError = findErrors(req.body)
     //if (Object.keys(messageError).length == 0) {
     const result = await getByEmail(email)
-    if(!result && password === passwordConfirmation){
 
-        const user = await createDocument({email: email, password: password}, "artists")
-        res.status(200).json({
+    try{
+        if(!email || !password || !passwordConfirmation){
+            res.status(412).end()
+        }
+        
+        if(!result && password === passwordConfirmation){
 
-        message: "Utilizador Criado com Sucesso!", _id: user.insertedId})
-    } else if (!result){
-        res.status(400).json({ message: "Password de confirmação não corresponde a password."})
+            const user = await createDocument({email: email, password: password}, "artists")
+            res.status(200).json({
 
-    } else {
-        res.status(400).json({ message: "Email já existe."})
+            message: "Utilizador Criado com Sucesso!", _id: user.insertedId})
+        } else if (!result){
+            res.status(409).json({ message: "Password de confirmação não corresponde a password."})
+
+        } else {
+            res.status(409).json({ message: "Email já existe."})
+        }
+    }
+    catch {
+        res.status(400).end()
     }
 // } else {
 //     res.status(400).json({

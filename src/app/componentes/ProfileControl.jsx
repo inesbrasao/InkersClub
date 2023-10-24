@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Button from "./Button";
 import InputText from "./InputText";
 import React, { useState } from 'react';
+import styles from '@/styles/profileControl.module.css'
 
 
 export default function ProfileControl({ artist }) {
@@ -22,9 +23,7 @@ export default function ProfileControl({ artist }) {
 
     console.log(res.status)
     if (res.status === 200) {
-      const body = await res.json();
-      setArtistState(body)
-      console.log(artistState)
+ 
 
 
     }
@@ -48,8 +47,8 @@ export default function ProfileControl({ artist }) {
     });
   };
 
-  return <div>{formData && <div>
-    <form onSubmit={handleSubmit} id="profileControl">
+  return <div>{formData && <div className={styles.ProfileControlContainer}>
+    <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
 
       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
@@ -57,7 +56,9 @@ export default function ProfileControl({ artist }) {
       <InputText name="city" label="Localidade" value={formData.city} onChange={handleChange} />
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
 
-      <button type="submit" >Submit</button>
+      <button className={styles.button} type="submit" >Alterar</button>
+      {/* <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
+     
 
     </form>
 
