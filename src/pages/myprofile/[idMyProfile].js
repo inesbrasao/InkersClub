@@ -51,7 +51,7 @@ export default function MyProfile() {
         </div>
         <div className={styles.cardBackground}>
             {artistImages && artistImages.length > 0
-                ? artistImages.map(e => <div key={e.id}><CardImage image={e} /></div>)
+                ? artistImages.map(e => <div key={e.id} onClick={() => router.push(`/photo/${e._id}`)}><CardImage image={e} /></div>)
                 : <div>Ainda não tens nenhuma imagem, adicione agora!</div>
             }
         </div>

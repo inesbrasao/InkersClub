@@ -1,6 +1,8 @@
+import Logo from "@/app/componentes/Logo";
 import ProfileControl from "@/app/componentes/ProfileControl";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import styles from '@/styles/form.module.css'
 
 export default function FormIdProfile() {
     const router = useRouter()
@@ -40,9 +42,14 @@ export default function FormIdProfile() {
 
 
 
-    return ( artistState &&
+    return ( artistState && <div className={styles.idControlContainer}>
+          
+          <div>
+             <Logo />
+          </div>
           <div>
              <ProfileControl artist={artistState}/>
+          </div>
           </div>
     )
   }
