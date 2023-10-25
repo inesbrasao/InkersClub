@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     const path = await uploadSubmissionFile(req, res)
 
     //GUARDAR NA BASE DE DADOS
-    const doc = await createDocument({"path": path}, "images")
+    const doc = await createDocument({"path": "/" + path}, "images")
     const id = await fetchByPath(path)
 
 
@@ -38,12 +38,12 @@ export default async function handler(req, res) {
 
 
 //Função a simular ser um middleware
-async function uploadSubmissionFile(req, res) {
+export async function uploadSubmissionFile(req, res) {
 
   //Definições do multer, podes definir tamanhos máximos dos ficheiros, se queres guardar mais ficheiros, onde ficam guardados e outras coisas
   const upload = multer({
     storage: multer.diskStorage({
-      destination: '/images/'
+      destination: 'images/'
     })
   })
 
