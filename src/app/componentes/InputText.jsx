@@ -1,4 +1,4 @@
-import styles from '@/styles/inputText.module.css'
+import styles from '@/styles/profileControl.module.css'
 
 
 export default function InputText({name, value, onChange, label}, ) {
