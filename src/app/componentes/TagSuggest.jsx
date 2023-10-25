@@ -23,7 +23,7 @@ export default function TagSuggest({changeParams}) {
 
      if (res.status === 200) {
          const body = await res.json();
-         console.log(body)
+        //  console.log(body)
          setTagList(body)
      }
    }
