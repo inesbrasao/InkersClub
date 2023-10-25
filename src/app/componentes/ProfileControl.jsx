@@ -24,8 +24,6 @@ export default function ProfileControl({ artist }) {
     console.log(res.status)
     if (res.status === 200) {
  
-
-
     }
   }
 
