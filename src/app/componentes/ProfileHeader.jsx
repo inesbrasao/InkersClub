@@ -57,9 +57,11 @@ export default function ProfileHeader({id}) {
       <div>
       {artist && <div className={styles.ProfileHeader}>
          <div className={styles.idContainer}>
+         <div className={styles.ImageContainer}>
             {artist.path === undefined ? 
-            <div className={styles.idImage} style={{background: "grey", border:"1px solid black"}} alt="avatar" /> : 
-            <div className={styles.idImage} style={{background: `url(/api/loadimages/${artist.path.split("/")[2]})`}} alt="profile photo" />}
+            <div className={styles.idImage} style={{background: "grey", border:"1px solid black", backgroundPosition: "center center"}} alt="avatar" /> : 
+            <div className={styles.idImage} style={{background: `url(/api/loadimages/${artist.path.split("/")[2]})`, backgroundPosition: "center center",backgroundSize: "cover"}} alt="profile photo" />}
+         </div>
          <div className={styles.idData}>
             <h1>{artist.name}</h1>
             <p>{artist.shop}</p>

@@ -4,9 +4,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 24px;
 }
 
-.inputBox {
+/* .inputBox {
     background: #121420;
     border: 1px solid #CEB27D;
     border-radius: 4px;
@@ -20,10 +21,10 @@
     display: flex;
     align-items: center;
     text-align: center;
-}
+} */
 
 .styleLabel{
-    margin-top: 50px;
+    margin-top: 48px;
     color: #CEB27D;
     font-family: 'Playfair Display';
     font-weight: 400;
@@ -62,7 +63,7 @@
     padding: 1rem;
     letter-spacing: 0.02em;
     color: #121420;
-    margin: 25px;
+   
     text-align: center;
     
 }
@@ -73,6 +74,16 @@
     height: 200px;
 }
 
-
+.select {
+    color: var(--secondarycolor);
+    font-size: var(--font-size-paragraph-1);
+    font-family: var(--font-style-paragraph);
+    background-color: transparent;
+    border: 2px solid var(--secondarycolor) ;
+    height: 2.5rem;
+    width: 80vw;
+    border-radius:0.25rem;
+  
+  }
 
 

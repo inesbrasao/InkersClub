@@ -27,7 +27,7 @@ export default function Home() {
           <IndexButton path={"/home"} name={"Procuro tatuador"}/>
         </div>
         <div className={styles.indexbutton}>
-          <IndexButton path={"/signup"} name={"Sou tatuador"}/>
+          <IndexButton path={"/login"} name={"Sou tatuador"}/>
         </div>
       </div> 
       </main>
