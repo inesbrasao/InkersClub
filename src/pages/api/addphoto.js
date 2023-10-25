@@ -19,10 +19,11 @@ export default async function handler(req, res) {
     
     //Linha mágica, guarda 1 ficheiro e retorna o caminho onde ficou guardado
     const path = await uploadSubmissionFile(req, res)
+    const rPath = "/" + path
 
     //GUARDAR NA BASE DE DADOS
-    const doc = await createDocument({"path": "/" + path}, "images")
-    const id = await fetchByPath(path)
+    const doc = await createDocument({"path": rPath}, "images")
+    const id = await fetchByPath(rPath)
 
 
     return res.status(200).json({ "id": id.toString() })
