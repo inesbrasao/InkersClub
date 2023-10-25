@@ -5,8 +5,6 @@
     flex-direction: column;
     justify-content: center;
 
-
-
 }
 
 .cardImage {
@@ -26,12 +24,12 @@
 .cardImage2 {
     background-color:var(--primarycolor);
     width: 182px;
+    height: 230px;
     border-radius: 2px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    height: 230px;
     outline: 1.25px var(--primarycolor) solid;
     filter: drop-shadow(-4px 0px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 
