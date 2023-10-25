@@ -21,7 +21,7 @@ export default function TagSelector(props) {
       <><div>
            <select className={styles.select} name="city" onChange={handleChange}>
             {cities.localidade.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
-        </select>
+            </select>
          </div><div>
          <select className={styles.select} name="city" onChange={handleChange}>
             {cities.localidade.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
