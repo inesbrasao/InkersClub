@@ -8,6 +8,7 @@ import Popup from "./Popup";
 
 export default function ProfileControl({ artist }) {
   const router = useRouter()
+  const id = router.asPath.split("/")[3]
   const [formData, setFormData] = useState(artist)
   const [cities, setCities] = useState()
 
@@ -26,8 +27,7 @@ export default function ProfileControl({ artist }) {
   const optionsArtist = {
     method: 'POST',
     headers: { 'Content-Type': "application/json" },
-    body: JSON.stringify(
-      formData)
+    body: JSON.stringify(formData)
   }
 
   async function updateProfile() {
@@ -40,27 +40,46 @@ export default function ProfileControl({ artist }) {
     }
   }
 
-  const handleSubmit = (event) => {
-
-   event.preventDefault()
-    updateProfile()
-    router.push(`/myprofile/${formData._id}`)
-  };
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    console.log(event.target.value, name)
-    setFormData({
-      ...formData,
-      [name]: value,
+    const { name, value, files } = event.target;
+    setFormData(pForm => {
+      if (name === "path") {
+        return { ...pForm, [name]: files[0] }
+      }
+      return {...pForm, [name]: value}
     });
   };
 
 
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    updateProfile()
+    const formDat = new FormData()
+
+    formDat.append("path", formData.path)
+
+    const res = await fetch(`/api/addProfilePhoto/${formData._id}`, {
+        method: 'POST',
+        body: formDat
+    })
+
+    if(res.status === 200){
+      router.push(`/myprofile/${formData._id}`)
+    }
+    
+  };
+
   return <div>{formData && cities &&<div className={styles.ProfileControlContainer}>
+    
 
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
-
+      <div className={styles.photoPreview}></div>
+      <div>
+        <label className={styles.loadButton}>
+        <input type="file" name="path" onChange={(e) => handleChange(e)} />
+        </label>
+      </div>
       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
       <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
