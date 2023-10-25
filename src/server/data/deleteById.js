@@ -1,13 +1,9 @@
-import { GetCollection } from "/.mongo"
+import { GetCollection } from "./mongo"
 import {ObjectId}  from "mongodb"
 
-async function deleteById(id) {
-    const collection = await GetCollection("inkersclub", "artists")
+export async function deleteById(id,collect) {
+  console.log("olq")
+    const collection = await GetCollection("inkersclub", collect)
     const result = await collection.deleteOne({_id: new ObjectId(id)})
-    console.log(result.deletedCount)
-    return result.deletedCount
+    return result
   }
-
-  module.exports = {
-    deleteById
-}

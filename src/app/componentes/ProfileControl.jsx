@@ -3,6 +3,7 @@ import Button from "./Button";
 import InputText from "./InputText";
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/profileControl.module.css'
+import Popup from "./Popup";
 
 
 export default function ProfileControl({ artist }) {
@@ -10,6 +11,8 @@ export default function ProfileControl({ artist }) {
   const id = router.asPath.split("/")[3]
   const [formData, setFormData] = useState(artist)
   const [cities, setCities] = useState()
+
+  const [popup,setPopup] = useState(false)
 
 
   useEffect(() => {
@@ -48,6 +51,7 @@ export default function ProfileControl({ artist }) {
     });
   };
 
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     updateProfile()
@@ -68,6 +72,7 @@ export default function ProfileControl({ artist }) {
 
   return <div>{formData && cities &&<div className={styles.ProfileControlContainer}>
     
+
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
       <div className={styles.photoPreview}></div>
       <div>
@@ -88,6 +93,8 @@ export default function ProfileControl({ artist }) {
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
 
       <button className={styles.button} type="submit" >Alterar</button>
+      <button className={styles.button} onClick={handleDelete} type="submit" >Eliminar</button>
+      {popup? <Popup artist={artist}/> : null}
       {/* <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
      
 
