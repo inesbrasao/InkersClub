@@ -9,18 +9,17 @@ export default function CardImage({ artist, image, page }) {
     const tags = image.tag
     const artistName = image.artist_id   
 
-
+    console.log(pathImage.split("/"))
     //retorna uma div  com uma imagem e um paragrafo
 
     return <>
     
     <div className={page === "home" ? styles.cardImage : styles.cardImage2}>
-    <Image className={styles.image}
-       src={pathImage}
-       width={180}
-       height={180}
+    <div className={styles.image}
+       style={{background: `url(/api/loadimages/${pathImage.split("/")[2]})`, width: "180px", height: "180px"}}
        alt={artistName}
     />
+    
     {tags.map(e=><p className={page === "home" ? styles.tags : styles.tags2}>{e}</p>)}
    
     </div>
