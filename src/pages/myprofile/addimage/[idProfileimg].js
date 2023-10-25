@@ -49,15 +49,6 @@ export default function AddImage() {
 
     formData.append("path", formInput.path)
 
-  //   async function addPhoto() {
-
-  //     const res = await fetch(`/api/addphoto`, optionsImage);
-  
-  //     if (res.status === 200) {
-  //         router.push(`/myprofile/${id}`)
-  //     }
-  // }
-
 
     const result = await fetch("/api/addphoto", {
       method: "POST",
@@ -67,7 +58,7 @@ export default function AddImage() {
     const image_id = await result.json()
     const data = {artist_id: id, tag: formInput.tag}
 
-    const res = await fetch("api/updateImage", {
+    const res = await fetch("/api/updateImage", {
         method: 'POST',
         headers: {
         'Content-Type': "application/json"
