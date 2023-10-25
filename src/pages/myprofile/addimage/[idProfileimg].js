@@ -10,63 +10,102 @@ import ProfilePath from "@/app/componentes/ProfilePath";
 export default function AddImage() {
   const router = useRouter()
   const id = router.asPath.split("/")[3]
+  console.log(id)
 
   const tags = ["Estilo", undefined, "minimalista", "tradicional", "pontilhismo", "aquarela"]
   const cities = ["Distrito", undefined, "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", 
     "Coimbra", "Évora", "Faro", "Funchal", "Guarda", "Leiria", "Lisboa", "Portalegre", 
     "Porto", "Santarém", "São Miguel", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu"]
-  const [formInput, setFormInput] = useState({artist_id: undefined, path: undefined, tag: []})
+  const [formInput, setFormInput] = useState({artist_id: id, path: undefined, tag: []})
 
-    const optionsImage = {
+    // const optionsImage = {
+    //     method: 'POST',
+    //     headers: {
+    //     'Content-Type': "application/json"
+    //     },
+    //     body: JSON.stringify(formInput)
+    // }
+  
+
+
+  const handleChange = (event) => {
+    const {name, value, files} = event.target
+    setFormInput(pForm => {
+      //Se o campo que foi alterado foi o ficheiro
+      if (name === "path") {
+        //Não queremos ler o 'value' mas sim o 'files'
+        return { ...pForm, [name]: files[0] }
+      } else if(name === "tag") {
+        return { ...pForm, [name]:[...pForm[name], value] }
+      }
+    })
+  }
+
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    //FormData é como JSON, uma estrutura de dados que o backend reconhece (neste caso o multer)
+    const formData = new FormData()
+
+    formData.append("path", formInput.path)
+
+  //   async function addPhoto() {
+
+  //     const res = await fetch(`/api/addphoto`, optionsImage);
+  
+  //     if (res.status === 200) {
+  //         router.push(`/myprofile/${id}`)
+  //     }
+  // }
+
+
+    const result = await fetch("/api/addphoto", {
+      method: "POST",
+      body: formData
+    })
+
+    const image_id = await result.json()
+    const data = {artist_id: id, tag: formInput.tag}
+    console.log("data", data)
+    console.log("image_id", image_id)
+
+    const res = await fetch("api/updateImage", {
         method: 'POST',
         headers: {
         'Content-Type': "application/json"
         },
-        body: JSON.stringify(formInput)
+        body: JSON.stringify({
+          "id": image_id, 
+          "data": data
+        })
+    })
+
+    if(res.status === 200){
+      router.push(`/myprofile/${id}`)
     }
-  
-  
-  
-  async function addPhoto() {
-
-    const res = await fetch(`/api/addphoto`, optionsImage);
-
-    if (res.status === 200) {
-        router.push(`/myprofile/${id}`)
-    }
-}
-
-    const handleSubmit = (event) => {
-        const {name, value} = event.target
-      setFormInput({
-         ...formInput,
-         [name]: value,
-       });
-    }
-
-    const handleChange = () => {
-        addPhoto()
-    }
-
+ 
+  }
 
 
 
 
   return <div>
     <div >
-        <form className={styles.formWrapper} onSubmit={handleSubmit}>
+        <form className={styles.formWrapper}>
             <div className={styles.photoPreview}></div>
             <div>
-            <button className={styles.loadButton} onClick={handleChange}>carregar imagem</button>
+              <label className={styles.loadButton}>
+              <input type="file" name="path" onChange={(e) => handleChange(e)} />
+              </label>
             </div>
             <label className={styles.styleLabel}>Estilo de Tatuagem</label>
-            <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={handleChange} required>
+            <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={(e) => handleChange(e)} required>
             {tags.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
             </select>
-            <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={handleChange}>
+            <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={(e) => handleChange(e)}>
             {tags.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
             </select>
-            <input className={styles.addButton} type="submit" value="Adicionar" />
+            <button className={styles.addButton} onClick={handleSubmit}>Adicionar</button>
         </form>
     </div>
   </div>
