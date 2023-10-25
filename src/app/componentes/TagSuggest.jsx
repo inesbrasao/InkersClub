@@ -34,12 +34,12 @@ export default function TagSuggest({changeParams}) {
 
 
 
-   return <div>
+   return <>
       {tagList && <div>
          {tagList.map(e => <Tag changeParams={(data) => changeParams(data)} tagName={e} />)}
          </div>
          }
-   </div>
+   </>
 
 
 
