@@ -14,9 +14,7 @@ export default function AddImage() {
   const [categories, setCategories] = useState()
 
 
-  // const cities = ["Distrito", undefined, "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", 
-  //   "Coimbra", "Évora", "Faro", "Funchal", "Guarda", "Leiria", "Lisboa", "Portalegre", 
-  //   "Porto", "Santarém", "São Miguel", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu"]
+
   const [formInput, setFormInput] = useState({artist_id: id, path: undefined, tag: []})
 
     // const optionsImage = {
