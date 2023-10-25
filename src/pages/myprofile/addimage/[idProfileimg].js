@@ -1,4 +1,4 @@
-import Tags from "@/app/componentes/Tags";
+import Tags from "@/app/componentes/Tag";
 import { useRouter } from "next/router"
 import { useEffect, useState, } from "react";
 import styles from '@/styles/addphoto.module.css'
