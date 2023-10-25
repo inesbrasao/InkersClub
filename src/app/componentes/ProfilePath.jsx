@@ -1,23 +1,23 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Button from "./Button";
 import styles from "../../styles/photo.module.css"
 
 
-export default function ProfilePath({artistId}) {
+export default function ProfilePath({ artistId }) {
 
-   const [artistState, setArtistState] = useState()
-  
+  const [artistState, setArtistState] = useState()
 
-   useEffect(() => {
 
-      const optionsArtist = {
-           method: 'POST',
-           headers: {'Content-Type': "application/json"},
-           body: JSON.stringify({
-             "collection": "artists",
-             "id":artistId
-           })
-         }
+  useEffect(() => {
+
+    const optionsArtist = {
+      method: 'POST',
+      headers: { 'Content-Type': "application/json" },
+      body: JSON.stringify({
+        "collection": "artists",
+        "id": artistId
+      })
+    }
 
 
 
@@ -30,20 +30,21 @@ export default function ProfilePath({artistId}) {
         const body = await res.json();
         setArtistState(body)
         console.log(artistState, 'ola1')
-        
-        
+
+
       }
     }
-   fetchArtist();
+    fetchArtist();
 
   }, [])
 
 
-   return <>{artistState &&
-  <div>
-             <p>{artistState.name}</p>  
-            <Button name="Ver perfil" id={artistState._id} />
-          </div>
-   
-    
-}</>}
+  return <>{artistState &&
+    <div className={styles.profilePath}>
+      <p className={styles.artistName}>{artistState.name}</p>
+      <Button name="Ver perfil" id={artistState._id} />
+    </div>
+
+
+  }</>
+}

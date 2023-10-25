@@ -49,7 +49,7 @@ export default function ShowImage() {
   }, [])
 
 
-  return <> {imageState &&
+  return <div className={styles.showImageContainer}> {imageState &&
     <div className={styles.showImage}>
       <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
       <div className={styles.photoContainer}>
@@ -58,13 +58,13 @@ export default function ShowImage() {
           <div className={styles.tags}>
             {imageState.tag.map(e => <Tags tagName={e} key={e} />)}
           </div>
-          <div>
+          <div >
             <ProfilePath artistId={imageState.artist_id} />
           </div>
         </div>
       </div>
     </div>}
-  </>
+  </div>
 
 
 

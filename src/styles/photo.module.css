@@ -17,11 +17,20 @@
 }
 
 .photo {
-  border: #CEB27D solid 2px;
-  border-radius: 8px;
+  border: #CEB27D solid 3px;
+  border-radius: 4px;
   width: 90vw;
   height: 90vw;
+  filter: drop-shadow(-4px 0px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 
+
+}
+
+.profilePath{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
 }
 
 .backButton {
@@ -47,6 +56,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 
 }
 
@@ -57,7 +67,7 @@
   align-items: flex-end;
 }
 
-.artistpath button {
+.button {
   background-color: transparent;
   border: none;
   text-decoration: underline;
@@ -66,7 +76,7 @@
   font-size: var(--font-size-paragraph-2);
 }
 
-.artistpath p {
+.artistName {
   color: #CEB27D;
   font-family: var(--font-style-paragraph);
   font-size: var(--font-size-paragraph-2);
@@ -91,4 +101,10 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.showImageContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
