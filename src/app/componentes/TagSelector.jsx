@@ -1,19 +1,34 @@
+import { useEffect, useState } from "react";
+
 export default function TagSelector(props) {
+
+   const [cities, setCities] = useState()
    // retorna
    // dois seletores, onde o primeiro é obrigatório
+
+
+   useEffect(() => {
+      fetch('/cities.json')
+         .then(response => response.json())
+         .then(cities => {
+            setCities(cities);
+  
+         })
+   }, []);
+
       return ( 
 
       <><div>
-            <select name="tag" onChange={handleChange} required>
-               {tags.map(e => <option value={e}>{e}</option>)}
-            </select>
+           <select className={styles.select} name="city" onChange={handleChange}>
+            {cities.localidade.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
+        </select>
          </div><div>
-               <select name="tag" onChange={handleChange}>
-                  {tags.map(e => <option value={e}>{e}</option>)}
-               </select>
+         <select className={styles.select} name="city" onChange={handleChange}>
+            {cities.localidade.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
+        </select>
             </div></>  
    )
-   //? as opções do select virão de uma lista?
+ 
   
    
 }
