@@ -16,7 +16,7 @@ export default async function login(req, res) {
             message: "O utilizador não foi encontrado!"
         })
     } else if(user.email === email && user.password === password) {
-        res.status(200).json({message: "boa"})
+        res.status(200).json(user._id.toString())
     } else if (user.email === email) {
         res.status(401).json({
             message: "A password introduzida é inválida!"

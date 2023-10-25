@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Button from "./Button";
 import InputText from "./InputText";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '@/styles/profileControl.module.css'
 import Popup from "./Popup";
 
@@ -9,9 +9,19 @@ import Popup from "./Popup";
 export default function ProfileControl({ artist }) {
   const router = useRouter()
   const [formData, setFormData] = useState(artist)
+  const [cities, setCities] = useState()
 
   const [popup,setPopup] = useState(false)
 
+
+  useEffect(() => {
+    fetch('/cities.json')
+       .then(response => response.json())
+       .then(cities => {
+          setCities(cities);
+
+       })
+ }, []);
 
   const optionsArtist = {
     method: 'POST',
@@ -30,9 +40,6 @@ export default function ProfileControl({ artist }) {
     }
   }
 
-  
-
-
   const handleSubmit = (event) => {
 
    event.preventDefault()
@@ -49,17 +56,21 @@ export default function ProfileControl({ artist }) {
     });
   };
 
-  const handleDelete = (id) => {
-    setPopup(true);
-  }
 
-  return <div>{formData && <div className={styles.ProfileControlContainer}>
+  return <div>{formData && cities &&<div className={styles.ProfileControlContainer}>
+
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
 
       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
       <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
-      <InputText name="city" label="Localidade" value={formData.city} onChange={handleChange} />
+      {/* <InputText name="city" label="Localidade" value={formData.city} onChange={handleChange} /> */}
+      <div className={styles.containerInputText} >
+        <label htmlFor="city" className={styles.labelSelect}>Localidade</label> 
+        <select className={styles.select} name="city" onChange={handleChange}>
+            {cities.localidade.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
+        </select>
+      </div>
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
 
       <button className={styles.button} type="submit" >Alterar</button>
