@@ -66,8 +66,6 @@ export default function AddImage() {
 
     const image_id = await result.json()
     const data = {artist_id: id, tag: formInput.tag}
-    console.log("data", data)
-    console.log("image_id", image_id)
 
     const res = await fetch("api/updateImage", {
         method: 'POST',
