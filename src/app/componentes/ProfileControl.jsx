@@ -109,7 +109,7 @@ export default function ProfileControl({ artist }) {
 
       <button className={styles.button} type="submit" >Alterar</button>
       <button className={styles.button} onClick={handleDelete} type="submit" >Eliminar</button>
-      {popup? <Popup data={artist} collection={"artists"}/> : null}
+      {popup? <Popup className={styles.popup} data={artist} collection={"artists"}/> : null}
       {/* handledelete <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
      
 

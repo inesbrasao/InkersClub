@@ -29,13 +29,17 @@ export default function Login() {
      router.push(`/myprofile/${body}`)
       console.log(body)
     } else if( res.status === 404){
-      setErrorMessage("Esse email não está registado.")
+      const error = await res.json()
+      setErrorMessage(error.message)
+     
 
-    }
+    }else if( res.status === 401){
+      const error = await res.json()
+      setErrorMessage(error.message)
 
   }
 
-
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -75,7 +79,7 @@ export default function Login() {
           <label className={styles2.labelInputText}>Senha</label>
           <input className={styles2.inputText} type="password" name="password" label="Senha" onChange={handleChange} />
         </div>
-        {errorMessage ? <p>{errorMessage}</p> : null}
+        {errorMessage ? <p className={styles.error}>{errorMessage}</p> : null}
         <button className={styles.button} type="submit" >Entrar</button>
       </form>
     </div>

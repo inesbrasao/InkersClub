@@ -82,3 +82,10 @@
     font-size: var(--font-size-paragraph-1);
     font-family: var(--font-style-paragraph);
   }
+
+  .popup{
+    color: var(--secondarycolor);
+    border: 2px inset var(--secondarycolor);
+    padding: 8px;
+    font-size: 20px;
+  }

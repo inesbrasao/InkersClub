@@ -1,4 +1,3 @@
-// import styles from "@/styles/photo.module.css";
 import styles from "@/styles/index.module.css";
 import { useRouter } from "next/router";
 

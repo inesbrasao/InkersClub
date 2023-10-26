@@ -80,3 +80,11 @@
     font-family: var(--font-style-paragraph);
     font-size: var(--font-size-paragraph-2);
 }
+
+.error{
+    color: var(--secondarycolor);
+    border: 2px inset var(--secondarycolor);
+    padding: 8px;
+    font-size: 20px ;
+    border-radius: 4px;
+}
