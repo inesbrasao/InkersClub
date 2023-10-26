@@ -12,6 +12,7 @@ export default function AddImage() {
   const id = router.asPath.split("/")[3]
   //console.log(id)
   const [categories, setCategories] = useState()
+  const [imageUrl, setImageUrl] = useState(null);
 
 
 
@@ -40,6 +41,32 @@ export default function AddImage() {
         return { ...pForm, "tag": [pForm.tag[0], value] }
       }
     })
+    
+  }
+  const handleFileChange = (event) => {
+    const {name, value, files} = event.target
+    setFormInput(pForm => {
+      //Se o campo que foi alterado foi o ficheiro
+      if (name === "path") {
+        //Não queremos ler o 'value' mas sim o 'files'
+        return { ...pForm, [name]: files[0] }
+      } 
+    })
+    handleImageChange(event)
+  }
+  
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    console.log(file)
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setImageUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setImageUrl(null);
+    }
   }
 
 
@@ -101,14 +128,18 @@ export default function AddImage() {
   return <div>{categories &&
     <div >
         <form className={styles.formWrapper}>
-            <div className={styles.photoPreview}></div>
+            <div className={styles.photoPreview}> {imageUrl ? (
+        <img src={imageUrl} alt="Preview" style={{ width: "200px", height: "200px"}} />
+      ) : (
+        <div></div>
+      )}</div>
             <div>
               <label className={styles.loadButton}>
-              <input type="file" name="path" onChange={(e) => handleChange(e)} />
+              <input type="file" name="path" onChange={(e) => handleFileChange(e)} />
               </label>
             </div>
             <label className={styles.styleLabel}>Estilo de Tatuagem</label>
-            <select className={styles.select} name="tag1" onChange={(e) => handleChange(e)} required>
+            <select required className={styles.select} name="tag1" onChange={(e) => handleChange(e)} >
             {categories.tags.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
             </select>
             <select className={styles.select} name="tag2" onChange={(e) => handleChange(e)} >

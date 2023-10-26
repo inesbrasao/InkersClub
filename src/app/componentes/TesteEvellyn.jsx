@@ -3,14 +3,18 @@ import Button from "./Button";
 import InputText from "./InputText";
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/profileControl.module.css'
+import Popup from "./Popup";
 
 
 export default function ProfileControl({ artist }) {
-   const router = useRouter()
-   const id = router.asPath.split("/")[3]
-   const [formData, setFormData] = useState(artist)
-   const [cities, setCities] = useState()
-   const [imageUrl, setImageUrl] = useState(null);
+  const router = useRouter()
+  const id = router.asPath.split("/")[3]
+  const [formData, setFormData] = useState(artist)
+  const [cities, setCities] = useState()
+
+  const [popup,setPopup] = useState(false)
+
+  const [imageUrl, setImageUrl] = useState(null);
 
 
   useEffect(() => {
@@ -34,13 +38,28 @@ export default function ProfileControl({ artist }) {
 
     console.log(res.status)
     if (res.status === 200) {
- 
+      return true
     }
+
+    return false
   }
 
 
+  const handleChange = (event) => {
+    const { name, value, files } = event.target;
+    setFormData(pForm => {
+      if (name === "path") {
+        return { ...pForm, [name]: files[0] }
+      }
+      return {...pForm, [name]: value}
+    });
+    handleImageChange(event)
+    
+  };
+
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+    console.log(file)
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
@@ -53,52 +72,50 @@ export default function ProfileControl({ artist }) {
   }
 
 
-  const handleChange = (event) => {
-    const { name, value, files } = event.target;
-    setFormData(pForm => {
-      if (name === "path") {
-        return { ...pForm, [name]: files[0] }
-      }
-      return {...pForm, [name]: value}
-    });
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault()
-    updateProfile()
+    console.log(formData.path)
     const formDat = new FormData()
-
+    
     formDat.append("path", formData.path)
+    
+    // if(artist.path === formData.path && artist.path !== undefined) {
+    //   const res = await fetch(`/api/addProfilePhoto/${formData._id}`, {
+    //     method: 'POST',
+    //     body: formDat
+    //   })
+      
+      
+    // }
+    
+    const updatedProfile = await updateProfile()
 
-    const res = await fetch(`/api/addProfilePhoto/${formData._id}`, {
-        method: 'POST',
-        body: formDat
-    })
-
-    if(res.status === 200){
+    if(updatedProfile){
       router.push(`/myprofile/${formData._id}`)
     }
-    
   };
+
+  const changeState = (value) => {
+    setPopup(value)
+  }
+
 
   return <div>{formData && cities &&<div className={styles.ProfileControlContainer}>
     
+
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
-      <div className={styles.photoPreview}></div>
+      <div className={styles.photoPreview}>
+      {imageUrl ? (
+        <img src={imageUrl} alt="Preview" style={{ maxWidth: '100%', maxHeight: '300px' }} />
+      ) : (
+        <div></div>
+      )}</div>
       <div>
+     
         <label className={styles.loadButton}>
         <input type="file" name="path" onChange={(e) => handleChange(e)} />
-        <input type="file" onChange={handleImageChange} accept="image/*" />
-
-        <img src={imageUrl} alt="Preview" style={{ maxWidth: '100%', maxHeight: '300px' }} />
-
-
         </label>
       </div>
-
-
-
-      
       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
       <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
@@ -112,10 +129,10 @@ export default function ProfileControl({ artist }) {
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
 
       <button className={styles.button} type="submit" >Alterar</button>
-      {/* <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
-     
-
+      {/* handledelete <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
     </form>
+    <button className={styles.deleteButton} onClick={() => setPopup(true)} type="submit" >Eliminar</button>
+    {popup ? <Popup className={styles.popup} data={artist} collection={"artists"} changeState={changeState} /> : null}
 
   </div>}</div>
 
