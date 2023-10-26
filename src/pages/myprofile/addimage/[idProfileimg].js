@@ -15,7 +15,7 @@ export default function AddImage() {
 
 
 
-  const [formInput, setFormInput] = useState({path: undefined, tag: []})
+  const [formInput, setFormInput] = useState({path: undefined, tag: [undefined , undefined]})
 
     // const optionsImage = {
     //     method: 'POST',
@@ -34,8 +34,10 @@ export default function AddImage() {
       if (name === "path") {
         //Não queremos ler o 'value' mas sim o 'files'
         return { ...pForm, [name]: files[0] }
-      } else if(name === "tag") {
-        return { ...pForm, [name]:[...pForm[name], value] }
+      } else if(name === "tag1") {
+        return { ...pForm, "tag": [value, pForm.tag[1]] }
+      } else if (name === "tag2") {
+        return { ...pForm, "tag": [pForm.tag[0], value] }
       }
     })
   }
@@ -106,10 +108,10 @@ export default function AddImage() {
               </label>
             </div>
             <label className={styles.styleLabel}>Estilo de Tatuagem</label>
-            <select className={styles.select} name="tag" onChange={(e) => handleChange(e)} required>
+            <select className={styles.select} name="tag1" onChange={(e) => handleChange(e)} required>
             {categories.tags.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
             </select>
-            <select className={styles.select} name="tag" onChange={(e) => handleChange(e)} >
+            <select className={styles.select} name="tag2" onChange={(e) => handleChange(e)} >
             {categories.tags.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
             </select>
             {/* <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={(e) => handleChange(e)} required>
