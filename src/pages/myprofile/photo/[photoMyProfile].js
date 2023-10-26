@@ -48,10 +48,14 @@ export default function ShowImage() {
 
   }, [])
 
+  
+
 
   return <div className={styles.showImageContainer}> {imageState &&
     <div className={styles.showImage}>
+      <div>
       <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
+      </div>
       <div className={styles.photoContainer}>
         <div className={styles.photo} style={{background: `url(/api/loadimages/${imageState.path.split("/")[2]})`, backgroundSize: 'cover', width: "293px", height: "293px"}} alt="Girl in a jacket" >
         </div>
