@@ -36,8 +36,10 @@ export default function ProfileControl({ artist }) {
 
     console.log(res.status)
     if (res.status === 200) {
- 
+      return true
     }
+
+    return false
   }
 
 
@@ -54,19 +56,28 @@ export default function ProfileControl({ artist }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    updateProfile()
+    console.log(formData.path)
     const formDat = new FormData()
-
+    
     formDat.append("path", formData.path)
-
-    const res = await fetch(`/api/addProfilePhoto/${formData._id}`, {
+    
+    if(artist.path === formData.path && artist.path !== undefined) {
+      const res = await fetch(`/api/addProfilePhoto/${formData._id}`, {
         method: 'POST',
         body: formDat
-    })
+      })
+      
+      
+    }
+    
+    const updatedProfile = await updateProfile()
 
-    if(res.status === 200){
+    if(updatedProfile){
       router.push(`/myprofile/${formData._id}`)
     }
+
+
+
     
   };
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from '@/styles/login.module.css'
 import Logo from "@/app/componentes/Logo";
 import InputText from "@/app/componentes/InputText";
+import styles2 from '@/styles/profileControl.module.css'
 
 export default function Login() {
   const [formData, setFormData] = useState()
@@ -60,10 +61,16 @@ export default function Login() {
     </div>
     
     <div className={styles.formContainer}>
-      <h1 className={styles.title}>Criar Conta</h1>
+      <h1 className={styles.title}>Login</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <InputText name="email" label="Email" onChange={handleChange} />
-        <InputText name="password" label="Senha" onChange={handleChange} />
+        <div className={styles2.containerInputText}>
+          <label className={styles2.labelInputText}>Email</label>
+          <input className={styles2.inputText} type="text" name="email" label="Email" onChange={handleChange} />
+        </div>
+        <div className={styles2.containerInputText}>
+          <label className={styles2.labelInputText}>Senha</label>
+          <input className={styles2.inputText} type="password" name="password" label="Senha" onChange={handleChange} />
+        </div>
       
 
         <button className={styles.button} type="submit" >Entrar</button>
