@@ -1,6 +1,7 @@
 import InputText from "@/app/componentes/InputText";
 import { useRouter } from "next/router";
 import styles from '@/styles/signup.module.css'
+import styles2 from '@/styles/profileControl.module.css'
 
 import React, { useState } from 'react';
 import Logo from "@/app/componentes/Logo";
@@ -57,8 +58,14 @@ export default function SignUp() {
       <h1 className={styles.title}>Criar Conta</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <InputText name="email" label="Email" onChange={handleChange} />
-        <InputText name="password" label="Senha" onChange={handleChange} />
-        <InputText name="passwordConfirmation" label="Confirmar Senha" onChange={handleChange} />
+        <div className={styles2.containerInputText}>
+          <label className={styles2.labelInputText}>Senha</label>
+          <input className={styles2.inputText} type="password" name="password" label="Senha" onChange={handleChange} />
+        </div>
+        <div className={styles2.containerInputText}>
+          <label className={styles2.labelInputText}>Confirmar Senha</label>
+          <input className={styles2.inputText} type="password" name="passwordConfirmation" label="Confirmar Senha" onChange={handleChange} />
+        </div>
 
         <button className={styles.button} type="submit" >Continuar</button>
       </form>
