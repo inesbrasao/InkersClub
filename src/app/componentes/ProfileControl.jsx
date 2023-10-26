@@ -70,6 +70,10 @@ export default function ProfileControl({ artist }) {
     
   };
 
+  const handleDelete = () => {
+    setPopup(true);
+  }
+
   return <div>{formData && cities &&<div className={styles.ProfileControlContainer}>
     
 
@@ -93,8 +97,8 @@ export default function ProfileControl({ artist }) {
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
 
       <button className={styles.button} type="submit" >Alterar</button>
-      <button className={styles.button} type="submit" >Eliminar</button>
-      {popup? <Popup artist={artist}/> : null}
+      <button className={styles.button} onClick={handleDelete} type="submit" >Eliminar</button>
+      {popup? <Popup data={artist} collection={"artists"}/> : null}
       {/* handledelete <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
      
 

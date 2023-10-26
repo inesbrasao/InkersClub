@@ -1,11 +1,14 @@
-function Popup({artist}) {
+import { useRouter } from "next/router";
+
+function Popup({data, collection}) {
+  const router = useRouter()
 
     const options = {
         method: 'POST',
         headers: {
             'Content-Type': "application/json"
         },
-        body: JSON.stringify({id:artist._id.toString(),collection:"artists"})
+        body: JSON.stringify({id:data._id.toString(),collection: collection})
     }
 
     async function deleteById() {
@@ -13,8 +16,12 @@ function Popup({artist}) {
         const res = await fetch(`/api/deleteItem`, options);
     
         console.log(res.status)
-        if (res.status === 204) {
-     
+        if (res.status === 200) {
+          if(collection === "artists"){
+            router.push(`/`)
+          }  else {
+            router.push(`/myprofile/${data.artist_id}`)
+          }   
         }
       }
 
