@@ -15,7 +15,7 @@ export default function AddImage() {
 
 
 
-  const [formInput, setFormInput] = useState({artist_id: id, path: undefined, tag: []})
+  const [formInput, setFormInput] = useState({path: undefined, tag: []})
 
     // const optionsImage = {
     //     method: 'POST',
@@ -45,6 +45,7 @@ export default function AddImage() {
     event.preventDefault()
     //FormData é como JSON, uma estrutura de dados que o backend reconhece (neste caso o multer)
     const formData = new FormData()
+    console.log(formInput)
 
     formData.append("path", formInput.path)
 
@@ -69,6 +70,15 @@ export default function AddImage() {
     })
 
     if(res.status === 200){
+      const tags = await fetch("/api/artistTags", {
+        method: 'POST',
+        headers: {
+        'Content-Type': "application/json"
+        },
+        body: JSON.stringify({
+          "id": id, 
+        })
+      })
       router.push(`/myprofile/${id}`)
     }
  
@@ -96,10 +106,10 @@ export default function AddImage() {
               </label>
             </div>
             <label className={styles.styleLabel}>Estilo de Tatuagem</label>
-            <select className={styles.select} name="city" onChange={handleChange} required>
+            <select className={styles.select} name="tag" onChange={(e) => handleChange(e)} required>
             {categories.tags.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
             </select>
-            <select className={styles.select} name="city" onChange={handleChange} >
+            <select className={styles.select} name="tag" onChange={(e) => handleChange(e)} >
             {categories.tags.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
             </select>
             {/* <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={(e) => handleChange(e)} required>

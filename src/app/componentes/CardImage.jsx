@@ -16,7 +16,7 @@ export default function CardImage({ artist, image, page }) {
     
     <div className={page === "home" ? styles.cardImage : styles.cardImage2}>
     <div className={styles.image}
-       style={{background: `url(/api/loadimages/${pathImage.split("/")[2]})`, width: "180px", height: "180px"}}
+       style={{background: `url(/api/loadimages/${pathImage.split("/")[2]})`, backgroundSize: 'cover', width: "180px", height: "180px"}}
        alt={artistName}
     />
     

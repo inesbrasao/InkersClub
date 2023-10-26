@@ -93,9 +93,9 @@ export default function ProfileControl({ artist }) {
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
 
       <button className={styles.button} type="submit" >Alterar</button>
-      <button className={styles.button} onClick={handleDelete} type="submit" >Eliminar</button>
+      <button className={styles.button} type="submit" >Eliminar</button>
       {popup? <Popup artist={artist}/> : null}
-      {/* <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
+      {/* handledelete <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
      
 
     </form>
