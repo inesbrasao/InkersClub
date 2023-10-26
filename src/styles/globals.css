@@ -1,5 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&family=Pirata+One&display=swap');
+
 html{
   margin: 0;
   padding: 0;
@@ -7,7 +11,7 @@ html{
 }
 
 body{
-  background-color: #121420;
+  background-color: var(--primarycolor);
   margin: 0;
   padding: 0;
   
@@ -19,11 +23,11 @@ body{
 }
 
 :root {
-  --primarycolor:#121420 ;
-  --secondarycolor : #ceb27d;
+  --primarycolor:#0C1117;
+  --secondarycolor : #E7E0D3;
 
-  --font-style-heading: 'Playfair Display';
-  --font-style-paragraph: 'Raleway';
+  --font-style-heading: 'Pirata One';
+  --font-style-paragraph: 'Josefin Sans';
 
   --font-size-h3: 2rem;
   --font-size-paragraph-1: 1.125rem;
