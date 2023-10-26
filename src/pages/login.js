@@ -8,6 +8,7 @@ import styles2 from '@/styles/profileControl.module.css'
 
 export default function Login() {
   const [formData, setFormData] = useState()
+  const [errorMessage, setErrorMessage] = useState()
 
   const router = useRouter()
 
@@ -27,6 +28,9 @@ export default function Login() {
 
      router.push(`/myprofile/${body}`)
       console.log(body)
+    } else if( res.status === 404){
+      setErrorMessage("Esse email não está registado.")
+
     }
 
   }
@@ -71,8 +75,7 @@ export default function Login() {
           <label className={styles2.labelInputText}>Senha</label>
           <input className={styles2.inputText} type="password" name="password" label="Senha" onChange={handleChange} />
         </div>
-      
-
+        {errorMessage ? <p>{errorMessage}</p> : null}
         <button className={styles.button} type="submit" >Entrar</button>
       </form>
     </div>
