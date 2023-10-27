@@ -54,7 +54,7 @@ export default function ShowImage() {
 
   return <div className={styles.showImageContainer}> {imageState &&
     <div className={styles.showImage}>
-      <div>
+      <div className={styles.control}>
       <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
       <button onClick={()=> setPopup(true)} className={styles.deleteButton}><img src="\icons\delete.svg" /></button>
       </div>
@@ -65,9 +65,7 @@ export default function ShowImage() {
           <div className={styles.tags}>
             {imageState.tag.map(e => <Tags tagName={e} key={e} />)}
           </div>
-          <div >
-            <ProfilePath artistId={imageState.artist_id} />
-          </div>
+         
           {popup ? <Popup className={styles.popup} data={imageState} collection={"images"} changeState={changeState} /> : null}
         </div>
       </div>
