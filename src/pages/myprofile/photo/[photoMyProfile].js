@@ -10,10 +10,7 @@ import Popup from "@/app/componentes/Popup";
 
 export default function ShowImage() {
   const router = useRouter()
-  const id = router.asPath.split("/")[2]
-  let userId = useParams();
 
-  const [idState, setIdState] = useState(router.asPath.split("/")[3])
   const [imageState, setImageState] = useState()
   const [popup,setPopup] = useState(false)
   //const [artistState, setArtistState] = useState()
@@ -27,7 +24,7 @@ export default function ShowImage() {
       },
       body: JSON.stringify({
         "collection": "images",
-        "id": idState
+        "id": router.asPath.split("/")[3]
       })
     }
     
@@ -35,8 +32,6 @@ export default function ShowImage() {
     async function fetchImage() {
 
       const res = await fetch(`/api/fetchById`, optionsImage);
-      console.log(idState,"olá1")
-      console.log(res.status)
       if (res.status === 200) {
         const body = await res.json();
         setImageState(body)

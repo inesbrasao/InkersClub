@@ -14,18 +14,10 @@ export default function AddImage() {
   //console.log(id)
   const [categories, setCategories] = useState()
   const [imageUrl, setImageUrl] = useState(null);
+  const [errorMessage, setErrorMessage] = useState()
+  const [formInput, setFormInput] = useState({path: undefined, tag: []})
 
 
-
-  const [formInput, setFormInput] = useState({path: undefined, tag: [undefined , undefined]})
-
-    // const optionsImage = {
-    //     method: 'POST',
-    //     headers: {
-    //     'Content-Type': "application/json"
-    //     },
-    //     body: JSON.stringify(formInput)
-    // }
   
 
 
@@ -58,7 +50,6 @@ export default function AddImage() {
   
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    console.log(file)
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
@@ -84,34 +75,41 @@ export default function AddImage() {
       method: "POST",
       body: formData
     })
+    if(result.status === 200){
+      const image_id = await result.json()
+      const data = {artist_id: id, tag: formInput.tag}
 
-    const image_id = await result.json()
-    const data = {artist_id: id, tag: formInput.tag}
-
-    const res = await fetch("/api/updateImage", {
-        method: 'POST',
-        headers: {
-        'Content-Type': "application/json"
-        },
-        body: JSON.stringify({
-          "id": image_id, 
-          "data": data
-        })
-    })
-
-    if(res.status === 200){
-      const tags = await fetch("/api/artistTags", {
-        method: 'POST',
-        headers: {
-        'Content-Type': "application/json"
-        },
-        body: JSON.stringify({
-          "id": id, 
-        })
+      const res = await fetch("/api/updateImage", {
+          method: 'POST',
+          headers: {
+          'Content-Type': "application/json"
+          },
+          body: JSON.stringify({
+            "id": image_id, 
+            "data": data
+          })
       })
-      router.push(`/myprofile/${id}`)
+
+      if(res.status === 200){
+        const tags = await fetch("/api/artistTags", {
+          method: 'POST',
+          headers: {
+          'Content-Type': "application/json"
+          },
+          body: JSON.stringify({
+            "id": id, 
+          })
+        })
+        router.push(`/myprofile/${id}`)
+      }
+
+      if(res.status === 412){
+        const message = await res.json()
+        setErrorMessage(message.message)
+      }
+    } else {
+      setErrorMessage("Tem de adicionar uma foto.")
     }
- 
   }
 
   useEffect(() => {
@@ -144,12 +142,7 @@ export default function AddImage() {
             <select className={styles.select} name="tag2" onChange={(e) => handleChange(e)} >
             {categories.tags.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
             </select>
-            {/* <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={(e) => handleChange(e)} required>
-            {tags.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
-            </select> */}
-            {/* <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={(e) => handleChange(e)}>
-            {tags.map((e, i) => i === 0 ? <option value="" disabled>{e}</option> : <option value={e}>{e}</option>)}
-            </select> */}
+            {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
             <button className={styles.addButton} onClick={handleSubmit}>Adicionar</button>
         </form>
     </div></>}
