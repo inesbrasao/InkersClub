@@ -1,97 +1,127 @@
 .title {
-    font-family: var(--font-style-heading);
-    font-size: var(--font-size-h3);
-    color: var(--secondarycolor);
-    margin: 0;
-    font-weight: 400;
-    line-height: 160.6%;
-    letter-spacing: 0.1rem;
-    margin-bottom: 24px;
+  font-family: var(--font-style-heading);
+  font-size: var(--font-size-h3);
+  color: var(--secondarycolor);
+  margin: 0;
+  font-weight: 400;
+  line-height: 160.6%;
+  letter-spacing: 0.1rem;
+  margin-bottom: 24px;
 }
 
 .ProfileControlContainer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    align-content: center;
-    flex-direction: column;
-    gap: 125px;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-direction: column;
+  gap: 24px;
+  height: 100vh;
 
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    
-
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .button {
-    background-color: var(--secondarycolor);
-    border: none;
-    color: var(--primarycolor);
-    padding: .5rem;
-    font-size: var(--font-style-paragraph);
-    font-family: var(--font-style-paragraph);
-    border-radius:0.25rem;
-    width: 50vw;
-    height: 2.5rem;
-    font-weight: 600;
+  background-color: var(--secondarycolor);
+  border: none;
+  color: var(--primarycolor);
+  padding: .5rem;
+  font-size: var(--font-style-paragraph);
+  font-family: var(--font-style-paragraph);
+  border-radius: 0.25rem;
+  width: 50vw;
+  height: 2.5rem;
+  font-weight: 600;
 }
+
 .labelSelect {
-    color: var(--secondarycolor);
-    font-size: var(--font-size-paragraph-1);
-    font-family: var(--font-style-paragraph);
-  }
+  color: var(--secondarycolor);
+  font-size: var(--font-size-paragraph-1);
+  font-family: var(--font-style-paragraph);
+}
+
 .select {
-    color: var(--secondarycolor);
-    font-size: var(--font-size-paragraph-1);
-    font-family: var(--font-style-paragraph);
-    background-color: transparent;
-    border: 2px solid var(--secondarycolor) ;
-    height: 2.5rem;
-    width: 80vw;
-    border-radius:0.25rem;
-  
-  }
-  .inputText {
-    color: var(--secondarycolor);
-    font-size: var(--font-size-paragraph-1);
-    font-family: var(--font-style-paragraph);
-    background-color: transparent;
-    border: 2px solid var(--secondarycolor) ;
-    height: 2.5rem;
-    width: 80vw;
-    border-radius:0.25rem;
-  
-  }
+  color: var(--secondarycolor);
+  font-size: var(--font-size-paragraph-1);
+  font-family: var(--font-style-paragraph);
+  background-color: transparent;
+  border: 2px solid var(--secondarycolor);
+  height: 2.5rem;
+  width: 80vw;
+  border-radius: 0.25rem;
 
-  .containerInputText {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-  }
-  
-  .labelInputText {
-    color: var(--secondarycolor);
-    font-size: var(--font-size-paragraph-1);
-    font-family: var(--font-style-paragraph);
-  }
+}
 
-  .popup{
-    color: var(--secondarycolor);
-    border: 2px inset var(--secondarycolor);
-    padding: 8px;
-    font-size: 20px;
-  }
+.inputText {
+  color: var(--secondarycolor);
+  font-size: var(--font-size-paragraph-1);
+  font-family: var(--font-style-paragraph);
+  background-color: transparent;
+  border: 2px solid var(--secondarycolor);
+  height: 2.5rem;
+  width: 80vw;
+  border-radius: 0.25rem;
 
-  .photoPreview {
-    background-color: grey;
-    width: 100px;
-    height: 100px;
+}
+
+.containerInputText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.labelInputText {
+  color: var(--secondarycolor);
+  font-size: var(--font-size-paragraph-1);
+  font-family: var(--font-style-paragraph);
+}
+
+.popup {
+  color: var(--secondarycolor);
+  border: 2px inset var(--secondarycolor);
+  padding: 8px;
+  font-size: 20px;
+}
+
+.photoPreview {
+  background-color: grey;
+  width: 100px;
+  height: 100px;
+}
+
+
+.loadButton {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondarycolor);
+  font-family: var(--font-style-paragraph);
+  font-size: var(--font-size-paragraph-1);
+  border-radius: 4px;
+  height: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--primarycolor);
+  text-align: center;
+}
+
+
+.loadButtonDefaut {
+  display: none;
+}
+
+.uploadImage {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  align-items: flex-end;
+
 }

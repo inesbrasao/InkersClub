@@ -109,14 +109,18 @@ export default function ProfileControl({ artist }) {
     
 
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
+        <div className={styles.labelInputText} >Escolha sua foto de perfil</div>
+      <div className={styles.uploadImage}>
+      
       <div className={styles.photoPreview}>
        {imageUrl ? (<img src={imageUrl} alt="Preview" style={{ width: "100px", height: "100px"}} />) : (<div></div>)}  
       </div>
       <div>
         <label className={styles.loadButton}>
-        <input type="file" name="path" onChange={(e) => handleFileChange(e)} />
+        Escolher Imagem
+        <input className={styles.loadButtonDefaut} type="file" name="path" onChange={(e) => handleFileChange(e)} />
         </label>
-      </div>
+      </div></div>
       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
       <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
@@ -133,7 +137,7 @@ export default function ProfileControl({ artist }) {
       {/* handledelete <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
     </form>
     <button className={styles.button} onClick={() => setPopup(true)} type="submit" >Eliminar</button>
-    {popup ? <Popup className={styles.popup} data={artist} collection={"artists"} changeState={changeState} /> : null}
+    {popup ? <Popup  data={artist} collection={"artists"} changeState={changeState} /> : null}
 
   </div>}</div>
 
