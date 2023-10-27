@@ -9,71 +9,74 @@ import ProfilePath from "@/app/componentes/ProfilePath";
 
 export default function ShowImage() {
   const router = useRouter()
-  const id = router.asPath.split("/")[2]
-  let userId = useParams();
+  // const id = router.asPath.split("/")[2]
+  // let userId = useParams();
 
-  const [idState, setIdState] = useState(router.asPath.split("/")[2])
+  // const [idState, setIdState] = useState(router.asPath.split("/")[2] )
   const [imageState, setImageState] = useState()
   const [suggestedImages, setSuggestedImages] = useState()
   //const [artistState, setArtistState] = useState()
 
   useEffect(() => {
-
-   async function heyholetsgo() {
-    const optionsImage = {
-      method: 'POST',
-      headers: {
-        'Content-Type': "application/json"
-      },
-      body: JSON.stringify({
-        "collection": "images",
-        "id": idState
-      })
-    }
+    if(router.isReady){
+      async function heyholetsgo() {
+        async function fetchImage() {
     
-    async function fetchImage() {
-
-      const res = await fetch(`/api/fetchById`, optionsImage);
-
-      console.log(res.status)
-      if (res.status === 200) {
-        const body = await res.json();
-        setImageState(body)
-        return body
-      }
-
-    }
-
-
-    const body = await fetchImage()
-    console.log(body)
-
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': "application/json"
-      },
-      body: JSON.stringify({
-        "tag": body.tag[0]
-      })
-    }
+          const optionsImage = {
+            method: 'POST',
+            headers: {
+              'Content-Type': "application/json"
+            },
+            body: JSON.stringify({
+              "collection": "images",
+              "id": router.asPath.split("/")[2] 
+            })
+          }
+          
+          const res = await fetch(`/api/fetchById`, optionsImage);
     
-    async function getSuggestedImages() {
-  
-      const result = await fetch(`/api/getSuggestedImages`, options);
-  
-      if (result.status === 200) {
-        const images = await result.json();
-        setSuggestedImages(images)
-      }
+          // console.log(res.status)
+          if (res.status === 200) {
+            const body = await res.json();
+            setImageState(body)
+
+            return body
+          }
+    
+        }
+    
+    
+        const body = await fetchImage()
+    
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': "application/json"
+          },
+          body: JSON.stringify({
+            "tag": body.tag[0]
+          })
+        }
+        
+        async function getSuggestedImages() {
+      
+          const result = await fetch(`/api/getSuggestedImages`, options);
+      
+          if (result.status === 200) {
+            const images = await result.json();
+            setSuggestedImages(images)
+          }
+        }
+    
+        getSuggestedImages()
+    
+       }
+
+    
+        heyholetsgo()
+      
     }
-
-    getSuggestedImages()
-
-   }
-
-   heyholetsgo()
-  }, [])
+  }, [router.isReady])
 
 
 
@@ -101,7 +104,5 @@ export default function ShowImage() {
   </div>
 
 
-
-
-
 }
+
