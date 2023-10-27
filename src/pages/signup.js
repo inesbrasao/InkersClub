@@ -10,7 +10,7 @@ export default function SignUp() {
   const [formData, setFormData] = useState()
   // const [artistId, setArtistId] = useState()
   const router = useRouter()
-  const [errorMessage,setErrorMessage]= useState()
+  const [errorMessage, setErrorMessage] = useState()
 
 
 
@@ -27,17 +27,17 @@ export default function SignUp() {
 
     if (res.status === 200) {
       const body = await res.json();
-      
+
       router.push(`/myprofile/form/${body._id}`)
 
-    } else if( res.status === 409){
+    } else if (res.status === 409) {
       const error = await res.json()
       setErrorMessage(error.message)
-     
-    } else if( res.status === 409){
+
+    } else if (res.status === 409) {
       const error = await res.json()
       setErrorMessage(error.message)
-     
+
 
     }
 
@@ -64,8 +64,11 @@ export default function SignUp() {
 
 
   return (<div className={styles.signupContainer}>
+    <div className={styles.backButtonContainer}>
+      <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
+    </div>
     <div>
-      <Logo/>
+      <Logo />
     </div>
     <div className={styles.formContainer}>
       <h1 className={styles.title}>Criar Conta</h1>
