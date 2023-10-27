@@ -89,3 +89,9 @@
     padding: 8px;
     font-size: 20px;
   }
+
+  .photoPreview {
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+}

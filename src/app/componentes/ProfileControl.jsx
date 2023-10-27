@@ -11,6 +11,7 @@ export default function ProfileControl({ artist }) {
   const id = router.asPath.split("/")[3]
   const [formData, setFormData] = useState(artist)
   const [cities, setCities] = useState()
+  const [imageUrl, setImageUrl] = useState(null);
 
   const [popup,setPopup] = useState(false)
 
@@ -52,6 +53,30 @@ export default function ProfileControl({ artist }) {
       return {...pForm, [name]: value}
     });
   };
+  const handleFileChange = (event) => {
+    const { name, value, files } = event.target;
+    setFormData(pForm => {
+      if (name === "path") {
+        return { ...pForm, [name]: files[0] }
+      }
+      return {...pForm, [name]: value}
+    });
+    handleImageChange(event)
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    console.log(file)
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setImageUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setImageUrl(null);
+    }
+  }
 
 
   const handleSubmit = async (event) => {
@@ -84,10 +109,12 @@ export default function ProfileControl({ artist }) {
     
 
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
-      <div className={styles.photoPreview}></div>
+      <div className={styles.photoPreview}>
+       {imageUrl ? (<img src={imageUrl} alt="Preview" style={{ width: "100px", height: "100px"}} />) : (<div></div>)}  
+      </div>
       <div>
         <label className={styles.loadButton}>
-        <input type="file" name="path" onChange={(e) => handleChange(e)} />
+        <input type="file" name="path" onChange={(e) => handleFileChange(e)} />
         </label>
       </div>
       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
