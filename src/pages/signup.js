@@ -10,6 +10,9 @@ export default function SignUp() {
   const [formData, setFormData] = useState()
   // const [artistId, setArtistId] = useState()
   const router = useRouter()
+  const [errorMessage,setErrorMessage]= useState()
+
+
 
   const options = {
     method: 'POST',
@@ -26,7 +29,7 @@ export default function SignUp() {
       const body = await res.json();
       
       router.push(`/myprofile/form/${body._id}`)
-      
+
     } else if( res.status === 409){
       const error = await res.json()
       setErrorMessage(error.message)
@@ -76,7 +79,7 @@ export default function SignUp() {
           <label className={styles2.labelInputText}>Confirmar Senha</label>
           <input className={styles2.inputText} type="password" name="passwordConfirmation" label="Confirmar Senha" onChange={handleChange} />
         </div>
-        {/* {errorMessage ? <p className={styles.error}>{errorMessage}</p> : null} */}
+        {errorMessage ? <p className={styles.error}>{errorMessage}</p> : null}
         <button className={styles.button} type="submit" >Continuar</button>
       </form>
     </div></div>
