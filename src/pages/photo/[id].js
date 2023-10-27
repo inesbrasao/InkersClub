@@ -9,13 +9,9 @@ import ProfilePath from "@/app/componentes/ProfilePath";
 
 export default function ShowImage() {
   const router = useRouter()
-  // const id = router.asPath.split("/")[2]
-  // let userId = useParams();
-
-  // const [idState, setIdState] = useState(router.asPath.split("/")[2] )
   const [imageState, setImageState] = useState()
   const [suggestedImages, setSuggestedImages] = useState()
-  //const [artistState, setArtistState] = useState()
+  const [params, setParams] = useState()
 
   useEffect(() => {
     if(router.isReady){
@@ -29,7 +25,7 @@ export default function ShowImage() {
             },
             body: JSON.stringify({
               "collection": "images",
-              "id": router.asPath.split("/")[2] 
+              "id": params ?? router.asPath.split("/")[2] 
             })
           }
           
@@ -72,11 +68,14 @@ export default function ShowImage() {
     
        }
 
-    
         heyholetsgo()
       
     }
-  }, [router.isReady])
+  }, [router.isReady, params])
+
+  const handleClick = (data) => {
+    setParams(data)    
+  }
 
 
 
@@ -97,7 +96,7 @@ export default function ShowImage() {
           
         </div>
         <div className={styles.suggestedPhotos}>
-            {suggestedImages && suggestedImages.map(e => e.path === imageState.path ? null :<div><div className={styles.suggestedPhoto} style={{backgroundImage: `url(/api/loadimages/${e.path.split("/")[2]})`, backgroundSize: 'cover', width: "100px", height: "100px"}} alt="Girl in a jacket" ></div></div> )}
+            {suggestedImages && suggestedImages.map(e => e.path === imageState.path ? null :<div><div onClick={() => handleClick(e._id)} className={styles.suggestedPhoto} style={{backgroundImage: `url(/api/loadimages/${e.path.split("/")[2]})`, backgroundSize: 'cover', width: "100px", height: "100px"}} alt="Girl in a jacket" ></div></div> )}
           </div>
       </div>
     </div>}
