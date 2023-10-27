@@ -41,3 +41,10 @@
     width: 50vw;
     height: 2.5rem;
 }
+
+.backButton {
+    background: transparent;
+    border: none;
+    margin-top: 18px;
+    margin-left: -175px;
+}

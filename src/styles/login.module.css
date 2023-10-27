@@ -15,7 +15,7 @@
     justify-content: flex-start;
     align-content: center;
     flex-direction: column;
-    gap: 34px;
+    gap: 14px;
     height: 100vh;
 
 }
@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-margin-top: 54px;
+    margin-top: 54px;
 }
 .signupContainer {
     display: flex;
@@ -83,9 +83,12 @@ margin-top: 54px;
 }
 
 .error{
-    color: #810000;
-    border: 2px inset #810000;
+    color: #e84e4f;
+    text-decoration: underline;
     padding: 8px;
     font-size: 20px ;
     border-radius: 4px;
+    width: 80vw;
+    text-align: center;
+    font-family: var(--font-style-paragraph);
 }
