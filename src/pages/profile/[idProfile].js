@@ -16,6 +16,7 @@ export default function ArtistsImages() {
   const id = router.query.idProfile
 
   const [artistImages, setArtistImages] = useState()
+  const [imagesFeed, setImagesFeed] = useState()
 
   useEffect(() => {
 
@@ -46,15 +47,28 @@ export default function ArtistsImages() {
     }
 
 
+
   }, [router.isReady])
+
+  useEffect(() => {
+    
+    if (artistImages !== undefined) {
+       setImagesFeed( artistImages.reverse())
+       console.log(imagesFeed)
+       console.log(artistImages)
+      
+      
+    }
+  }, [artistImages])
+
 
 
   return <div className={styles.myProfileContainer}>
     <div className={styles.headerContainer}>
       {<ProfileHeader id={id} />}
     </div>
-    {artistImages && <div className={styles.cardBackground}>
-      {artistImages.map(e => <div onClick={() => router.push(`/photo/${e._id}`)}><CardImage image={e} page={"profile"} /></div>)}
+    {artistImages && imagesFeed && <div className={styles.cardBackground}>
+      {imagesFeed.map(e => <div onClick={() => router.push(`/photo/${e._id}`)}><CardImage image={e} page={"profile"} /></div>)}
 
     </div>
     }

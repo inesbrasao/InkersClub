@@ -52,13 +52,26 @@ export default function ListCard() {
     }
 
 
-    return <div >
-        {search ? <InputSearch changeParams={changeParams}/> : 
+    return <div className={styles.listCardContainer}>
+        <InputSearch changeParams={changeParams} search={search}/>
+
+        <div className={styles.searchContainer} >
+            {
+                search === false && <><button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> 
+                <TagSuggest changeParams={changeParams} />  </>
+            }
+            
+        </div>
+
+        {/* {search ? <InputSearch changeParams={changeParams}  /> : 
         <div className={styles.searchContainer} >
             <button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> 
             <TagSuggest changeParams={changeParams} /> 
-        </div>}
-        <div>
+        </div>} */}
+        
+        <div style={{ transform: search === true ? "translateY(160px)" : "translateY(0px)", left: "0px",
+            transition: "transform 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75)"}}>
+            
             {showImage ? <div onClick={() => setShowImage()}>
                 {router.push(`/photo/${imageList.id}`)}</div> :
                 imageList && <div className={styles.listCard}>

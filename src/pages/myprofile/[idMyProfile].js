@@ -10,6 +10,7 @@ export default function MyProfile() {
     const id = router.asPath.split("/")[2]
 
     const [artistImages, setArtistImages] = useState()
+    const [imagesFeed, setImagesFeed] = useState()
 
     useEffect(() => {
         if (router.isReady) {
@@ -42,6 +43,18 @@ export default function MyProfile() {
         }
     }, [router.isReady])
 
+    useEffect(() => {
+    
+        if (artistImages !== undefined) {
+           setImagesFeed( artistImages.reverse())
+           console.log(imagesFeed)
+           console.log(artistImages)
+          
+          
+        }
+      }, [artistImages])
+    
+
 
     return <div>  {artistImages && 
     <div className={styles.myProfileContainer}>
@@ -51,8 +64,8 @@ export default function MyProfile() {
             <button className={`${styles.addbutton} ${styles.button}`} onClick={() => { router.push(`/myprofile/addimage/${id}`) }}><img src="/icons/add_photo.svg" /></button>
         </div>
         <div className={styles.cardBackground}>
-            {artistImages && artistImages.length > 0
-                ? artistImages.map(e => <div key={e.id} onClick={() => router.push(`/myprofile/photo/${e._id}`)}><CardImage image={e} /></div>)
+            {artistImages && imagesFeed && artistImages.length > 0
+                ? imagesFeed.map(e => <div key={e.id} onClick={() => router.push(`/myprofile/photo/${e._id}`)}><CardImage image={e} /></div>)
                 : <div>Ainda não tens nenhuma imagem, adicione agora!</div>
             }
         </div>
