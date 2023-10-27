@@ -16,11 +16,11 @@ export default function CardImage({ artist, image, page }) {
     
     <div className={page === "home" ? styles.cardImage : styles.cardImage2}>
     <div className={styles.image}
-       style={{backgroundImage: `url(/api/loadimages/${pathImage.split("/")[2]})`,  backgroundPosition: "center center",  width: "180px", height: "180px"}}
+       style={{backgroundImage: `url(/api/loadimages/${pathImage.split("/")[2]})`,  backgroundPosition: "center center",  width: "170px", height: "170px"}}
        alt={artistName}
     />
     
-    {tags.map(e=><p className={page === "home" ? styles.tags : styles.tags2}>{e}</p>)}
+    {tags.map(e=><div className={page === "home" ? styles.tags : styles.tags2}>{e}</div>)}
    
     </div>
     </>

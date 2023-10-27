@@ -63,7 +63,7 @@ export default function ListCard() {
                 {router.push(`/photo/${imageList.id}`)}</div> :
                 imageList && <div className={styles.listCard}>
                 {imageList.map(e => <div onClick={() => {router.push(`/photo/${e._id}`)}}>
-                    <CardImage image={e} page={"home"} /> </div>)}
+                    <CardImage image={e} page={"home"} className={styles.cardImageContainer}/> </div>)}
                 </div>
             }
             {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}

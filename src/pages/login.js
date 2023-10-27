@@ -66,6 +66,7 @@ export default function Login() {
     <div className={styles.loginContainer}>
     <div>
       <Logo />
+      
     </div>
     
     <div className={styles.formContainer}>

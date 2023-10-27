@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main className={styles.body}>
       <div className={styles.logocontainer}>
-      <img src= "\icons\logo-inkersclub-dark.svg" className={styles.logo} />
+      <img src= "\icons\logo-inkersclub-light.svg" className={styles.logo} />
         </div>
       <div className={styles.buttons}>
         <div className={styles.indexbutton}>

@@ -3,6 +3,12 @@
   background-color: var(--primarycolor);
 
 margin: 0.8rem;
+color: var(--secondarycolor);
+    background-color: var(--primarycolor);
+    margin: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px
 }
 
 .idImage {
@@ -31,15 +37,6 @@ margin: 0.8rem;
   
 }
 
-.tags {
-  font-family: "Raleway";
-  color: var(--primarycolor);
-  margin: 2px;
-  font-size: 1rem;
-  background-color: var(--secondarycolor);
-  padding: 4px;
-  border-radius: 2px;
-}
 .idData {
   display: flex;
   flex-direction: column;
@@ -62,7 +59,7 @@ margin: 0.8rem;
   font-family: var(--font-style-paragraph);
   font-size: var(--font-size-paragraph-2);
   
-  margin-top: 16px;
+  
   gap: 6px;
 }
 .contactContainer p{

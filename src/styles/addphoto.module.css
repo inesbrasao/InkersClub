@@ -1,10 +1,18 @@
 .formWrapper {
-    margin-top: 70px;
+    margin-top: px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 24px;
+}
+.addImageContainer {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
 /* .inputBox {
@@ -25,10 +33,10 @@
 
 .styleLabel{
     margin-top: 48px;
-    color: #CEB27D;
-    font-family: 'Playfair Display';
+    color: var(--secondarycolor);
+    font-family: var(--font-style-heading);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 36px;
 }
 
 .addButton {
@@ -40,10 +48,11 @@
         padding: .5rem;
         font-size: var(--font-style-paragraph);
         font-family: var(--font-style-paragraph);
+        font-size: var(--font-size-paragraph-1);
         border-radius:0.25rem;
         width: 50vw;
         height: 2.5rem;
-        font-weight:600;
+        font-weight:500;
     
 
 }
@@ -53,16 +62,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #CEB27D;
-    border: 1px solid #CEB27D;
+    background: var(--secondarycolor);
+    font-family: var(--font-style-paragraph);
+    font-size: var(--font-size-paragraph-1);
+  
     border-radius: 4px;
-    width: 173px;
-    height: 32px;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 1rem;
+    width: 200px;
+    height: 2rem;
+  
+    font-weight: 500;
+    
+    
     letter-spacing: 0.02em;
-    color: #121420;
+    color:var(--primarycolor);
    
     text-align: center;
     
@@ -84,6 +96,10 @@
     width: 80vw;
     border-radius:0.25rem;
   
+  }
+
+  .loadButtonDefaut{
+    display: none;
   }
 
 

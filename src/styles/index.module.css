@@ -8,7 +8,7 @@
     font-weight: 400;
     font-size: 1.5rem;
     letter-spacing: 0.02em;
-    color: #ceb27d;
+    color: var(--secondarycolor);
     
 }
 
@@ -23,7 +23,7 @@
 .body{
     background-image: url("/background/home_page-background.jpg");
     height: 100%;
-    background-size: cover;
+    background-size: contain;
 }
 
 
@@ -32,5 +32,6 @@
     flex-direction: column;
     align-items: center;
    padding: 50px;
-   filter: drop-shadow(0px 3px 5px rgba(255, 255, 255, 0.80));
+   filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 1
+   ));
 }
