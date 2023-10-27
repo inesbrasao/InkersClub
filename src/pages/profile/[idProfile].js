@@ -50,6 +50,9 @@ export default function ArtistsImages() {
 
 
   return <div className={styles.myProfileContainer}>
+     <div>
+      <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
+    </div>
     <div className={styles.headerContainer}>
       {<ProfileHeader id={id} />}
     </div>
@@ -58,7 +61,6 @@ export default function ArtistsImages() {
 
     </div>
     }
-    <button className={styles.returnButton} onClick={() => router.back()}><img src="/icons/back.svg" /></button>
     <NavBar />
   </div>
 

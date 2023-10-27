@@ -127,7 +127,12 @@ export default function AddImage() {
 
 
   return <div className={styles.addImageContainer}>{categories &&
-    <><Logo/>
+    <>
+    <div>
+      <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
+    </div>
+    <Logo/>
+    
     <div >
         <form className={styles.formWrapper}>
             <div className={styles.photoPreview}> {imageUrl ? (
