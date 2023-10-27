@@ -82,8 +82,8 @@
 }
 
 .error{
-    color: var(--secondarycolor);
-    border: 2px inset var(--secondarycolor);
+    color: #810000;
+    border: 2px inset #810000;
     padding: 8px;
     font-size: 20px ;
     border-radius: 4px;

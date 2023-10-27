@@ -32,8 +32,8 @@ function Popup({data, collection}) {
       <div className="modal">
         <div className="modal_box">
           <p>Confirme a sua escolha:</p>
-          <button className="modal_buttonCancel">Cancelar</button>
-          <button onClick={handleClick} className="modal_buttonDelete">
+          <button onClick={handleClick} className="modal_buttonCancel">Cancelar</button>
+          <button onClick={handleChange} className="modal_buttonDelete">
             Confirmar
           </button>
         </div>

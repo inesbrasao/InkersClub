@@ -21,6 +21,7 @@ export default function ShowImage({artist, image}) {
    //retorna 
 
    return <div>
+   
       <div>
          <Image
             src={pathImage}
