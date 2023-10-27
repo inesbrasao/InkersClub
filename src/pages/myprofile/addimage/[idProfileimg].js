@@ -131,14 +131,11 @@ export default function AddImage() {
     <div >
         <form className={styles.formWrapper}>
             <div className={styles.photoPreview}> {imageUrl ? (
-        <img src={imageUrl} alt="Preview" style={{ width: "200px", height: "200px"}} />
-      ) : (
-        <div></div>
-      )}</div>
+              <img src={imageUrl} alt="Preview" style={{ width: "200px", height: "200px"}} />) : (<div></div>)}
+            </div>
             <div>
               <label className={styles.loadButton}>Escolha uma imagem
               <input  className={styles.loadButtonDefaut} type="file" name="path" onChange={(e) => handleFileChange(e)} /></label>
-              
             </div>
             <label className={styles.styleLabel}>Estilo de Tatuagem</label>
             <select required className={styles.select} name="tag1" onChange={(e) => handleChange(e)} >
