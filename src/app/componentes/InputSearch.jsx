@@ -3,7 +3,7 @@ import ListCard from "./ListCard"
 import styles from "../../styles/homepage.module.css"
 
 
-export default function InputSearch({ changeParams }) {
+export default function InputSearch({ changeParams, search }) {
    const [searchData, setSearchData] = useState()
    const [cities, setCities] = useState()
    const [categories, setCategories] = useState()
@@ -42,7 +42,11 @@ export default function InputSearch({ changeParams }) {
 
 
 
-   return <>{categories && cities &&(<div >
+   return <>{categories && cities && (<div style={{
+      transform: search === true ? "translateY(0px)" : "translateY(-1000px)", left: "0px",
+      height: search === true ? "100px" : "0px", transition: "transform 0.3s ease",
+      transition: "transform 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75)"
+   }} >
       <form onSubmit={handleSubmit} className={styles.searchForm}>
 
          <select className={styles.inputBox} placeholder="Estilo" name="tag" onChange={handleChange}>

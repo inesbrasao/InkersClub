@@ -27,10 +27,8 @@
     padding: 1rem;
     letter-spacing: 0.02em;
     color: var(--secondarycolor);
-    margin-top: 24px;
-    color: var(--secondarycolor);
-   
     font-family: var(--font-style-paragraph);
+    transition: "all 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75)";
    
 
 }
@@ -81,4 +79,5 @@
     align-items: center;
     justify-content: center;
     gap: 24px;
-}
+    transition: "transform 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75)"}
+    
