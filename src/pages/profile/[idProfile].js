@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import ProfilePath from "@/app/componentes/ProfilePath";
 import CardImage from "@/app/componentes/CardImage";
 import ProfileHeader from "@/app/componentes/ProfileHeader";
+import NavBar from "@/app/componentes/NavBar";
 
 
 export default function ArtistsImages() {
@@ -58,6 +59,7 @@ export default function ArtistsImages() {
     </div>
     }
     <button className={styles.returnButton} onClick={() => router.back()}><img src="/icons/back.svg" /></button>
+    <NavBar />
   </div>
 
 

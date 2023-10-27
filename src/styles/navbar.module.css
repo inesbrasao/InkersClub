@@ -1,0 +1,20 @@
+.nav{
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--primarycolor);
+    position: fixed;
+    height: 3.5rem;
+    width: 100vw;
+}
+
+.icon{
+    height: 24px;
+    width: 24px;
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+}

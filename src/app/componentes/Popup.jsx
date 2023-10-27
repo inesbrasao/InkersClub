@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-function Popup({data, collection}) {
+function Popup({data, collection, changeState}) {
   const router = useRouter()
 
     const options = {
@@ -32,8 +32,9 @@ function Popup({data, collection}) {
       <div className="modal">
         <div className="modal_box">
           <p>Confirme a sua escolha:</p>
-          <button onClick={handleClick} className="modal_buttonCancel">Cancelar</button>
-          <button onClick={handleChange} className="modal_buttonDelete">
+
+          <button className="modal_buttonCancel" onClick={() => changeState(false)}>Cancelar</button>
+          <button onClick={handleClick} className="modal_buttonDelete">
             Confirmar
           </button>
         </div>
