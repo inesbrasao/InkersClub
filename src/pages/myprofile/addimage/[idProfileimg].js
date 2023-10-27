@@ -137,7 +137,7 @@ export default function AddImage() {
               <img src={imageUrl} alt="Preview" style={{ width: "200px", height: "200px"}} />) : (<div></div>)}
             </div>
             <div>
-              <label className={styles.loadButton}>Escolha uma imagem
+              <label className={styles.loadButton}>Escolher imagem
               <input  className={styles.loadButtonDefaut} type="file" name="path" onChange={(e) => handleFileChange(e)} /></label>
             </div>
             <label className={styles.styleLabel}>Estilo de Tatuagem</label>

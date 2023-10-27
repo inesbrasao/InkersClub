@@ -1,0 +1,51 @@
+.title {
+    font-family: var(--font-style-heading);
+    font-size: var(--font-size-h3);
+    color: var(--secondarycolor);
+    margin: 0;
+    font-weight: 400;
+    line-height: 160.6%;
+    letter-spacing: 0.1rem;
+    margin-bottom: 24px;
+}
+
+
+.signupbutton {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: var(--secondarycolor);
+    font-family: var(--font-style-paragraph);
+    font-size: var(--font-size-paragraph-2);
+}
+.signupContainer p{
+    color: var(--secondarycolor);
+    font-family: var(--font-style-paragraph);
+    font-size: var(--font-size-paragraph-2);
+}
+
+.error{
+    color: #810000;
+    border: 2px inset #810000;
+    padding: 8px;
+    font-size: 20px ;
+    border-radius: 4px;
+}
+
+.popupTxt{
+    font-family: var(--font-style-heading);
+    font-size: var(--font-size-h3);
+
+}
+
+
+.popupContainer{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color:var(--secondarycolor);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}

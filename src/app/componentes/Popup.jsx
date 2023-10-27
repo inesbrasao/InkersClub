@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import styles from '@/styles/popup.module.css'
 
 function Popup({data, collection, changeState}) {
   const router = useRouter()
@@ -29,12 +30,12 @@ function Popup({data, collection, changeState}) {
     const handleClick = () => {deleteById()}
 
     return (
-      <div className="modal">
-        <div className="modal_box">
-          <p>Confirme a sua escolha:</p>
+      <div className={styles.popupContainer}>
+        <div className={styles.popupBox}>
+          <p className={styles.popupTxt}>Tem a certeza que quer excluir o perfil?</p>
 
-          <button className="modal_buttonCancel" onClick={() => changeState(false)}>Cancelar</button>
-          <button onClick={handleClick} className="modal_buttonDelete">
+          <button className={styles.popupButtonCancel} onClick={() => changeState(false)}>Cancelar</button>
+          <button onClick={handleClick} className={styles.popupButtonConfirm}>
             Confirmar
           </button>
         </div>
