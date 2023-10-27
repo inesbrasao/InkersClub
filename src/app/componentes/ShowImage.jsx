@@ -16,7 +16,7 @@ export default function ShowImage({artist, image}) {
    
 
 
-
+   
 
    //retorna 
 

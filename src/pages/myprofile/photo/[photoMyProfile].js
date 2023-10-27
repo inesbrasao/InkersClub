@@ -5,6 +5,7 @@ import styles from '@/styles/photo.module.css'
 import Button from "@/app/componentes/Button";
 import { useParams } from "next/navigation";
 import ProfilePath from "@/app/componentes/ProfilePath";
+import Popup from "@/app/componentes/Popup";
 
 
 export default function ShowImage() {
@@ -14,6 +15,7 @@ export default function ShowImage() {
 
   const [idState, setIdState] = useState(router.asPath.split("/")[3])
   const [imageState, setImageState] = useState()
+  const [popup,setPopup] = useState(false)
   //const [artistState, setArtistState] = useState()
 
   useEffect(() => {
@@ -48,6 +50,10 @@ export default function ShowImage() {
 
   }, [])
 
+  const changeState = (value) => {
+    setPopup(value)
+  }
+
   
 
 
@@ -55,7 +61,7 @@ export default function ShowImage() {
     <div className={styles.showImage}>
       <div>
       <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
-      <button onClick={()=> ()} className={styles.deleteButton}><img src="\icons\delete.svg" /></button>
+      <button onClick={()=> setPopup(true)} className={styles.deleteButton}><img src="\icons\delete.svg" /></button>
       </div>
       <div className={styles.photoContainer}>
         <div className={styles.photo} style={{background: `url(/api/loadimages/${imageState.path.split("/")[2]})`, backgroundSize: 'cover', width: "293px", height: "293px"}} alt="Girl in a jacket" >
@@ -67,6 +73,7 @@ export default function ShowImage() {
           <div >
             <ProfilePath artistId={imageState.artist_id} />
           </div>
+          {popup ? <Popup className={styles.popup} data={imageState} collection={"images"} changeState={changeState} /> : null}
         </div>
       </div>
     </div>}
