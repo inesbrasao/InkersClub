@@ -32,6 +32,7 @@ function Popup({data, collection, changeState}) {
       <div className="modal">
         <div className="modal_box">
           <p>Confirme a sua escolha:</p>
+
           <button className="modal_buttonCancel" onClick={() => changeState(false)}>Cancelar</button>
           <button onClick={handleClick} className="modal_buttonDelete">
             Confirmar
