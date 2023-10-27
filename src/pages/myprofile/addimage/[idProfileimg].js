@@ -5,6 +5,7 @@ import styles from '@/styles/addphoto.module.css'
 import Button from "@/app/componentes/Button";
 import { useParams } from "next/navigation";
 import ProfilePath from "@/app/componentes/ProfilePath";
+import Logo from "@/app/componentes/Logo";
 
 
 export default function AddImage() {
@@ -125,7 +126,8 @@ export default function AddImage() {
 
 
 
-  return <div>{categories &&
+  return <div className={styles.addImageContainer}>{categories &&
+    <><Logo/>
     <div >
         <form className={styles.formWrapper}>
             <div className={styles.photoPreview}> {imageUrl ? (
@@ -134,9 +136,9 @@ export default function AddImage() {
         <div></div>
       )}</div>
             <div>
-              <label className={styles.loadButton}>
-              <input type="file" name="path" onChange={(e) => handleFileChange(e)} />
-              </label>
+              <label className={styles.loadButton}>Escolha uma imagem
+              <input  className={styles.loadButtonDefaut} type="file" name="path" onChange={(e) => handleFileChange(e)} /></label>
+              
             </div>
             <label className={styles.styleLabel}>Estilo de Tatuagem</label>
             <select required className={styles.select} name="tag1" onChange={(e) => handleChange(e)} >
@@ -153,7 +155,7 @@ export default function AddImage() {
             </select> */}
             <button className={styles.addButton} onClick={handleSubmit}>Adicionar</button>
         </form>
-    </div>}
+    </div></>}
   </div>
 
 }

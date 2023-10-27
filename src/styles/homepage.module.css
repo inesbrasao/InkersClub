@@ -18,7 +18,7 @@
 
 .searchButton {
 
-    background: #121420;
+    background: var(--sprimarycolor);
     border: 1px solid var(--secondarycolor);
     border-radius: 4px;
     width: 90vw;
@@ -48,7 +48,7 @@
 }
 
 .inputBox {
-    background: #121420;
+    background:var(--sprimarycolor);
     border: 1px solid var(--secondarycolor);
     border-radius: 4px;
     width: 90vw;

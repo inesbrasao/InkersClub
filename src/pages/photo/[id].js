@@ -91,10 +91,11 @@ export default function ShowImage() {
           <div >
             <ProfilePath artistId={imageState.artist_id} />
           </div>
-          <div className={styles.suggestedPhotos}>
-            {suggestedImages && suggestedImages.map(e => e.path === imageState.path ? null : <div className={styles.suggestedPhoto} style={{backgroundImage: `url(/api/loadimages/${e.path.split("/")[2]})`, backgroundSize: 'cover', width: "100px", height: "100px"}} alt="Girl in a jacket" ></div>)}
-          </div>
+          
         </div>
+        <div className={styles.suggestedPhotos}>
+            {suggestedImages && suggestedImages.map(e => e.path === imageState.path ? null :<div><div className={styles.suggestedPhoto} style={{backgroundImage: `url(/api/loadimages/${e.path.split("/")[2]})`, backgroundSize: 'cover', width: "100px", height: "100px"}} alt="Girl in a jacket" ></div></div> )}
+          </div>
       </div>
     </div>}
   </div>
