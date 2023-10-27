@@ -34,7 +34,7 @@ export default function ProfileControl({ artist }) {
 
     const res = await fetch(`/api/profile`, optionsArtist);
 
-    console.log(res.status)
+
     if (res.status === 200) {
       return true
     }
@@ -56,18 +56,16 @@ export default function ProfileControl({ artist }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(formData.path)
     const formDat = new FormData()
     
     formDat.append("path", formData.path)
+
     
-    if(artist.path === formData.path && artist.path !== undefined) {
+    if(formData.path !== undefined) {
       const res = await fetch(`/api/addProfilePhoto/${formData._id}`, {
         method: 'POST',
         body: formDat
       })
-      
-      
     }
     
     const updatedProfile = await updateProfile()
