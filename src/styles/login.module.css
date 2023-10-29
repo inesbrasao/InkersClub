@@ -1,6 +1,6 @@
 .title {
     font-family: var(--font-style-heading);
-    font-size: var(--font-size-h3);
+    font-size: 3rem;
     color: var(--secondarycolor);
     margin: 0;
     font-weight: 400;
@@ -87,7 +87,7 @@
     text-decoration: underline;
     padding: 8px;
     font-size: 20px ;
-    border-radius: 4px;
+
     width: 80vw;
     text-align: center;
     font-family: var(--font-style-paragraph);

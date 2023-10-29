@@ -105,7 +105,8 @@ export default function ProfileControl({ artist }) {
   }
 
 
-  return <div>{formData && cities &&<div className={styles.ProfileControlContainer}>
+  return <div>{formData && cities &&
+  <div className={styles.ProfileControlContainer}>
     
 
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
@@ -124,7 +125,7 @@ export default function ProfileControl({ artist }) {
       <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
       <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
-      {/* <InputText name="city" label="Localidade" value={formData.city} onChange={handleChange} /> */}
+     
       <div className={styles.containerInputText} >
         <label htmlFor="city" className={styles.labelSelect}>Localidade</label> 
         <select className={styles.select} name="city" onChange={handleChange}>
@@ -136,7 +137,7 @@ export default function ProfileControl({ artist }) {
       <button className={styles.button} type="submit" >Alterar</button>
       {/* handledelete <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
     </form>
-    <button className={styles.button} onClick={() => setPopup(true)} type="submit" >Eliminar</button>
+    <button className={styles.buttonExcluir} onClick={() => setPopup(true)} type="submit" >Excluir Perfil</button>
     {popup ? <Popup  data={artist} collection={"artists"} changeState={changeState} /> : null}
 
   </div>}</div>
