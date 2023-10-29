@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Tag from "./Tag"
-import { useRouter } from "next/router";
 
 export default function TagSuggest({changeParams}) {
    const [tagList, setTagList] = useState()
@@ -23,7 +22,6 @@ export default function TagSuggest({changeParams}) {
 
      if (res.status === 200) {
          const body = await res.json();
-        //  console.log(body)
          setTagList(body)
      }
    }
@@ -36,7 +34,7 @@ export default function TagSuggest({changeParams}) {
 
    return <>
       {tagList && <div>
-         {tagList.map(e => <Tag changeParams={(data) => changeParams(data)} tagName={e} />)}
+         {tagList.map(e => <Tag changeParams={(data) => changeParams(data)} tagName={e} key={e} />)}
          </div>
          }
    </>

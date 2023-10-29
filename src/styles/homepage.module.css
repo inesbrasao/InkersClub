@@ -2,10 +2,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 20px;
 
 }
-
-
 
 
 .listCard {
@@ -72,8 +71,6 @@
 }
 
 
-
-
 .searchContainer{
     display: flex;
     flex-direction: column;
@@ -81,4 +78,20 @@
     justify-content: center;
     gap: 24px;
     transition: "transform 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75)"}
+
+.suggestedTags{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.errorMessage {
+    padding-top: 30px;
+    text-align: center;
+    font-size: var(--font-size-paragraph-1);
+    font-family: var(--font-style-paragraph);
+    color: var(--secondarycolor);
+
+}
     

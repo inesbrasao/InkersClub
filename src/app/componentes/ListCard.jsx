@@ -14,10 +14,10 @@ export default function ListCard() {
     const [errorMessage, setErrorMessage] = useState()
 
     const router = useRouter()
-    let query = "?" + router.asPath.split('?')[1]
-    for (let key in query){
-        query[key].replaceAll("+", " ")
-    }
+    // let query = "?" + router.asPath.split('?')[1]
+    // for (let key in query){
+    //     query[key].replaceAll("+", " ")
+    // }
 
     useEffect(() => {
         const options = {
@@ -30,14 +30,14 @@ export default function ListCard() {
 
         async function fetchData() {
 
-           const res = await fetch(`/api/search/${query}`, options);
+           const res = await fetch(`/api/search/`, options);
            if (res.status === 200) {
               const body = await res.json();
               setImageList(body)
               setErrorMessage()
            } else if(res.status === 204){
-                setImageList()
-                setErrorMessage("Pesquisa sem Resultados")
+              setImageList()
+              setErrorMessage("Pesquisa sem resultados")
            }
 
         }
@@ -58,16 +58,10 @@ export default function ListCard() {
         <div className={styles.searchContainer} >
             {
                 search === false && <><button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> 
-                <TagSuggest changeParams={changeParams} />  </>
+                <div className={styles.suggestedTags}><TagSuggest changeParams={changeParams} /></div>  </>
             }
             
         </div>
-
-        {/* {search ? <InputSearch changeParams={changeParams}  /> : 
-        <div className={styles.searchContainer} >
-            <button className={styles.searchButton} onClick={() => setSearch(true)}>Pesquisar</button> 
-            <TagSuggest changeParams={changeParams} /> 
-        </div>} */}
         
         <div style={{ transform: search === true ? "translateY(160px)" : "translateY(0px)", left: "0px",
             transition: "transform 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75)"}}>
@@ -75,7 +69,7 @@ export default function ListCard() {
             {showImage ? <div onClick={() => setShowImage()}>
                 {router.push(`/photo/${imageList.id}`)}</div> :
                 imageList && <div className={styles.listCard}>
-                {imageList.map(e => <div onClick={() => {router.push(`/photo/${e._id}`)}}>
+                {imageList.map(e => <div key={e._id} onClick={() => {router.push(`/photo/${e._id}`)}}>
                     <CardImage image={e} page={"home"} className={styles.cardImageContainer}/> </div>)}
                 </div>
             }

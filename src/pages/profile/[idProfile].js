@@ -1,10 +1,6 @@
-import Tags from "@/app/componentes/Tag";
 import { useRouter } from "next/router"
 import { useEffect, useState, } from "react";
 import styles from '@/styles/profile.module.css'
-import Button from "@/app/componentes/Button";
-import { useParams } from "next/navigation";
-import ProfilePath from "@/app/componentes/ProfilePath";
 import CardImage from "@/app/componentes/CardImage";
 import ProfileHeader from "@/app/componentes/ProfileHeader";
 import NavBar from "@/app/componentes/NavBar";
@@ -70,10 +66,11 @@ export default function ArtistsImages() {
     </div>
     {artistImages && imagesFeed && <div className={styles.cardBackground}>
       {imagesFeed.map(e => <div onClick={() => router.push(`/photo/${e._id}`)}><CardImage image={e} page={"profile"} /></div>)}
-
     </div>
     }
+    <div className={styles.navBar}>
     <NavBar />
+    </div>
   </div>
 
 

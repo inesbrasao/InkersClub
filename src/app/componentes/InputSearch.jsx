@@ -56,7 +56,7 @@ export default function InputSearch({ changeParams, search }) {
          <input className={styles.inputBox} type="text" placeholder="Artista" selected name="name" onChange={handleChange} />
 
          <select className={styles.inputBox} name="city" onChange={handleChange}>
-            {cities.localidade.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
+            {cities.localidade.map((e, i) => i === 0 ? <option key={e} value="" disabled selected>{e}</option> : <option key={e} value={e}>{e}</option>)}
          </select>
 
          <input className={styles.searchButton} type="submit" value="Pesquisar" />
