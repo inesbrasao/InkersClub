@@ -28,34 +28,6 @@ export default function CardImage({ artist, image, page }) {
 }
 
 
-/*
-[XX]CARD IMAGE
-
-[XX]CRIAR CONTA
-
-[XX]LISTA DE CARDS
-
-[XX]LOGIN 
-
-[X]EDITAR/CRIAR PERFIL
-
-[X]PERFIL (P.O.V. USER/ARTIST)
-
-[X]SELECT TAGS
-
-[x]CARREGAR IMAGEM
-
-[ ]BARRA DE PESQUISA/ BOTÃO DE PESQUISA
-
-[X]PESQUISA COMPLETA 
-
-[X]TAGS MAIS POPULARES?
-
-[XX]SHOWIMAGE
-
-*/
-
-
 
 
 

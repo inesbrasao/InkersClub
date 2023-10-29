@@ -10,8 +10,6 @@ import {createDocument} from '../../server/data/signup'
 
 export default async function signup(req, res) {
     const { email, password, passwordConfirmation} = req.body
-    //const messageError = findErrors(req.body)
-    //if (Object.keys(messageError).length == 0) {
     const result = await getByEmail(email)
 
     try{
@@ -35,10 +33,4 @@ export default async function signup(req, res) {
     catch {
         res.status(400).end()
     }
-// } else {
-//     res.status(400).json({
-//         message: "Os dados introduzidos não são válidos.",
-//         errors: messageError
-//     })
-// }
 }

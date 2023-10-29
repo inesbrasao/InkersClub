@@ -1,4 +1,3 @@
-import {ObjectId}  from "mongodb"
 import { GetCollection } from "./mongo"
 
 async function getByEmail(email) {

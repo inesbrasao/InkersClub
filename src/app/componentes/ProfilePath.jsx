@@ -25,11 +25,9 @@ export default function ProfilePath({ artistId }) {
 
       const res = await fetch(`/api/fetchById`, optionsArtist);
 
-      console.log(res.status, "ola2")
       if (res.status === 200) {
         const body = await res.json();
         setArtistState(body)
-        console.log(artistState, 'ola1')
 
 
       }

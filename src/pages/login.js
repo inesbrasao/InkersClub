@@ -1,9 +1,7 @@
-
 import { useRouter } from "next/router";
 import { useState } from "react";
 import styles from '@/styles/login.module.css'
 import Logo from "@/app/componentes/Logo";
-import InputText from "@/app/componentes/InputText";
 import styles2 from '@/styles/profileControl.module.css'
 
 export default function Login() {
@@ -25,9 +23,7 @@ export default function Login() {
 
     if (res.status === 200) {
       const body = await res.json();
-
-     router.push(`/myprofile/${body}`)
-      console.log(body)
+      router.push(`/myprofile/${body}`)
     } else if( res.status === 404){
       const error = await res.json()
       setErrorMessage(error.message)
@@ -42,15 +38,11 @@ export default function Login() {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-
     login(formData)
-    console.log(formData)
-
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(event.target.value, name)
     setFormData({
       ...formData,
       [name]: value,

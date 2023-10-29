@@ -11,7 +11,6 @@ export async function searchPhotos(searchParams) {
     let imageCollection = []
     let artistCollection = []
     let result = []
-    console.log("searchphotos", searchParams)
 
 
     if(!city && !name && !tag) {
@@ -50,7 +49,6 @@ export async function searchPhotos(searchParams) {
         for(let i = 0; i < images.length; i++){
             for(let j = 0; j < artistCollection.length; j++){
                 if(images[i].artist_id === artistCollection[j]._id.toString()){
-                    
                     result.push(images[i])
                 }
             }

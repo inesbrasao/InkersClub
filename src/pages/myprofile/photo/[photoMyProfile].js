@@ -2,9 +2,6 @@ import Tags from "@/app/componentes/Tag";
 import { useRouter } from "next/router"
 import { useEffect, useState, } from "react";
 import styles from '@/styles/photo.module.css'
-import Button from "@/app/componentes/Button";
-import { useParams } from "next/navigation";
-import ProfilePath from "@/app/componentes/ProfilePath";
 import Popup from "@/app/componentes/Popup";
 
 
@@ -13,7 +10,6 @@ export default function ShowImage() {
 
   const [imageState, setImageState] = useState()
   const [popup,setPopup] = useState(false)
-  //const [artistState, setArtistState] = useState()
 
   useEffect(() => {
 
