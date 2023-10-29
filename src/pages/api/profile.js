@@ -8,12 +8,13 @@ import {updateByEmail} from '../../server/data/profile'
 
 export default async function profile(req, res) {
     const {email, name, shop, city, instagram, phone} = req.body
-    if(!name) {
-        res.status(412).end()
-    }
     try{
-        const updatedProfile = await updateByEmail(email, {name, shop, city, instagram, phone})
-        res.status(200).end()
+        if(!name) {
+            res.status(412).end()
+        } else{
+            const updatedProfile = await updateByEmail(email, {name, shop, city, instagram, phone})
+            res.status(200).end()
+        }
     }
     catch{
         res.status(400).end()
