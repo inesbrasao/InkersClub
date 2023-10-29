@@ -1,7 +1,6 @@
 .showImage {
   color: var(--secondarycolor);
-  
-  margin-top: 48px;
+  margin-top: 36px;
 }
 
 .photoContainer {
@@ -14,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   width: 90vw;
-  margin-top: 16px;
+  
 }
 
 .photo {
@@ -24,30 +23,32 @@
   height: 90vw;
   filter: drop-shadow(-4px 0px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 
-
 }
 
-.profilePath{
+.profilePath {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  
+
 }
 
 .backButton {
   background: transparent;
   border: none;
-  
+  margin-bottom: 36px;
+
 }
 
-.deleteButton{
+.deleteButton {
   background: transparent;
   border: none;
 }
-.deleteButton img{
+
+.deleteButton img {
   height: 28px;
 }
-.backButton img{
+
+.backButton img {
   height: 24px;
 }
 
@@ -70,11 +71,12 @@
   justify-content: center;
 
 }
+
 .control {
   display: flex;
   margin-bottom: 160px;
   justify-content: space-between;
-  
+
 }
 
 
@@ -103,15 +105,13 @@
 
 
 .cardBackground {
-
-    background-color:var(--secondarycolor);
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border-radius: 12px 12px 0 0;
-    flex-grow: 1
-
+  background-color: var(--secondarycolor);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 12px 12px 0 0;
+  flex-grow: 1
 }
 
 .myProfileContainer {
@@ -120,13 +120,13 @@
   height: 100vh;
 }
 
-.showImageContainer{
+.showImageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.suggestedPhoto{
+.suggestedPhoto {
   border: var(--secondarycolor) solid 3px;
   border-radius: 4px;
   border-top-left-radius: 2px;
@@ -134,22 +134,29 @@
   background-size: cover;
   width: 100%;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
-
 }
 
-.suggestedPhotos{
+.suggestedPhotos {
   display: flex;
   flex-direction: row;
+  width: 90vw;
 
 }
-.suggestedPhotos{
+
+.suggestedPhotos {
   display: flex;
   flex-direction: row;
-
-}
-.suggestedPhotoContainer{
-  display: flex;
-  flex-direction: column;
-font-family: var(--font-style-paragraph);
+  justify-content: space-between;
 }
 
+.suggestedPhotosContainer{
+  width: 90vw;
+  font-family: var(--font-style-heading);
+  font-size: 1rem;
+  
+}
+
+.title{
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
