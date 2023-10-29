@@ -96,6 +96,11 @@
   background-color: grey;
   width: 100px;
   height: 100px;
+  border-radius: 50%;
+}
+.photoPreview img{
+
+  border-radius: 50%;
 }
 
 
@@ -129,3 +134,19 @@
 }
 
    
+.backButton {
+  background: transparent;
+  border: none;
+  margin-left: 24px;
+  
+  
+}
+.buttonExcluir{
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: #810000;
+  font-family: var(--font-style-paragraph);
+  font-size: var(--font-size-paragraph-2);
+
+}

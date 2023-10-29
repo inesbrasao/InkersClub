@@ -40,3 +40,8 @@
 .headerContainer{
     position: relative;
 }
+
+.cta{
+    font-family: var(--font-style-paragraph);
+    margin-top: 2rem;
+}

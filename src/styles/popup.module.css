@@ -35,6 +35,30 @@
 .popupTxt{
     font-family: var(--font-style-heading);
     font-size: var(--font-size-h3);
+    color: var(--secondarycolor);
+    text-align: center;
+    width: 80vw;
+
+}
+
+.popupButtonCancel{
+    background-color: var(--secondarycolor);
+    color: var(--primarycolor);
+    font-family: var(--font-style-paragraph);
+    font-size: var(--font-size-paragraph-2);
+    padding: 4px;
+    border: var(--secondarycolor) solid 1px;
+    border-radius: 2px;
+    
+}
+.popupButtonConfirm{
+    border-radius: 2px;
+    background-color: var(--secondarycolor);
+    color:#810000;
+    font-family: var(--font-style-paragraph);
+    font-size: var(--font-size-paragraph-2);
+    padding: 4px;
+    border: #810000 solid 1px;
 
 }
 
@@ -44,8 +68,14 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    background-color:var(--secondarycolor);
+    background-color:var(--primarycolor);
     align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+.buttonContainer{
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
 }

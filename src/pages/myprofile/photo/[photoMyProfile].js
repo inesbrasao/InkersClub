@@ -66,10 +66,10 @@ export default function ShowImage() {
             {imageState.tag.map(e => <Tags tagName={e} key={e} />)}
           </div>
          
-          {popup ? <Popup className={styles.popup} data={imageState} collection={"images"} changeState={changeState} /> : null}
         </div>
       </div>
     </div>}
+          {popup ? <Popup className={styles.popup} data={imageState} collection={"images"} changeState={changeState} /> : null}
   </div>
 
 

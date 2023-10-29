@@ -31,13 +31,16 @@ function Popup({data, collection, changeState}) {
 
     return (
       <div className={styles.popupContainer}>
+        
         <div className={styles.popupBox}>
-          <p className={styles.popupTxt}>Tem a certeza que quer excluir o perfil?</p>
-
+          <p className={styles.popupTxt}>Tem a certeza que quer excluir?</p>
+          <div className={styles.buttonContainer}>
           <button className={styles.popupButtonCancel} onClick={() => changeState(false)}>Cancelar</button>
+
           <button onClick={handleClick} className={styles.popupButtonConfirm}>
             Confirmar
           </button>
+        </div>
         </div>
       </div>
     );
