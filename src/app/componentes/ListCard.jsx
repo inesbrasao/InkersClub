@@ -14,10 +14,12 @@ export default function ListCard() {
     const [errorMessage, setErrorMessage] = useState()
 
     const router = useRouter()
-    // let query = "?" + router.asPath.split('?')[1]
-    // for (let key in query){
-    //     query[key].replaceAll("+", " ")
-    // }
+
+    //when the search params comes from query (e.g. by clicking in the artist tags)
+    let query = "?" + router.asPath.split('?')[1]
+    for (let key in query){
+        query[key].replaceAll("+", " ")
+    }
 
     useEffect(() => {
         const options = {
@@ -30,7 +32,7 @@ export default function ListCard() {
 
         async function fetchData() {
 
-           const res = await fetch(`/api/search/`, options);
+           const res = await fetch(`/api/search/${query}`, options);
            if (res.status === 200) {
               const body = await res.json();
               setImageList(body)
