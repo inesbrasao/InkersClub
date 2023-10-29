@@ -61,7 +61,6 @@ export default function AddImage() {
     event.preventDefault()
     //FormData é como JSON, uma estrutura de dados que o backend reconhece (neste caso o multer)
     const formData = new FormData()
-    console.log(formInput)
 
     formData.append("path", formInput.path)
 

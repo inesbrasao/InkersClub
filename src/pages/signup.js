@@ -8,7 +8,6 @@ import Logo from "@/app/componentes/Logo";
 
 export default function SignUp() {
   const [formData, setFormData] = useState()
-  // const [artistId, setArtistId] = useState()
   const router = useRouter()
   const [errorMessage, setErrorMessage] = useState()
 
@@ -46,15 +45,11 @@ export default function SignUp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     signup(formData)
-    console.log(formData)
-
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(event.target.value, name)
     setFormData({
       ...formData,
       [name]: value,

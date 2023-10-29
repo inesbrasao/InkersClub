@@ -17,7 +17,6 @@ export default function ArtistsImages() {
   useEffect(() => {
 
     if (router.isReady) {
-      console.log("id:", id)
       const optionsImage = {
         method: 'POST',
         headers: {

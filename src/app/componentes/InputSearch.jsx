@@ -7,10 +7,6 @@ export default function InputSearch({ changeParams, search }) {
    const [searchData, setSearchData] = useState()
    const [cities, setCities] = useState()
    const [categories, setCategories] = useState()
-   //const tags = ["Estilo", undefined, "minimalista", "tradicional", "pontilhismo", "aquarela"]
-   // const cities = ["Distrito", undefined, "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", 
-   // "Coimbra", "Évora", "Faro", "Funchal", "Horta", "Angra do Heroísmo","Guarda", "Leiria", "Lisboa", "Portalegre", 
-   // "Porto", "Santarém", "Ponta Delgada", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu"]
 
    const handleChange = (event) => {
       const { name, value } = event.target

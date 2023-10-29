@@ -1,4 +1,3 @@
-import Logo from "@/app/componentes/Logo";
 import ProfileControl from "@/app/componentes/ProfileControl";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
