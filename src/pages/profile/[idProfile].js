@@ -32,7 +32,6 @@ export default function ArtistsImages() {
 
         const res = await fetch(`/api/fetchImagesByArtistId`, optionsImage);
 
-        console.log(res.status)
         if (res.status === 200) {
           const body = await res.json();
           setArtistImages(body)
@@ -49,11 +48,7 @@ export default function ArtistsImages() {
   useEffect(() => {
     
     if (artistImages !== undefined) {
-       setImagesFeed( artistImages.reverse())
-       console.log(imagesFeed)
-       console.log(artistImages)
-      
-      
+       setImagesFeed( artistImages.reverse()) 
     }
   }, [artistImages])
 
@@ -65,7 +60,7 @@ export default function ArtistsImages() {
       {<ProfileHeader id={id} />}
     </div>
     {artistImages && imagesFeed && <div className={styles.cardBackground}>
-      {imagesFeed.map(e => <div onClick={() => router.push(`/photo/${e._id}`)}><CardImage image={e} page={"profile"} /></div>)}
+      {imagesFeed.map(e => <div key={e._id} onClick={() => router.push(`/photo/${e._id}`)}><CardImage image={e} page={"profile"} /></div>)}
     </div>
     }
     <div className={styles.navBar}>

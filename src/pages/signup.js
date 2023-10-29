@@ -73,13 +73,13 @@ export default function SignUp() {
     <div className={styles.formContainer}>
       <h1 className={styles.title}>Criar Conta</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <InputText name="email" label="Email" onChange={handleChange} />
+        <InputText name="email" label="Email*" onChange={handleChange} />
         <div className={styles2.containerInputText}>
-          <label className={styles2.labelInputText}>Senha</label>
+          <label className={styles2.labelInputText}>Senha*</label>
           <input className={styles2.inputText} type="password" name="password" label="Senha" onChange={handleChange} />
         </div>
         <div className={styles2.containerInputText}>
-          <label className={styles2.labelInputText}>Confirmar Senha</label>
+          <label className={styles2.labelInputText}>Confirmar Senha*</label>
           <input className={styles2.inputText} type="password" name="passwordConfirmation" label="Confirmar Senha" onChange={handleChange} />
         </div>
         {errorMessage ? <p className={styles.error}>{errorMessage}</p> : null}
