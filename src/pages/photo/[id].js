@@ -84,7 +84,7 @@ export default function ShowImage() {
     <div className={styles.showImage}>
       <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
       <div className={styles.photoContainer}>
-        <div className={styles.photo} style={{backgroundImage: `url(/api/loadimages/${imageState.path.split("/")[2]})`, backgroundSize: 'cover', width: "293px", height: "293px"}} alt="Girl in a jacket" >
+        <div className={styles.photo} style={{backgroundImage: `url(/api/loadimages/${imageState.path.split("/")[2]})`, backgroundSize: 'cover', width: "90vw", height: "90vw"}} alt="Girl in a jacket" >
         </div>
         <div className={styles.photoInfo}>
           <div className={styles.tags}>
@@ -95,8 +95,11 @@ export default function ShowImage() {
           </div>
           
         </div>
-        <div className={styles.suggestedPhotos}>
-            {suggestedImages && suggestedImages.map(e => e.path === imageState.path ? null :<div><div onClick={() => handleClick(e._id)} className={styles.suggestedPhoto} style={{backgroundImage: `url(/api/loadimages/${e.path.split("/")[2]})`, backgroundSize: 'cover', width: "100px", height: "100px"}} alt="Girl in a jacket" ></div></div> )}
+        <div className={styles.suggestedPhotosContainer}>
+          
+            {suggestedImages && suggestedImages.map(e => e.path === imageState.path ? null :<div>
+              <div className={styles.title}>Mais neste estilo:</div>
+              <div className={styles.suggestedPhoto} onClick={() => handleClick(e._id)}  style={{backgroundImage: `url(/api/loadimages/${e.path.split("/")[2]})`, backgroundSize: 'cover', width: "100px", height: "100px"}} alt="Girl in a jacket" ></div></div> )}
           </div>
       </div>
     </div>}

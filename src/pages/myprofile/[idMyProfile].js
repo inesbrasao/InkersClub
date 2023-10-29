@@ -61,7 +61,7 @@ export default function MyProfile() {
         <div className={styles.headerContainer}>
             <ProfileHeader id={id} />
             <button className={`${styles.editbutton} ${styles.button}`}onClick={() => { router.push(`/myprofile/form/${id}`) }}><img src="/icons/edit_profile.svg" /></button>
-            <button className={`${styles.addbutton} ${styles.button}`} onClick={() => { router.push(`/myprofile/addimage/${id}`) }}><img src="/icons/add_photo.svg" /></button>
+            <button className={`${styles.addbutton} ${styles.button}`} onClick={() => { router.push(`/myprofile/addimage/${id}`) }}><img src="\icons\add_photo.svg" /></button>
         </div>
         <div className={styles.cardBackground}>
             {artistImages && imagesFeed && artistImages.length > 0
