@@ -11,6 +11,7 @@ export default function ProfileControl({ artist }) {
   const [formData, setFormData] = useState(artist)
   const [cities, setCities] = useState()
   const [imageUrl, setImageUrl] = useState(null);
+  const [errorMessage, setErrorMessage] = useState()
 
   const [popup,setPopup] = useState(false)
 
@@ -33,6 +34,11 @@ export default function ProfileControl({ artist }) {
   async function updateProfile() {
 
     const res = await fetch(`/api/profile`, optionsArtist);
+
+    if(res.status === 412){
+      setErrorMessage("É obrigatório escolher um nome.")
+
+    }
 
 
     if (res.status === 200) {
@@ -132,7 +138,7 @@ export default function ProfileControl({ artist }) {
         </select>
       </div>
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
-
+      {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
       <button className={styles.button} type="submit" >Alterar</button>
     </form>
     <button className={styles.buttonExcluir} onClick={() => setPopup(true)} type="submit" >Excluir Perfil</button>

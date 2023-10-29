@@ -29,13 +29,9 @@ export default function MyProfile() {
 
                 const res = await fetch(`/api/fetchImagesByArtistId`, options);
 
-                console.log(router.asPath.split("/")[3])
-                console.log(res.status)
                 if (res.status === 200) {
                     const body = await res.json();
                     setArtistImages(body)
-                    console.log(artistImages)
-                    console.log(id)
                 }
 
             }
@@ -47,10 +43,7 @@ export default function MyProfile() {
     useEffect(() => {
     
         if (artistImages !== undefined) {
-           setImagesFeed( artistImages.reverse())
-           console.log(imagesFeed)
-           console.log(artistImages)
-          
+           setImagesFeed( artistImages.reverse())        
           
         }
       }, [artistImages])

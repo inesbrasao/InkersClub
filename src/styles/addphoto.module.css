@@ -92,5 +92,11 @@
     margin-left: 24px;
 }
 
+.errorMessage {
+    color: #810000;
+    font-size: var(--font-size-paragraph-1);
+    font-family: var(--font-style-paragraph);
+}
+
 
 

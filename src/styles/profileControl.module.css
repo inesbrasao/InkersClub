@@ -150,3 +150,9 @@
   font-size: var(--font-size-paragraph-2);
 
 }
+
+.errorMessage{
+  color: #810000;
+  font-family: var(--font-style-paragraph);
+  font-size: var(--font-size-paragraph-1);
+}
