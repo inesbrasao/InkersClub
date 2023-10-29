@@ -30,6 +30,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
     background-color: var(--secondarycolor);
+    padding-bottom: 80px;
 }
 
 .button {

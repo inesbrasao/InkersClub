@@ -15,6 +15,7 @@
     flex-grow: 1;
     flex-wrap: wrap;
     align-content: flex-start;
+    padding-bottom: 80px;
 }
 
 .button {
@@ -25,7 +26,7 @@
 .addbutton {
 
     position: fixed;
-    bottom: 20px;
+    bottom: 70px;
     right: 20px;
     z-index: 9999;
 
@@ -42,6 +43,8 @@
 }
 
 .cta{
+    width: 90%;
     font-family: var(--font-style-paragraph);
+    text-align: center;
     margin-top: 2rem;
 }

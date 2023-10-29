@@ -20,7 +20,7 @@ export default function CardImage({ artist, image, page }) {
        alt={artistName}
     />
     
-    {tags.map(e=><div className={page === "home" ? styles.tags : styles.tags2}>{e}</div>)}
+    {tags.map(e=><div key={e} className={page === "home" ? styles.tags : styles.tags2}>{e}</div>)}
    
     </div>
     </>

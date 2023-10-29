@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import Button from "./Button";
 import InputText from "./InputText";
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/profileControl.module.css'
@@ -12,6 +11,7 @@ export default function ProfileControl({ artist }) {
   const [formData, setFormData] = useState(artist)
   const [cities, setCities] = useState()
   const [imageUrl, setImageUrl] = useState(null);
+  const [errorMessage, setErrorMessage] = useState()
 
   const [popup,setPopup] = useState(false)
 
@@ -34,6 +34,11 @@ export default function ProfileControl({ artist }) {
   async function updateProfile() {
 
     const res = await fetch(`/api/profile`, optionsArtist);
+
+    if(res.status === 412){
+      setErrorMessage("É obrigatório escolher um nome.")
+
+    }
 
 
     if (res.status === 200) {
@@ -122,20 +127,19 @@ export default function ProfileControl({ artist }) {
         <input className={styles.loadButtonDefaut} type="file" name="path" onChange={(e) => handleFileChange(e)} />
         </label>
       </div></div>
-      <InputText name="name" label="Nome" value={formData.name} onChange={handleChange} />
+      <InputText name="name" label="Nome*" value={formData.name} onChange={handleChange} />
       <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
       <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
      
       <div className={styles.containerInputText} >
         <label htmlFor="city" className={styles.labelSelect}>Localidade</label> 
         <select className={styles.select} name="city" onChange={handleChange}>
-            {cities.localidade.map((e, i) => i === 0 ? <option value="" disabled selected>{e}</option> : <option value={e}>{e}</option>)}
+            {cities.localidade.map((e, i) => i === 0 ? <option key={e} value="" disabled selected>{e}</option> : <option key={e} value={e}>{e}</option>)}
         </select>
       </div>
       <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
-
+      {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
       <button className={styles.button} type="submit" >Alterar</button>
-      {/* handledelete <button className={styles.button} type="submit" >{formData.city!= null? "Alterar" : "Adicionar"}</button> */}
     </form>
     <button className={styles.buttonExcluir} onClick={() => setPopup(true)} type="submit" >Excluir Perfil</button>
     {popup ? <Popup  data={artist} collection={"artists"} changeState={changeState} /> : null}

@@ -6,7 +6,8 @@
 .photoContainer {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  margin-top: 30px;
 }
 
 .photoInfo {
@@ -150,13 +151,15 @@
 }
 
 .suggestedPhotosContainer{
+  display: flex;
+  justify-content: space-evenly;
   width: 90vw;
-  font-family: var(--font-style-heading);
-  font-size: 1rem;
   
 }
 
 .title{
-  margin-top: 24px;
+  font-family: var(--font-style-heading);
+  font-size: 1rem;
+  margin-top: 50px;
   margin-bottom: 16px;
 }

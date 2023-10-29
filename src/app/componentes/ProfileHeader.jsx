@@ -71,7 +71,7 @@ export default function ProfileHeader({id}) {
 
          <div className={styles.tagsContainer}>
             
-         {artist.category && artist.category.map(e => <Tag tagName={e} />)}
+         {artist.category && artist.category.map(e => <Tag tagName={e} key={e} />)}
 
             {/* <p>neo tradicional</p>
             <p>aquarela</p> */}

@@ -1,17 +1,12 @@
-import Tags from "@/app/componentes/Tag";
 import { useRouter } from "next/router"
 import { useEffect, useState, } from "react";
 import styles from '@/styles/addphoto.module.css'
-import Button from "@/app/componentes/Button";
-import { useParams } from "next/navigation";
-import ProfilePath from "@/app/componentes/ProfilePath";
 import Logo from "@/app/componentes/Logo";
 
 
 export default function AddImage() {
   const router = useRouter()
   const id = router.asPath.split("/")[3]
-  //console.log(id)
   const [categories, setCategories] = useState()
   const [imageUrl, setImageUrl] = useState(null);
   const [errorMessage, setErrorMessage] = useState()
@@ -124,11 +119,11 @@ export default function AddImage() {
 
 
 
-  return <div className={styles.addImageContainer}>{categories &&
+  return <>
+  <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
+  
+  <div className={styles.addImageContainer}>{categories &&
     <>
-    <div>
-      <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
-    </div>
     <Logo/>
     
     <div >
@@ -152,5 +147,6 @@ export default function AddImage() {
         </form>
     </div></>}
   </div>
+  </>
 
 }

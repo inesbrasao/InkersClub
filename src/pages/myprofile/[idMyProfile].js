@@ -3,6 +3,7 @@ import ProfileHeader from "@/app/componentes/ProfileHeader";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from '@/styles/myprofile.module.css'
+import NavBar from "@/app/componentes/NavBar";
 
 export default function MyProfile() {
 
@@ -28,13 +29,9 @@ export default function MyProfile() {
 
                 const res = await fetch(`/api/fetchImagesByArtistId`, options);
 
-                console.log(router.asPath.split("/")[3])
-                console.log(res.status)
                 if (res.status === 200) {
                     const body = await res.json();
                     setArtistImages(body)
-                    console.log(artistImages)
-                    console.log(id)
                 }
 
             }
@@ -46,10 +43,7 @@ export default function MyProfile() {
     useEffect(() => {
     
         if (artistImages !== undefined) {
-           setImagesFeed( artistImages.reverse())
-           console.log(imagesFeed)
-           console.log(artistImages)
-          
+           setImagesFeed( artistImages.reverse())        
           
         }
       }, [artistImages])
@@ -66,10 +60,12 @@ export default function MyProfile() {
         <div className={styles.cardBackground}>
             {artistImages && imagesFeed && artistImages.length > 0
                 ? imagesFeed.map(e => <div key={e.id} onClick={() => router.push(`/myprofile/photo/${e._id}`)}><CardImage image={e} /></div>)
-                : <div className={styles.cta}>Ainda não tens nenhuma imagem, adicione agora!</div>
+                : <div className={styles.cta}>Ainda não tem nenhuma imagem, adicione agora!</div>
             }
         </div>
+        <NavBar />
     </div>
+    
     }
     </div>
 

@@ -6,6 +6,7 @@
     justify-content: center;
     gap: 24px;
 }
+
 .addImageContainer {
     margin-top: 36px;
     display: flex;
@@ -25,20 +26,17 @@
 }
 
 .addButton {
-
-   
-        background-color: var(--secondarycolor);
-        border: none;
-        color: var(--primarycolor);
-        padding: .5rem;
-        font-size: var(--font-style-paragraph);
-        font-family: var(--font-style-paragraph);
-        font-size: var(--font-size-paragraph-1);
-        border-radius:0.25rem;
-        width: 50vw;
-        height: 2.5rem;
-        font-weight:500;
-    
+    background-color: var(--secondarycolor);
+    border: none;
+    color: var(--primarycolor);
+    padding: .5rem;
+    font-size: var(--font-style-paragraph);
+    font-family: var(--font-style-paragraph);
+    font-size: var(--font-size-paragraph-1);
+    border-radius:0.25rem;
+    width: 50vw;
+    height: 2.5rem;
+    font-weight:500;
 
 }
 
@@ -92,7 +90,12 @@
     border: none;
     margin-top: 24px;
     margin-left: 24px;
+}
 
+.errorMessage {
+    color: #810000;
+    font-size: var(--font-size-paragraph-1);
+    font-family: var(--font-style-paragraph);
 }
 
 
