@@ -6,7 +6,7 @@ import ProfileHeader from "@/app/componentes/ProfileHeader";
 import NavBar from "@/app/componentes/NavBar";
 import Head from "next/head";
 
-
+// Page that shows the user the chosen artist profile
 export default function ArtistsImages() {
 
   const router = useRouter()

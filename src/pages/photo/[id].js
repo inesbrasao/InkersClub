@@ -5,7 +5,8 @@ import Tags from "@/app/componentes/Tag";
 import ProfilePath from "@/app/componentes/ProfilePath";
 import Head from "next/head";
 
-
+// Page that shows the user one tattoo photo zoomed, where he can click that photo tags for a new search,
+// choose one of the suggested images, or go to the artist profile. 
 export default function ShowImage() {
   const router = useRouter();
   const [imageState, setImageState] = useState();

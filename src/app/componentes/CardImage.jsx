@@ -1,15 +1,15 @@
-import Image from 'next/image'
 import styles from '@/styles/cardImage.module.css'
-import Tag from './Tag'
 
-export default function CardImage({ artist, image, page }) {
-    //recebe uma imagem e uma (ou duas) tags
-
+// Params {
+//     image: object,
+//     page: string
+// }
+// CardImage Component - shows image and correspondent tags
+export default function CardImage({ image, page }) {
     const pathImage = image.path
     const tags = image.tag
     const artistName = image.artist_id   
 
-    //retorna uma div  com uma imagem e um paragrafo
 
     return <>
     

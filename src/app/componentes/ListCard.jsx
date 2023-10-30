@@ -5,7 +5,10 @@ import { useRouter } from "next/router"
 import InputSearch from "./InputSearch"
 import TagSuggest from "./TagSuggest"
 
-
+// Params {
+// }
+// ListCard Component - /home. 
+// Shows the search form and lists the cardImage's resulting from the search or a sample of 10 random results.
 export default function ListCard() {
     const [search, setSearch] = useState(false)
     const [params, setParams] = useState()

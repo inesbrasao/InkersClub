@@ -4,10 +4,12 @@ import React, { useEffect, useState } from 'react';
 import styles from '@/styles/profileControl.module.css'
 import Popup from "./Popup";
 
-
+// Params {
+//     artist: object
+// }
+// ProfileControl Component - Form for artist profile, the same component to edit the artist profile.
 export default function ProfileControl({ artist }) {
   const router = useRouter()
-  const id = router.asPath.split("/")[3]
   const [formData, setFormData] = useState(artist)
   const [cities, setCities] = useState()
   const [imageUrl, setImageUrl] = useState(null);

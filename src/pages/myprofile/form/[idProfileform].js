@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from '@/styles/form.module.css'
 
+// Page to update the artist profile
 export default function FormIdProfile() {
   const router = useRouter()
   const [idState, setIdState] = useState(router.asPath.split("/")[3])

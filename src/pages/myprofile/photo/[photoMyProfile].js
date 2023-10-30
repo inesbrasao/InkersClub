@@ -5,7 +5,7 @@ import styles from '@/styles/photo.module.css'
 import Popup from "@/app/componentes/Popup";
 import Head from "next/head";
 
-
+// Page that shows the artist one of his own photos zoomed, where he can delete it. 
 export default function ShowImage() {
   const router = useRouter()
 

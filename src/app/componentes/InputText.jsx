@@ -1,14 +1,15 @@
 import styles from '@/styles/profileControl.module.css'
 
-
+// Params {
+//     name: string,
+//     value: string,
+//     onChange: function
+//     label: string
+// }
+// InputText Component - shows in the form input the existing value in the DB.
 export default function InputText({name, value, onChange, label}, ) {
-   // recebe label do input
-
-
-   //retorna um input type text
 
    return<div className={styles.containerInputText} >
-   {/* <input type="text"> ola </input> */}
    <label htmlFor={name} className={styles.labelInputText}>{label}</label> 
    <input className={styles.inputText} type="text" id={name} name={name}   value={value} onChange={onChange}/>
 
@@ -16,12 +17,3 @@ export default function InputText({name, value, onChange, label}, ) {
 
    </div>
 }
-
-{/* <input
-      type={type}
-      value={value}
-      name={name}
-      className="form-control"
-      placeholder={placeholder}
-      onChange={onChange}
-    /> */}

@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import Button from "./Button";
 import styles from "../../styles/photo.module.css"
 
-
+// Params {
+//     artistId: string
+// }
+// ProfilePath Component - Fetches the artist info by Id and renders a button that sends the user to the artists profile
 export default function ProfilePath({ artistId }) {
 
   const [artistState, setArtistState] = useState()
