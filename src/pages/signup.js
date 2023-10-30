@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import Logo from "@/app/componentes/Logo";
 import Head from 'next/head'
 
+// Page to signup.
 export default function SignUp() {
   const [formData, setFormData] = useState()
   const router = useRouter()

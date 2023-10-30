@@ -2,7 +2,11 @@ import { useState, useEffect } from "react"
 import ListCard from "./ListCard"
 import styles from "../../styles/homepage.module.css"
 
-
+// Params {
+//     changeParams: function,
+//     search: boolean
+// }
+// InputSearch Component - Search Form at /home
 export default function InputSearch({ changeParams, search }) {
    const [searchData, setSearchData] = useState()
    const [cities, setCities] = useState()

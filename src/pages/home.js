@@ -3,7 +3,7 @@ import styles from '../styles/homepage.module.css'
 import Head from 'next/head'
 import NavBar from "@/app/componentes/NavBar";
 
-
+// Page that shows the search form, and lists the images resulting from the search input (or random ones, if it has no search input).
 export default function Home() {
     return (<>
       <Head>

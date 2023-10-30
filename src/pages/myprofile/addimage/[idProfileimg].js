@@ -4,7 +4,7 @@ import styles from '@/styles/addphoto.module.css'
 import Logo from "@/app/componentes/Logo";
 import Head from "next/head";
 
-
+// Page to add a new Tattoo Photo
 export default function AddImage() {
   const router = useRouter()
   const id = router.asPath.split("/")[3]
@@ -35,9 +35,7 @@ export default function AddImage() {
   const handleFileChange = (event) => {
     const {name, value, files} = event.target
     setFormInput(pForm => {
-      //Se o campo que foi alterado foi o ficheiro
       if (name === "path") {
-        //Não queremos ler o 'value' mas sim o 'files'
         return { ...pForm, [name]: files[0] }
       } 
     })
@@ -60,7 +58,6 @@ export default function AddImage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    //FormData é como JSON, uma estrutura de dados que o backend reconhece (neste caso o multer)
     const formData = new FormData()
 
     formData.append("path", formInput.path)

@@ -1,12 +1,9 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/index.module.css'
 import IndexButton from '../app/componentes/IndexButton'
 
 
-
-const inter = Inter({ subsets: ['latin'] })
-
+// Index Page, shows Logo and two buttons
 export default function Home() {
   
 

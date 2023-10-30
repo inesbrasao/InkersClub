@@ -1,7 +1,11 @@
 import styles from '@/styles/tag.module.css'
 import { useRouter } from "next/router"
 
-
+// Params {
+//     tagName: string,
+//     changeParams: function
+// }
+// Tag Component - sends the user to a new search by tagName
 export default function Tag({tagName, changeParams}) {
    const router = useRouter()
 

@@ -5,6 +5,7 @@ import Logo from "@/app/componentes/Logo";
 import styles2 from '@/styles/profileControl.module.css'
 import Head from 'next/head'
 
+// Page to Login.
 export default function Login() {
   const [formData, setFormData] = useState()
   const [errorMessage, setErrorMessage] = useState()

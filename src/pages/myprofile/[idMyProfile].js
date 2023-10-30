@@ -6,6 +6,7 @@ import styles from '@/styles/myprofile.module.css'
 import NavBar from "@/app/componentes/NavBar";
 import Head from "next/head";
 
+// Page that shows the artist his own profile.
 export default function MyProfile() {
 
     const router = useRouter()

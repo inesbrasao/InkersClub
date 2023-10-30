@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import Tag from "./Tag"
 
+// Params {
+//     changeParams: function
+// }
+// TagSuggest Component - Popular Tags listed in the /home page.
 export default function TagSuggest({changeParams}) {
    const [tagList, setTagList] = useState()
 

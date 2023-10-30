@@ -3,9 +3,11 @@ import styles from '@/styles/ProfileHearder.module.css'
 import Tag from "./Tag";
 import { useRouter } from "next/router";
 
-
+// Params {
+//     id: string
+// }
+// ProfileHeader Component - fetches artist info by id and shows it in the artist profile
 export default function ProfileHeader({id}) {
-   
    const [artist, setArtist] = useState()
    const router = useRouter()
    
@@ -14,9 +16,9 @@ export default function ProfileHeader({id}) {
    useEffect(() => {
 
       if(router.isReady){
-               const options = {
-          method: 'POST',
-          headers: {
+         const options = {
+         method: 'POST',
+         headers: {
             'Content-Type': "application/json"
           },
           body: JSON.stringify({
@@ -38,22 +40,10 @@ export default function ProfileHeader({id}) {
       fetchArtist()
       }
 
-
-    
       }, [router.isReady])
 
 
-
-   //recebe informações do artista
-
    return (
-      //retorna 
-      //<div>
-      //imagem circular, 
-      // h1 com ArtistName
-      //paragrafo com estudio(se houver)
-      //paragrafo localidade
-      //</div>
       <div>
       {artist && <div className={styles.ProfileHeader}>
          <div className={styles.idContainer}>
@@ -73,47 +63,14 @@ export default function ProfileHeader({id}) {
             
          {artist.category && artist.category.map(e => <Tag tagName={e} key={e} />)}
 
-            {/* <p>neo tradicional</p>
-            <p>aquarela</p> */}
          </div>
 
          <div className={styles.contactContainer}>
             <a href="mailto:">{artist.email}</a>
             <p>{artist.instagram}</p>
          </div>
-
-         {/* <button onClick={() => {
-            //  alert('clicked');
-         }}>editar </button>
-
-
-         <button onClick={() => {
-
-         }}>
-            adicionar foto</button> */}
       </div>}
       </div>
    );
-
-
-
-   //<div>
-   // tags mais relevantes para este artista
-   //</div>
-
-
-   //<div>
-   //link emailto email
-   //paragrafo instagram
-   //</div>
-
-
-   //botão para editar perfil 
-
-
-   //? como renderizar o botão de editar apenas para artista dono do perfil?)
-
-
-   // botão para add foto
 
 }
