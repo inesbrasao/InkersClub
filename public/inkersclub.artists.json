@@ -1,0 +1,369 @@
+[{
+  "_id": {
+    "$oid": "6531323d939a1134f480717e"
+  },
+  "name": "Ana Carolina",
+  "email": "anacarolina@gmail.com",
+  "instagram": "@ana_carolina",
+  "city": "Braga",
+  "shop": "The Waveless Beach",
+  "phone": "+351967454687",
+  "password": "Mor@ngito19",
+  "path": "/images/acf943a978e948feb5aba472f3b42adb",
+  "category": [
+    "Black Work",
+    "Dotwork",
+    "Japanese"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f480717f"
+  },
+  "name": "João Silva",
+  "email": "joao.silva@gmail.com",
+  "instagram": "@joaosilva",
+  "city": "Lisboa",
+  "shop": "ArtStudio Lisboa",
+  "phone": "+351912345678",
+  "password": "SenhaSegura123",
+  "category": [
+    "Minimalist",
+    "White Ink",
+    "Floral"
+  ],
+  "path": "/images/b6843e1ba7eb98b33610a8b3ddd4eeb1"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807180"
+  },
+  "name": "Maria Cabral",
+  "email": "maria.cabral@gmail.com",
+  "instagram": "@mariacabral",
+  "city": "Porto",
+  "shop": "ColorSplash Studios",
+  "phone": "+351987654321",
+  "password": "Senha1234",
+  "path": "/images/407db1acc269933466929b3c949424de",
+  "category": [
+    "Watercolor",
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807181"
+  },
+  "name": "Carlos Pereira",
+  "email": "carlos.pereira@gmail.com",
+  "instagram": "@carlospereira",
+  "city": "Faro",
+  "shop": "Agulha Dourada",
+  "phone": "+351933333333",
+  "password": "SenhaCarlos",
+  "path": "/images/4752997d665d1d3d8145615740d21db5",
+  "category": [
+    "Tribal",
+    "Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807182"
+  },
+  "name": "Sofia Ribeiro",
+  "email": "sofia.ribeiro@gmail.com",
+  "instagram": "@sofiaribeiro",
+  "city": "Coimbra",
+  "shop": "ArtInk Coimbra",
+  "phone": "+351966666666",
+  "password": "Arte1234",
+  "path": "/images/47f9b0d89944db0009896715f925fb07",
+  "category": [
+    "Trash Polka",
+    "Abstract"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807183"
+  },
+  "name": "Pedro Ferreira",
+  "email": "pedro.ferreira@gmail.com",
+  "instagram": "@pedroferreira",
+  "city": "Bragança",
+  "shop": "NeedlePoke Art",
+  "phone": "+351955555555",
+  "password": "Pintor45",
+  "category": [
+    "Black and Grey",
+    "Traditional",
+    "Realistic"
+  ],
+  "path": "/images/dda4fdc2506a188cd500b86cea4e8271"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807184"
+  },
+  "name": "Marta Lopes",
+  "email": "marta.lopes@gmail.com",
+  "instagram": "@martalopes",
+  "city": "Aveiro",
+  "shop": "Canvas Creations",
+  "phone": "+351944444444",
+  "password": "MartaArt123",
+  "category": [
+    "Single Line",
+    "Minimalist",
+    "White Ink"
+  ],
+  "path": "/images/22927679cbf3159c99fad2e384a1e3b1"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807185"
+  },
+  "name": "Rui Costa",
+  "email": "rui.costa@gmail.com",
+  "instagram": "@ruicosta",
+  "city": "Vila Real",
+  "shop": "Artistic Visions",
+  "phone": "+351977777777",
+  "password": "Artista456",
+  "category": [
+    "Neo Traditional",
+    "Realistic",
+    "Floral"
+  ],
+  "path": "/images/72386203cecb5a681a6351565504930a"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807186"
+  },
+  "name": "Catarina Almeida",
+  "email": "catarina.almeida@gmail.com",
+  "instagram": "@catarinaalmeida",
+  "city": "Viseu",
+  "shop": "ColorBliss Creations",
+  "phone": "+351988888888",
+  "password": "CatArt123",
+  "category": [
+    "Portrait",
+    "Realistic",
+    "Black and Grey"
+  ],
+  "path": "/images/11ebef61030151c8865af6ada8039daf"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807187"
+  },
+  "name": "Jorge Borges",
+  "email": "jorge.borges@gmail.com",
+  "instagram": "@jorgeborges",
+  "city": "Évora",
+  "shop": "ArtGallery Évora",
+  "phone": "+351966666666",
+  "password": "Artista123",
+  "category": [
+    "New School",
+    "Biomechanical"
+  ],
+  "path": "/images/35c0ea0bf5347279771c05329f0b99fb"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807188"
+  },
+  "name": "Carolina Bastos",
+  "email": "carolina.bastos@gmail.com",
+  "instagram": "@carolinabastos",
+  "city": "Guarda",
+  "shop": "Canvas Creations",
+  "phone": "+351922222222",
+  "password": "CarolArt456",
+  "category": [
+    "Glitch",
+    "Abstract"
+  ],
+  "path": "/images/0d67ede2c3024d59b4308950204343dc"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807189"
+  },
+  "name": "António Pereira",
+  "email": "antonio.pereira@gmail.com",
+  "instagram": "@antoniopereira",
+  "city": "Leiria",
+  "shop": "Artistic Creations Leiria",
+  "phone": "+351977777777",
+  "password": "Art1234",
+  "category": [
+    "Biomechanical",
+    "Realistic",
+    "Portrait"
+  ],
+  "path": "/images/1331ad5ffcf2e2e86e96f0d4730ac5d1"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f480718a"
+  },
+  "name": "Lúcia Marques",
+  "email": "lucia.marques@gmail.com",
+  "instagram": "@luciamarques",
+  "city": "Braga",
+  "shop": "Luminous Art Studio",
+  "phone": "+351955555555",
+  "password": "ArtistaLucia",
+  "category": [
+    "Black and Grey",
+    "Floral"
+  ],
+  "path": "/images/5803de78c2c3ab1e807f361d09f37161"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f480718b"
+  },
+  "name": "Hugo Semedo",
+  "email": "hugo.semedo@gmail.com",
+  "instagram": "@inker4life",
+  "city": "Setúbal",
+  "shop": "InkArt Setúbal",
+  "phone": "+351988888888",
+  "password": "Ink1234",
+  "category": [
+    "Lettering",
+    "Geometric",
+    "Dotwork"
+  ],
+  "path": "/images/1085516b8cb84fa031d9fe353f8a97d8"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f480718c"
+  },
+  "name": "Sara Fernandes",
+  "email": "sara.fernandes@gmail.com",
+  "instagram": "@sarafernandes",
+  "city": "Faro",
+  "shop": "SurrealArt Portimão",
+  "phone": "+351933333333",
+  "password": "SaraArt45",
+  "category": [
+    "Realistic",
+    "Floral",
+    "Portrait"
+  ],
+  "path": "/images/90f015ce5ef3247b5dc4455443f1253c"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f480718d"
+  },
+  "name": "Ricardo Alves",
+  "email": "ricardo.alves@gmail.com",
+  "instagram": "@ricardoalves",
+  "city": "Santarém",
+  "shop": "BrushMagic Santarém",
+  "phone": "+351944444444",
+  "password": "ArtMagic123",
+  "category": [
+    "Geometric",
+    "Tribal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f480718e"
+  },
+  "name": "Ana Gonçalves",
+  "email": "ana.goncalves@gmsem contrail.com",
+  "instagram": "@anagoncalves",
+  "city": "Castelo Branco",
+  "shop": "Canvas Creations",
+  "phone": "+351966666666",
+  "password": "AnaArt123",
+  "category": [
+    "Glitch",
+    "Portrait",
+    "Floral"
+  ],
+  "path": "/images/c6d4f3d67ccaaf9c28bb2bac4760f3c7"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f480718f"
+  },
+  "name": "Luis Rodrigues",
+  "email": "luis.rodrigues@gmail.com",
+  "instagram": "@luisrodrigues",
+  "city": "Região Autónoma dos Açores",
+  "shop": "ArtVision Açores",
+  "phone": "+351955555555",
+  "password": "ArtistaLuís",
+  "category": [
+    "Neo Traditional",
+    "Japanese",
+    "Floral"
+  ],
+  "path": "/images/f58373f9b9306de7a77d30fff18c9854"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807190"
+  },
+  "name": "Mariana Sousa",
+  "email": "mariana.sousa@gmail.com",
+  "instagram": "@marianasousa",
+  "city": "Região Autónoma da Madeira",
+  "shop": "ColorSplash Studios",
+  "phone": "+351988888888",
+  "password": "MarianaArt123",
+  "category": [
+    "Single Line",
+    "Lettering",
+    "Minimalist"
+  ],
+  "path": "/images/77b12ac975bf2d2ef23f7affe6372438"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807191"
+  },
+  "name": "Gonçalo Oliveira",
+  "email": "goncalo.oliveira@gmail.com",
+  "instagram": "@goncalooliveira",
+  "city": "Évora",
+  "shop": "Artistic Creations Évora",
+  "phone": "+351977777777",
+  "password": "ArtGonçalo123",
+  "category": [
+    "Watercolor",
+    "Minimalist",
+    "Lettering"
+  ],
+  "path": "/images/20805311ac8641102fcc870f2da417e3"
+},
+{
+  "_id": {
+    "$oid": "6531323d939a1134f4807192"
+  },
+  "name": "Beatriz Moura",
+  "email": "beatriz.moura@gmail.com",
+  "instagram": "@beatrizmoura",
+  "city": "Portalegre",
+  "shop": "Canvas Creations",
+  "phone": "+351922222222",
+  "password": "BeatrizArt456",
+  "category": [
+    "New School",
+    "Neo Traditional"
+  ],
+  "path": "/images/48197b2754e742867c1076850e8abb4e"
+}]
