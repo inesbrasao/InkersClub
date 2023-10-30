@@ -4,6 +4,7 @@ import styles from '@/styles/profile.module.css'
 import CardImage from "@/app/componentes/CardImage";
 import ProfileHeader from "@/app/componentes/ProfileHeader";
 import NavBar from "@/app/componentes/NavBar";
+import Head from "next/head";
 
 
 export default function ArtistsImages() {
@@ -54,6 +55,10 @@ export default function ArtistsImages() {
 
 
   return <div className={styles.myProfileContainer}>
+      <Head>
+        <title>InkersClub</title>
+        <link rel="icon" href="/icons/InK-Icon.ico" sizes="any" />
+      </Head>
     
     <div className={styles.headerContainer}>
       {<ProfileHeader id={id} />}

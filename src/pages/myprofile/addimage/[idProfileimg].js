@@ -2,6 +2,7 @@ import { useRouter } from "next/router"
 import { useEffect, useState, } from "react";
 import styles from '@/styles/addphoto.module.css'
 import Logo from "@/app/componentes/Logo";
+import Head from "next/head";
 
 
 export default function AddImage() {
@@ -119,6 +120,10 @@ export default function AddImage() {
 
 
   return <>
+      <Head>
+        <title>InkersClub</title>
+        <link rel="icon" href="/icons/InK-Icon.ico" sizes="any" />
+      </Head>
   <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
   
   <div className={styles.addImageContainer}>{categories &&
