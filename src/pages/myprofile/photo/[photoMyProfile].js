@@ -61,7 +61,7 @@ export default function ShowImage() {
       <button onClick={()=> setPopup(true)} className={styles.deleteButton}><img src="\icons\delete.svg" /></button>
       </div>
       <div className={styles.photoContainer}>
-        <div className={styles.photo} style={{background: `url(/api/loadimages/${imageState.path.split("/")[2]})`, backgroundSize: 'cover', width: "293px", height: "293px"}} alt="Girl in a jacket" >
+        <div className={styles.photo} style={{background: `url(/api/loadimages/${imageState.path.split("/")[2]})`, backgroundSize: 'cover', width: "90vw", height: "90vw"}} alt="Girl in a jacket" >
         </div>
         <div className={styles.photoInfo}>
           <div className={styles.tags}>
