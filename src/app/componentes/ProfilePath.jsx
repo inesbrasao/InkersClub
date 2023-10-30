@@ -34,7 +34,7 @@ export default function ProfilePath({ artistId }) {
     }
     fetchArtist();
 
-  }, [])
+  }, [artistState])
 
 
   return <>{artistState &&

@@ -1,6 +1,7 @@
 import ListCard from "@/app/componentes/ListCard";
 import styles from '../styles/homepage.module.css'
 import Head from 'next/head'
+import NavBar from "@/app/componentes/NavBar";
 
 
 export default function Home() {
@@ -12,6 +13,9 @@ export default function Home() {
 
         <div className={styles.body} >
             <ListCard />
+        </div>
+        <div className={styles.navBar}>
+          <NavBar />
         </div>
     </>
     )

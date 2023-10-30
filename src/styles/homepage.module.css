@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     column-gap: 5px;
-    padding-bottom: 20px;
+    padding-bottom: 70px;
     padding-top: 15px;
 
 }
@@ -91,6 +91,5 @@
     font-size: var(--font-size-paragraph-1);
     font-family: var(--font-style-paragraph);
     color: var(--secondarycolor);
-
 }
     

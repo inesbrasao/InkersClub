@@ -1,5 +1,10 @@
 import { GetCollection } from "./mongo"
 
+// Params {
+//     collect: string
+// }
+// Function that searches in DB (collection designed in parameter) by tag,
+// maps the tags and attributes a count to each tag, finds the 6 more popular tags.
 async function getTags(collect){
     const collection = await GetCollection("inkersclub",collect)
     const tagData = await collection.aggregate([

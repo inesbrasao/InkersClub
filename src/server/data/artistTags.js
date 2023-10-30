@@ -1,5 +1,10 @@
 import { GetCollection } from "./mongo"
 
+// Params {
+//     id: string
+// }
+// Function that searches in the "images" collection for the ones that match the artist_id with the id in the parameters,
+// maps the tags in the resulting images and attributes a count to each tag, finds the 3 more popular tags.
 async function getArtistTags(id){
     const collection = await GetCollection("inkersclub", "images")
     const tagData = await collection.aggregate([
