@@ -57,6 +57,7 @@
     width: 80vw;
     text-align: center;
     font-family: var(--font-style-paragraph);
+    text-decoration: underline;
 }
 
 .backButton {
