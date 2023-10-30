@@ -1,0 +1,1026 @@
+[{
+  "_id": {
+    "$oid": "653bd8cd8203bbfb51f495e3"
+  },
+  "path": "/images/206c14c3539a6b4843d7a5e0fdd9d246",
+  "artist_id": "6531323d939a1134f480717f",
+  "tag": [
+    "Minimalist",
+    "White Ink"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd8e48203bbfb51f495e4"
+  },
+  "path": "/images/93cfe9ba2117f1e37ef3198ae70ea53b",
+  "artist_id": "6531323d939a1134f480717f",
+  "tag": [
+    "Minimalist",
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd8f38203bbfb51f495e5"
+  },
+  "path": "/images/76910326b40da61efaba95b1e2fc7b6e",
+  "artist_id": "6531323d939a1134f480717f",
+  "tag": [
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd90b8203bbfb51f495e6"
+  },
+  "path": "/images/aa29f31ce24512d82392472e8a85de50",
+  "artist_id": "6531323d939a1134f480717f",
+  "tag": [
+    "White Ink"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd9188203bbfb51f495e7"
+  },
+  "path": "/images/9f9c6ed3b2c54ebb808a2ded870fa4ee",
+  "artist_id": "6531323d939a1134f480717f",
+  "tag": [
+    "White Ink"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd92f8203bbfb51f495e8"
+  },
+  "path": "/images/6b16e8375aeaa17eb270a9fc5fa8e71a",
+  "artist_id": "6531323d939a1134f480717f",
+  "tag": [
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd9b28203bbfb51f495e9"
+  },
+  "path": "/images/edc9f40784d9ab574e1e03ded5c3f332",
+  "artist_id": "6531323d939a1134f4807180",
+  "tag": [
+    "Watercolor",
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd9c58203bbfb51f495ea"
+  },
+  "path": "/images/5ebb27b6b1dae61c3e0dd809d45de139",
+  "artist_id": "6531323d939a1134f4807180",
+  "tag": [
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd9d68203bbfb51f495eb"
+  },
+  "path": "/images/6938ee682e4677b333f78fe121f5543e",
+  "artist_id": "6531323d939a1134f4807180",
+  "tag": [
+    "Watercolor"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bd9e98203bbfb51f495ec"
+  },
+  "path": "/images/c2d618ab28dd0468f01ec516e60e53c9",
+  "artist_id": "6531323d939a1134f4807180",
+  "tag": [
+    "Watercolor"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bda198203bbfb51f495ed"
+  },
+  "path": "/images/4abd0d64deba2e2e156e17449116c724",
+  "artist_id": "6531323d939a1134f4807181",
+  "tag": [
+    "Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bda4c8203bbfb51f495ee"
+  },
+  "path": "/images/3824e93a5d44fc424253d8b6933a370f",
+  "artist_id": "6531323d939a1134f4807181",
+  "tag": [
+    "Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bda5c8203bbfb51f495ef"
+  },
+  "path": "/images/6e000210198c5ce813442d357094af79",
+  "artist_id": "6531323d939a1134f4807181",
+  "tag": [
+    "Tribal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bda6a8203bbfb51f495f0"
+  },
+  "path": "/images/af335ac6376a45e570b960c50e2565a2",
+  "artist_id": "6531323d939a1134f4807181",
+  "tag": [
+    "Tribal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdaa08203bbfb51f495f1"
+  },
+  "path": "/images/7b5d68b7cc63d50115f870641d7fb383",
+  "artist_id": "6531323d939a1134f4807182",
+  "tag": [
+    "Abstract"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdaac8203bbfb51f495f2"
+  },
+  "path": "/images/6cfd2737b0cd9374b78698f0126321a3",
+  "artist_id": "6531323d939a1134f4807182",
+  "tag": [
+    "Abstract"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdabb8203bbfb51f495f3"
+  },
+  "path": "/images/48fe3c42fac1246e5a44350b5708cd61",
+  "artist_id": "6531323d939a1134f4807182",
+  "tag": [
+    "Trash Polka"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdacb8203bbfb51f495f4"
+  },
+  "path": "/images/7e7c7179a31f8fdf3ef8eb6896331a04",
+  "artist_id": "6531323d939a1134f4807182",
+  "tag": [
+    "Trash Polka"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdad78203bbfb51f495f5"
+  },
+  "path": "/images/4e9bb095129514fdab29e91dc4d27495",
+  "artist_id": "6531323d939a1134f4807182",
+  "tag": [
+    "Trash Polka"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdb348203bbfb51f495f6"
+  },
+  "path": "/images/56ed11a66cda4a573b8ea8e83897029b",
+  "artist_id": "6531323d939a1134f4807183",
+  "tag": [
+    "Traditional",
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdb528203bbfb51f495f7"
+  },
+  "path": "/images/03baf692824cd7af4d861dde6a66df02",
+  "artist_id": "6531323d939a1134f4807183",
+  "tag": [
+    "Black and Grey",
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdb6b8203bbfb51f495f8"
+  },
+  "path": "/images/933d6b5c2a50abba221b35e9bc915ee1",
+  "artist_id": "6531323d939a1134f4807183",
+  "tag": [
+    "Traditional",
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdb788203bbfb51f495f9"
+  },
+  "path": "/images/1f3aa38790ba085e011460b8e594dccb",
+  "artist_id": "6531323d939a1134f4807183",
+  "tag": [
+    "Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdb898203bbfb51f495fa"
+  },
+  "path": "/images/5e19f7832cb871f9d93fac757e013429",
+  "artist_id": "6531323d939a1134f4807183",
+  "tag": [
+    "Traditional",
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdbb28203bbfb51f495fb"
+  },
+  "path": "/images/4ca2abc3b7321958db24c847a2d07770",
+  "artist_id": "6531323d939a1134f4807184",
+  "tag": [
+    "White Ink"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdbc18203bbfb51f495fc"
+  },
+  "path": "/images/74781c0cf6bf532bf395ce3b5646beff",
+  "artist_id": "6531323d939a1134f4807184",
+  "tag": [
+    "White Ink"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdbe08203bbfb51f495fd"
+  },
+  "path": "/images/c1d5fdd0a3d5afae01b8742bad60ad16",
+  "artist_id": "6531323d939a1134f4807184",
+  "tag": [
+    "Single Line",
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdbf38203bbfb51f495fe"
+  },
+  "path": "/images/2a1973d0283086374c64dcf0ed6572bd",
+  "artist_id": "6531323d939a1134f4807184",
+  "tag": [
+    "Single Line",
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdc048203bbfb51f495ff"
+  },
+  "path": "/images/ea6ba3d22f35c609aa67e3aa46366b1d",
+  "artist_id": "6531323d939a1134f4807184",
+  "tag": [
+    "Single Line",
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdc448203bbfb51f49600"
+  },
+  "path": "/images/d4e03e7ab6f31ef9139cabe66291ce1b",
+  "artist_id": "6531323d939a1134f4807185",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdc588203bbfb51f49601"
+  },
+  "path": "/images/d1765b0cd96d99f9b0fbb7cf92ec660a",
+  "artist_id": "6531323d939a1134f4807185",
+  "tag": [
+    "Realistic",
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdc668203bbfb51f49602"
+  },
+  "path": "/images/e603411b7b3cdc20b02a21a6838df084",
+  "artist_id": "6531323d939a1134f4807185",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdc788203bbfb51f49603"
+  },
+  "path": "/images/3c5b4bb26d22ddcc64bc1659e09cf266",
+  "artist_id": "6531323d939a1134f4807185",
+  "tag": [
+    "Floral",
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdc888203bbfb51f49604"
+  },
+  "path": "/images/b5fd7f78aa8d2142601e8b1239419a60",
+  "artist_id": "6531323d939a1134f4807185",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdccb8203bbfb51f49605"
+  },
+  "path": "/images/8aa2bd8d86162aa02031c750bfc385f7",
+  "artist_id": "6531323d939a1134f4807186",
+  "tag": [
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdcde8203bbfb51f49606"
+  },
+  "path": "/images/e678bbcbe7a087b5d79f0875254461f4",
+  "artist_id": "6531323d939a1134f4807186",
+  "tag": [
+    "Portrait",
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdcea8203bbfb51f49607"
+  },
+  "path": "/images/7dd5a5e7417f43fcf07664aec97b1662",
+  "artist_id": "6531323d939a1134f4807186",
+  "tag": [
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdd038203bbfb51f49608"
+  },
+  "path": "/images/189d48c11e6a5793c9d9472f326ab291",
+  "artist_id": "6531323d939a1134f4807186",
+  "tag": [
+    "Portrait",
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdd188203bbfb51f49609"
+  },
+  "path": "/images/0b9a66ee494d470f9f4d505a3e9caeb1",
+  "artist_id": "6531323d939a1134f4807186",
+  "tag": [
+    "Portrait",
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdd598203bbfb51f4960a"
+  },
+  "path": "/images/5c344c0affcb87c3d459d4d7566d09b0",
+  "artist_id": "6531323d939a1134f4807187",
+  "tag": [
+    "Biomechanical"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdd688203bbfb51f4960b"
+  },
+  "path": "/images/799ca76dd81cb47d027aa2fbf721bc80",
+  "artist_id": "6531323d939a1134f4807187",
+  "tag": [
+    "New School"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdd748203bbfb51f4960c"
+  },
+  "path": "/images/f9c7b91c62e31a873288c8d74ea70eb3",
+  "artist_id": "6531323d939a1134f4807187",
+  "tag": [
+    "New School"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdd818203bbfb51f4960d"
+  },
+  "path": "/images/ad03974f31cfc2f7ac5fa889148ada6b",
+  "artist_id": "6531323d939a1134f4807187",
+  "tag": [
+    "Biomechanical"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653bdd938203bbfb51f4960e"
+  },
+  "path": "/images/d7c88e780a1432f87d716745b3d2f3c5",
+  "artist_id": "6531323d939a1134f4807187",
+  "tag": [
+    "New School"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6bc146ffaa02146e6692"
+  },
+  "path": "/images/8e8eed4136a13621ead537ba343cde9b",
+  "artist_id": "6531323d939a1134f4807188",
+  "tag": [
+    "Glitch"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6bd546ffaa02146e6693"
+  },
+  "path": "/images/7dcc2b97cf35611c035ce147717683ce",
+  "artist_id": "6531323d939a1134f4807188",
+  "tag": [
+    "Abstract"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6c3b46ffaa02146e6694"
+  },
+  "path": "/images/cb8f17e6785f67e1065b408169e9ed57",
+  "artist_id": "6531323d939a1134f4807189",
+  "tag": [
+    "Biomechanical",
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6c6146ffaa02146e6695"
+  },
+  "path": "/images/69e2a2496b2141a0f490864395002db7",
+  "artist_id": "6531323d939a1134f4807189",
+  "tag": [
+    "Biomechanical",
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6c7846ffaa02146e6696"
+  },
+  "path": "/images/81514abcc9e7ae9e65d953b8ea0763d5",
+  "artist_id": "6531323d939a1134f4807189",
+  "tag": [
+    "Realistic",
+    "Portrait"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6c9246ffaa02146e6697"
+  },
+  "path": "/images/d3eb858a6e8f58e306deaddb09b73b46",
+  "artist_id": "6531323d939a1134f4807189",
+  "tag": [
+    "Portrait",
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6cff46ffaa02146e6698"
+  },
+  "path": "/images/fadff4bdab44210a51850ab496e0e580",
+  "artist_id": "6531323d939a1134f480718a",
+  "tag": [
+    "Floral",
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6d1846ffaa02146e6699"
+  },
+  "path": "/images/9add4bdd89e0c19dd028af3900043ffe",
+  "artist_id": "6531323d939a1134f480718a",
+  "tag": [
+    "Black and Grey"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6d3446ffaa02146e669a"
+  },
+  "path": "/images/8c28ca4d30db678f76265cee6a620d90",
+  "artist_id": "6531323d939a1134f480718a",
+  "tag": [
+    "Black and Grey",
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6d4b46ffaa02146e669b"
+  },
+  "path": "/images/d8120142aae74624756b17140d7555d0",
+  "artist_id": "6531323d939a1134f480718a",
+  "tag": [
+    "Black and Grey",
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6da146ffaa02146e669c"
+  },
+  "path": "/images/a72df91202bc87d640364cc4be779ee2",
+  "artist_id": "6531323d939a1134f480718b",
+  "tag": [
+    "Dotwork",
+    "Geometric"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6db646ffaa02146e669d"
+  },
+  "path": "/images/380f8b792638ed4b86573a0e9ffd3d7c",
+  "artist_id": "6531323d939a1134f480718b",
+  "tag": [
+    "Lettering"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6dcb46ffaa02146e669e"
+  },
+  "path": "/images/c1e7bbd6ecd87ac8f1e8b47070287603",
+  "artist_id": "6531323d939a1134f480718b",
+  "tag": [
+    "Lettering"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6e0d46ffaa02146e669f"
+  },
+  "path": "/images/2ca9955f6bad994d6f8ed1a4ee10cc29",
+  "artist_id": "6531323d939a1134f480718c",
+  "tag": [
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6e2846ffaa02146e66a0"
+  },
+  "path": "/images/c27a7c4dbf1350305657b4d542bd0703",
+  "artist_id": "6531323d939a1134f480718c",
+  "tag": [
+    "Portrait",
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6e3e46ffaa02146e66a1"
+  },
+  "path": "/images/31f4a6109122ddd0a4102822ab50b607",
+  "artist_id": "6531323d939a1134f480718c",
+  "tag": [
+    "Floral",
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6e5346ffaa02146e66a2"
+  },
+  "path": "/images/09ca79582fab3cede91220db285a4798",
+  "artist_id": "6531323d939a1134f480718c",
+  "tag": [
+    "Floral",
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6ebb46ffaa02146e66a3"
+  },
+  "path": "/images/8f7ce286267e5e1f6506412c4ee9f734",
+  "artist_id": "6531323d939a1134f480718d",
+  "tag": [
+    "Tribal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6ed146ffaa02146e66a4"
+  },
+  "path": "/images/2c00096a8cdcb77423ee9402046519b6",
+  "artist_id": "6531323d939a1134f480718d",
+  "tag": [
+    "Tribal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6ee846ffaa02146e66a5"
+  },
+  "path": "/images/0a414a0fcd7dcbf92029a5608fab4b55",
+  "artist_id": "6531323d939a1134f480718d",
+  "tag": [
+    "Tribal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6efc46ffaa02146e66a6"
+  },
+  "path": "/images/ef462a56265a57292eaffbdc9c8e0b16",
+  "artist_id": "6531323d939a1134f480718d",
+  "tag": [
+    "Geometric"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6f1046ffaa02146e66a7"
+  },
+  "path": "/images/60f4e8c69fca3157bf7f2b96508312c7",
+  "artist_id": "6531323d939a1134f480718d",
+  "tag": [
+    "Geometric"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6f2846ffaa02146e66a8"
+  },
+  "path": "/images/f27184e225ddd6fa1ce22dfb6882cbb2",
+  "artist_id": "6531323d939a1134f480718d",
+  "tag": [
+    "Geometric"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6f8446ffaa02146e66a9"
+  },
+  "path": "/images/83800edfdc3bd2fef57508deaf3efda3",
+  "artist_id": "6531323d939a1134f480718e",
+  "tag": [
+    "Glitch",
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6f9846ffaa02146e66aa"
+  },
+  "path": "/images/9144a8fede0e75d588987e8367abe948",
+  "artist_id": "6531323d939a1134f480718e",
+  "tag": [
+    "Glitch"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6fb146ffaa02146e66ab"
+  },
+  "path": "/images/43be195f5b3ee5612f6c9dd05481b5f0",
+  "artist_id": "6531323d939a1134f480718e",
+  "tag": [
+    "Trash Polka",
+    "Portrait"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d6fc946ffaa02146e66ac"
+  },
+  "path": "/images/d0eac3c8249464b0914c47894c963d83",
+  "artist_id": "6531323d939a1134f480718e",
+  "tag": [
+    "Glitch"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d703446ffaa02146e66ad"
+  },
+  "path": "/images/66398d34bb1a3fbb3d6a4601b361a028",
+  "artist_id": "6531323d939a1134f480718f",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d704846ffaa02146e66ae"
+  },
+  "path": "/images/b8c757180036ea5e5e1fd8b57778513d",
+  "artist_id": "6531323d939a1134f480718f",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d705f46ffaa02146e66af"
+  },
+  "path": "/images/b75a6404a179a2a18b015db0cf1ebd01",
+  "artist_id": "6531323d939a1134f480718f",
+  "tag": [
+    "Japanese"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d707446ffaa02146e66b0"
+  },
+  "path": "/images/a31aada6c3ad969c6b0fbf7b62c6b4a4",
+  "artist_id": "6531323d939a1134f480718f",
+  "tag": [
+    "Japanese"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d708a46ffaa02146e66b1"
+  },
+  "path": "/images/06cdf38a64f15d63b1ba282da3bbe50d",
+  "artist_id": "6531323d939a1134f480718f",
+  "tag": [
+    "Neo Traditional",
+    "Floral"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d70a046ffaa02146e66b2"
+  },
+  "path": "/images/0a9d10389509b00971527dad0dc4a2b9",
+  "artist_id": "6531323d939a1134f480718f",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d70e046ffaa02146e66b3"
+  },
+  "path": "/images/cb7d3b8f21ab97dbacf6bea39ec53aa1",
+  "artist_id": "6531323d939a1134f4807190",
+  "tag": [
+    "Lettering",
+    "Single Line"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d70f746ffaa02146e66b4"
+  },
+  "path": "/images/0ccdb58bab99347e161dcd73bacdc3eb",
+  "artist_id": "6531323d939a1134f4807190",
+  "tag": [
+    "Single Line",
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d710a46ffaa02146e66b5"
+  },
+  "path": "/images/b50c89606235b0adf19afd5b9ed416ff",
+  "artist_id": "6531323d939a1134f4807190",
+  "tag": [
+    "Single Line"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d711f46ffaa02146e66b6"
+  },
+  "path": "/images/a899a159b689a0fe795c1e49f39854e3",
+  "artist_id": "6531323d939a1134f4807190",
+  "tag": [
+    "Lettering"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d713246ffaa02146e66b7"
+  },
+  "path": "/images/62beb8f6431947241a6dcb1ae18aa964",
+  "artist_id": "6531323d939a1134f4807190",
+  "tag": [
+    "Lettering"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d714646ffaa02146e66b8"
+  },
+  "path": "/images/2d819ba05930797240c72c7e348216d3",
+  "artist_id": "6531323d939a1134f4807190",
+  "tag": [
+    "Single Line",
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d71b946ffaa02146e66b9"
+  },
+  "path": "/images/8c98669a6f11db8adcaa0e2e27a34cae",
+  "artist_id": "6531323d939a1134f4807191",
+  "tag": [
+    "Watercolor",
+    "Lettering"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d71cf46ffaa02146e66ba"
+  },
+  "path": "/images/99bbf5723574f8dd988c8c0992ab9655",
+  "artist_id": "6531323d939a1134f4807191",
+  "tag": [
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d720146ffaa02146e66bb"
+  },
+  "path": "/images/4dccc122a23edd32ebc6ded4eb98e3c9",
+  "artist_id": "6531323d939a1134f4807191",
+  "tag": [
+    "Watercolor",
+    "Realistic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d721346ffaa02146e66bc"
+  },
+  "path": "/images/bcb344004e157f1f6a8d3086c27da330",
+  "artist_id": "6531323d939a1134f4807191",
+  "tag": [
+    "Minimalist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d72b946ffaa02146e66bd"
+  },
+  "path": "/images/0e434e85102e55ca11614b1570424d24",
+  "artist_id": "6531323d939a1134f4807192",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d72cb46ffaa02146e66be"
+  },
+  "path": "/images/5e222926f0f16044935f04018aef0955",
+  "artist_id": "6531323d939a1134f4807192",
+  "tag": [
+    "New School"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d72db46ffaa02146e66bf"
+  },
+  "path": "/images/98865ce2aa1c9553d264b19d6ea0dfc1",
+  "artist_id": "6531323d939a1134f4807192",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d72ec46ffaa02146e66c0"
+  },
+  "path": "/images/792159ef25d28e0cb53426494ca72c27",
+  "artist_id": "6531323d939a1134f4807192",
+  "tag": [
+    "New School"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d72ff46ffaa02146e66c1"
+  },
+  "path": "/images/9e49c2f19d8a3d015db7fefa8597d1d1",
+  "artist_id": "6531323d939a1134f4807192",
+  "tag": [
+    "Neo Traditional"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653d731246ffaa02146e66c2"
+  },
+  "path": "/images/f0b985bbc81cbdcbcb09dd410af0cf20",
+  "artist_id": "6531323d939a1134f4807192",
+  "tag": [
+    "New School"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653fac4a75637428335ce39e"
+  },
+  "path": "/images/e3077cd5781d65b0730061861780a8f0",
+  "artist_id": "6531323d939a1134f480717e",
+  "tag": [
+    "Black Work"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653fac5e75637428335ce39f"
+  },
+  "path": "/images/bcb614752f0ee6ecfe7d8719056e6310",
+  "artist_id": "6531323d939a1134f480717e",
+  "tag": [
+    "Black Work",
+    "Japanese"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653fac6b75637428335ce3a0"
+  },
+  "path": "/images/26cb6659be2eb63eda680e42b771fdae",
+  "artist_id": "6531323d939a1134f480717e",
+  "tag": [
+    "Dotwork"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653fac7475637428335ce3a1"
+  },
+  "path": "/images/3d2fff51dfd2f8bbc4f757dd4b4b7774",
+  "artist_id": "6531323d939a1134f480717e",
+  "tag": [
+    "Dotwork"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653fac9e75637428335ce3a2"
+  },
+  "path": "/images/2f678f4a5297d3700050ea2cb411c6e6",
+  "artist_id": "6531323d939a1134f480717e",
+  "tag": [
+    "Abstract"
+  ]
+},
+{
+  "_id": {
+    "$oid": "653facab75637428335ce3a3"
+  },
+  "path": "/images/3f14f0eb946ed44aa265d7316eb7445b",
+  "artist_id": "6531323d939a1134f480717e",
+  "tag": [
+    "Black Work",
+    "Geometric"
+  ]
+}]
