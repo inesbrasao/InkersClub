@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "import:history": "node ./src/server/data/data/addCollection.js"
+    "import:history": "node ./src/server/data/addCollection.js"
   },
   "dependencies": {
     "formidable": "^3.5.1",
