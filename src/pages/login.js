@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from '@/styles/login.module.css'
 import Logo from "@/app/componentes/Logo";
 import styles2 from '@/styles/profileControl.module.css'
+import Head from 'next/head'
 
 export default function Login() {
   const [formData, setFormData] = useState()
@@ -52,6 +53,10 @@ export default function Login() {
 
 
   return (<div >
+      <Head>
+        <title>InkersClub</title>
+        <link rel="icon" href="/icons/InK-Icon.ico" sizes="any" />
+      </Head>
     <div className={styles.backButtonContainer}>
     <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
     </div>

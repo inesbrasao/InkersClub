@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import { useEffect, useState, } from "react";
 import styles from '@/styles/photo.module.css'
 import Popup from "@/app/componentes/Popup";
+import Head from "next/head";
 
 
 export default function ShowImage() {
@@ -48,7 +49,12 @@ export default function ShowImage() {
   
 
 
-  return <div className={styles.showImageContainer}> {imageState &&
+  return <>
+      <Head>
+        <title>InkersClub</title>
+        <link rel="icon" href="/icons/InK-Icon.ico" sizes="any" />
+      </Head>
+    <div className={styles.showImageContainer}> {imageState &&
     <div className={styles.showImage}>
       <div className={styles.control}>
       <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
@@ -67,6 +73,7 @@ export default function ShowImage() {
     </div>}
           {popup ? <Popup className={styles.popup} data={imageState} collection={"images"} changeState={changeState} /> : null}
   </div>
+  </>
 
 
 

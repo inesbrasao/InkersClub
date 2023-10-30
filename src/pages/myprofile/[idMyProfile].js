@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from '@/styles/myprofile.module.css'
 import NavBar from "@/app/componentes/NavBar";
+import Head from "next/head";
 
 export default function MyProfile() {
 
@@ -50,7 +51,12 @@ export default function MyProfile() {
     
 
 
-    return <div>  {artistImages && 
+    return <div>
+        <Head>
+            <title>InkersClub</title>
+            <link rel="icon" href="/icons/InK-Icon.ico" sizes="any" />
+        </Head>
+        {artistImages && 
     <div className={styles.myProfileContainer}>
         <div className={styles.headerContainer}>
             <ProfileHeader id={id} />

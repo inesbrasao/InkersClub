@@ -2,9 +2,9 @@ import InputText from "@/app/componentes/InputText";
 import { useRouter } from "next/router";
 import styles from '@/styles/signup.module.css'
 import styles2 from '@/styles/profileControl.module.css'
-
 import React, { useState } from 'react';
 import Logo from "@/app/componentes/Logo";
+import Head from 'next/head'
 
 export default function SignUp() {
   const [formData, setFormData] = useState()
@@ -59,6 +59,10 @@ export default function SignUp() {
 
 
   return (<div className={styles.signupContainer}>
+      <Head>
+        <title>InkersClub</title>
+        <link rel="icon" href="/icons/InK-Icon.ico" sizes="any" />
+      </Head>
     <div className={styles.backButtonContainer}>
       <button onClick={() => router.back()} className={styles.backButton}><img src="\icons\radix-icons_cross-1.svg" /></button>
     </div>
