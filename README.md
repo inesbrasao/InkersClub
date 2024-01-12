@@ -2,6 +2,7 @@
 
 In order to install nextjs and react dependencies, run the following command in the terminal
 
+
 ```bash
 npm install
 ```
